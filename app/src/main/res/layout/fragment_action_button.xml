@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:tag="action_bar"
+    tools:context=".FragmentActionButton">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/czytaj"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/read_button_state"
+        android:text="Odczytaj komentarz."
+        android:textSize="0dp"
+        android:layout_marginLeft="25dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/przerwij"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/stop_read_button"
+        android:text="Przerwiij czytanie komentarza."
+        android:textSize="0dp"
+        android:layout_marginLeft="20dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/lokalizuj"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/pin_button"
+        android:text="Wyświetl lokalizacje komentarza na mapie."
+        android:textSize="0dp"
+        android:layout_marginLeft="20dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edytuj"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_button"
+        android:text="Edytuj komentarz."
+        android:textSize="0dp"
+        android:layout_marginLeft="20dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/usun"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/delete_button"
+        android:text="Usuń komentarz."
+        android:textSize="0dp"
+        android:layout_marginLeft="45dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+</LinearLayout>

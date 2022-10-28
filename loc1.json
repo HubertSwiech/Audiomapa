@@ -1,0 +1,4204 @@
+{
+  "features" : [
+    {
+      "attributes" : {
+        "FID" : 0,
+        "Id" : 0,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500737.936170931,
+        "y" : 5787430.2936717831
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 1,
+        "Id" : 1,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500735.1966306157,
+        "y" : 5787424.4187086169
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 2,
+        "Id" : 2,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500732.2492899969,
+        "y" : 5787418.5676603271
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 3,
+        "Id" : 3,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500727.4320453303,
+        "y" : 5787435.8670620667
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 4,
+        "Id" : 4,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500724.0004620384,
+        "y" : 5787429.7601254573
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 5,
+        "Id" : 5,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500721.3680212861,
+        "y" : 5787423.8644145438
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 6,
+        "Id" : 6,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500723.5239907289,
+        "y" : 5787444.5910420436
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 7,
+        "Id" : 7,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500721.2899274249,
+        "y" : 5787438.0967205456
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 8,
+        "Id" : 8,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500718.7102347659,
+        "y" : 5787432.2758755703
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 9,
+        "Id" : 9,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500715.9321042094,
+        "y" : 5787426.5211765599
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 10,
+        "Id" : 10,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500713.0216817223,
+        "y" : 5787421.2956452761
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 11,
+        "Id" : 11,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500709.6274706926,
+        "y" : 5787436.8067919081
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 12,
+        "Id" : 12,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.5187988281,
+        "y" : 5787467.2269287109
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 13,
+        "Id" : 13,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500685.0419382611,
+        "y" : 5787448.5610123025
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 14,
+        "Id" : 14,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500683.0575592918,
+        "y" : 5787420.7003315846
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 15,
+        "Id" : 15,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500702.7161402758,
+        "y" : 5787470.4685561182
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 16,
+        "Id" : 16,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.8242174909,
+        "y" : 5787420.7532483544
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 17,
+        "Id" : 17,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.1569222044,
+        "y" : 5787481.9161877632
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 18,
+        "Id" : 18,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.9192136815,
+        "y" : 5787498.4615287706
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 19,
+        "Id" : 19,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.2003922435,
+        "y" : 5787422.6582521638
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 20,
+        "Id" : 20,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500662.6316851061,
+        "y" : 5787485.7615033705
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 21,
+        "Id" : 21,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.5972680375,
+        "y" : 5787442.9782928042
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 22,
+        "Id" : 22,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500648.1854062136,
+        "y" : 5787465.8383385241
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 23,
+        "Id" : 23,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.5970643116,
+        "y" : 5787459.7728252737
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 24,
+        "Id" : 24,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.019412199,
+        "y" : 5787452.5712763052
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 25,
+        "Id" : 25,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500699.5757607715,
+        "y" : 5787468.4981121337
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 26,
+        "Id" : 26,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.7199640041,
+        "y" : 5787424.2735586362
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 27,
+        "Id" : 27,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.0829782188,
+        "y" : 5787487.7313198568
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 28,
+        "Id" : 28,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500638.236203379,
+        "y" : 5787443.3849950396
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 29,
+        "Id" : 29,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500697.4125650236,
+        "y" : 5787465.9189789603
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 30,
+        "Id" : 30,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500679.2618152676,
+        "y" : 5787427.3534971448
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 31,
+        "Id" : 31,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.1620334499,
+        "y" : 5787479.0867649512
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 32,
+        "Id" : 33,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500730.0530953519,
+        "y" : 5787393.6570331492
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 33,
+        "Id" : 34,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500754.3583159894,
+        "y" : 5787448.5344055286
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 34,
+        "Id" : 35,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500758.6585759632,
+        "y" : 5787414.1826535016
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 35,
+        "Id" : 32,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500738.6340756603,
+        "y" : 5787422.9233652549
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 36,
+        "Id" : 36,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500723.2627719892,
+        "y" : 5787445.2240827978
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 37,
+        "Id" : 37,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500713.0216817223,
+        "y" : 5787421.2956452761
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 38,
+        "Id" : 39,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500700.0609499998,
+        "y" : 5787441.2307499982
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 39,
+        "Id" : 40,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.5187988281,
+        "y" : 5787467.2269287109
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 40,
+        "Id" : 41,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500683.0575592918,
+        "y" : 5787420.7003315846
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 41,
+        "Id" : 42,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500702.7161402758,
+        "y" : 5787470.4685561182
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 42,
+        "Id" : 43,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500685.0419382611,
+        "y" : 5787448.5610123025
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 43,
+        "Id" : 44,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.8242174909,
+        "y" : 5787420.7532483544
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 44,
+        "Id" : 45,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.1569222044,
+        "y" : 5787481.9161877632
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 45,
+        "Id" : 46,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.019412199,
+        "y" : 5787452.5712763052
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 46,
+        "Id" : 47,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.5970643116,
+        "y" : 5787459.7728252737
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 47,
+        "Id" : 48,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.9192136815,
+        "y" : 5787498.4615287706
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 48,
+        "Id" : 49,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500662.6316851061,
+        "y" : 5787485.7615033705
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 49,
+        "Id" : 50,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500648.1854062136,
+        "y" : 5787465.8383385241
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 50,
+        "Id" : 51,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.5972680375,
+        "y" : 5787442.9782928042
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 51,
+        "Id" : 52,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.3463069592,
+        "y" : 5787429.2317548236
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 52,
+        "Id" : 53,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500699.8443821697,
+        "y" : 5787468.197690323
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 53,
+        "Id" : 54,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.9565267246,
+        "y" : 5787424.2800220242
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 54,
+        "Id" : 55,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.0829782188,
+        "y" : 5787487.7313198568
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 55,
+        "Id" : 56,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500638.236203379,
+        "y" : 5787443.3849950396
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 56,
+        "Id" : 57,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500697.5845500007,
+        "y" : 5787465.7502500005
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 57,
+        "Id" : 58,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500679.5427303538,
+        "y" : 5787427.6428921167
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 58,
+        "Id" : 59,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.1620334499,
+        "y" : 5787479.0867649512
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 59,
+        "Id" : 60,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.5168226827,
+        "y" : 5787476.0920669511
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 60,
+        "Id" : 61,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500686.4185836241,
+        "y" : 5787476.5457794033
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 61,
+        "Id" : 62,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.1183101581,
+        "y" : 5787478.7508906201
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 62,
+        "Id" : 63,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500671.1337022353,
+        "y" : 5787491.0101751797
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 63,
+        "Id" : 64,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500664.4189440338,
+        "y" : 5787483.0957596377
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 64,
+        "Id" : 65,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500668.2809408773,
+        "y" : 5787424.7627976267
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 65,
+        "Id" : 66,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500657.6034290725,
+        "y" : 5787435.6956742899
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 66,
+        "Id" : 67,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500657.1684186524,
+        "y" : 5787451.2211838765
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 67,
+        "Id" : 68,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500645.2922008997,
+        "y" : 5787443.3085480304
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 68,
+        "Id" : 69,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500644.4683932522,
+        "y" : 5787450.3745155167
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 69,
+        "Id" : 70,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500681.315452707,
+        "y" : 5787523.7699908651
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 70,
+        "Id" : 71,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.9589396277,
+        "y" : 5787500.5829041107
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 71,
+        "Id" : 72,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500620.3643442709,
+        "y" : 5787482.27328951
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 72,
+        "Id" : 73,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500628.1260706745,
+        "y" : 5787450.2221210245
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 73,
+        "Id" : 38,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500708.3892791197,
+        "y" : 5787437.5680983309
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 74,
+        "Id" : 74,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500723.2627719892,
+        "y" : 5787445.2240827978
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 75,
+        "Id" : 75,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500721.2899274249,
+        "y" : 5787438.0967205456
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 76,
+        "Id" : 76,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500718.7102347659,
+        "y" : 5787432.2758755703
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 77,
+        "Id" : 77,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500715.9321042094,
+        "y" : 5787426.5211765599
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 78,
+        "Id" : 78,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500712.7264614832,
+        "y" : 5787421.3757042326
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 79,
+        "Id" : 79,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500709.6274706926,
+        "y" : 5787436.8067919081
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 80,
+        "Id" : 80,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.5187988281,
+        "y" : 5787467.2269287109
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 81,
+        "Id" : 81,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500685.0419382611,
+        "y" : 5787448.5610123025
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 82,
+        "Id" : 82,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500683.0575592918,
+        "y" : 5787420.7003315846
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 83,
+        "Id" : 83,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500702.7161402758,
+        "y" : 5787470.4685561182
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 84,
+        "Id" : 84,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.019412199,
+        "y" : 5787452.5712763052
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 85,
+        "Id" : 85,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.8242174909,
+        "y" : 5787420.7532483544
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 86,
+        "Id" : 86,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.1569222044,
+        "y" : 5787481.9161877632
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 87,
+        "Id" : 87,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.9192136815,
+        "y" : 5787498.4615287706
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 88,
+        "Id" : 88,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.2003922435,
+        "y" : 5787422.6582521638
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 89,
+        "Id" : 89,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500662.6316851061,
+        "y" : 5787485.7615033705
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 90,
+        "Id" : 90,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.5972680375,
+        "y" : 5787442.9782928042
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 91,
+        "Id" : 91,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500648.1854062136,
+        "y" : 5787465.8383385241
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 92,
+        "Id" : 92,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500699.5757607715,
+        "y" : 5787468.4981121337
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 93,
+        "Id" : 93,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.7199640041,
+        "y" : 5787424.2735586362
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 94,
+        "Id" : 94,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.1620334499,
+        "y" : 5787479.0867649512
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 95,
+        "Id" : 95,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.0829782188,
+        "y" : 5787487.7313198568
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 96,
+        "Id" : 96,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500638.0151499994,
+        "y" : 5787443.558600001
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 97,
+        "Id" : 97,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500697.3569275551,
+        "y" : 5787465.9624392996
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 98,
+        "Id" : 98,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500679.2886515819,
+        "y" : 5787427.4110478042
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 99,
+        "Id" : 122,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500679.5475133294,
+        "y" : 5787427.6844521761
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 100,
+        "Id" : 99,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500723.2627719892,
+        "y" : 5787445.2240827978
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 101,
+        "Id" : 100,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500721.2899274249,
+        "y" : 5787438.0967205456
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 102,
+        "Id" : 101,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500718.7102347659,
+        "y" : 5787432.2758755703
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 103,
+        "Id" : 102,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500715.9321042094,
+        "y" : 5787426.5211765599
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 104,
+        "Id" : 103,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500712.7264614832,
+        "y" : 5787421.3757042326
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 105,
+        "Id" : 104,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.5187988281,
+        "y" : 5787467.2269287109
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 106,
+        "Id" : 105,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500685.0419382611,
+        "y" : 5787448.5610123025
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 107,
+        "Id" : 106,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500683.0575592918,
+        "y" : 5787420.7003315846
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 108,
+        "Id" : 107,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500702.7161402758,
+        "y" : 5787470.4685561182
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 109,
+        "Id" : 108,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.019412199,
+        "y" : 5787452.5712763052
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 110,
+        "Id" : 109,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.8242174909,
+        "y" : 5787420.7532483544
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 111,
+        "Id" : 110,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.1569222044,
+        "y" : 5787481.9161877632
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 112,
+        "Id" : 111,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500676.9192136815,
+        "y" : 5787498.4615287706
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 113,
+        "Id" : 112,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.2003922435,
+        "y" : 5787422.6582521638
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 114,
+        "Id" : 113,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500662.6316851061,
+        "y" : 5787485.7615033705
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 115,
+        "Id" : 114,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.5972680375,
+        "y" : 5787442.9782928042
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 116,
+        "Id" : 115,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500649.1899752123,
+        "y" : 5787465.6264167782
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 117,
+        "Id" : 116,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500699.5757607715,
+        "y" : 5787468.4981121337
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 118,
+        "Id" : 117,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.7199640041,
+        "y" : 5787424.2735586362
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 119,
+        "Id" : 118,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.0829782188,
+        "y" : 5787487.7313198568
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 120,
+        "Id" : 119,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500638.236203379,
+        "y" : 5787443.3849950396
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 121,
+        "Id" : 120,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.1620334499,
+        "y" : 5787479.0867649512
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 122,
+        "Id" : 121,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500697.4375010608,
+        "y" : 5787465.9161091773
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 123,
+        "Id" : 143,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500679.3641500007,
+        "y" : 5787427.4582999982
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 124,
+        "Id" : 123,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500723.2627719892,
+        "y" : 5787445.2240827978
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 125,
+        "Id" : 124,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500718.7102347659,
+        "y" : 5787432.2758755703
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 126,
+        "Id" : 125,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500712.7264614832,
+        "y" : 5787421.3757042326
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 127,
+        "Id" : 126,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.5187988281,
+        "y" : 5787467.2269287109
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 128,
+        "Id" : 127,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500684.9110137206,
+        "y" : 5787448.7380508231
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 129,
+        "Id" : 128,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500683.0575592918,
+        "y" : 5787420.7003315846
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 130,
+        "Id" : 129,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500702.7161402758,
+        "y" : 5787470.4685561182
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 131,
+        "Id" : 130,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.8242174909,
+        "y" : 5787420.7532483544
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 132,
+        "Id" : 131,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.1569222044,
+        "y" : 5787481.9161877632
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 133,
+        "Id" : 132,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500682.7018194692,
+        "y" : 5787503.601211872
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 134,
+        "Id" : 133,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500640.4837504914,
+        "y" : 5787419.8257053262
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 135,
+        "Id" : 134,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500662.6316851061,
+        "y" : 5787485.7615033705
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 136,
+        "Id" : 135,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.5972680375,
+        "y" : 5787442.9782928042
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 137,
+        "Id" : 136,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500645.4629583573,
+        "y" : 5787468.0671763103
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 138,
+        "Id" : 137,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500699.5757607715,
+        "y" : 5787468.4981121337
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 139,
+        "Id" : 138,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500678.7199640041,
+        "y" : 5787424.2735586362
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 140,
+        "Id" : 139,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.0829782188,
+        "y" : 5787487.7313198568
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 141,
+        "Id" : 140,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500638.236203379,
+        "y" : 5787443.3849950396
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 142,
+        "Id" : 141,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.1620334499,
+        "y" : 5787479.0867649512
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 143,
+        "Id" : 142,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500697.5558469873,
+        "y" : 5787465.7003587689
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 144,
+        "Id" : 144,
+        "pietro" : 5,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500673.5696586734,
+        "y" : 5787454.0432138117
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 145,
+        "Id" : 145,
+        "pietro" : 5,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.9290874619,
+        "y" : 5787460.0213132994
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 146,
+        "Id" : 146,
+        "pietro" : 6,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500673.5696586734,
+        "y" : 5787454.0432138117
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 147,
+        "Id" : 147,
+        "pietro" : 6,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.9290874619,
+        "y" : 5787460.0213132994
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 148,
+        "Id" : 148,
+        "pietro" : 7,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500673.4831217388,
+        "y" : 5787454.164623253
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 149,
+        "Id" : 149,
+        "pietro" : 7,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500660.9290874619,
+        "y" : 5787460.0213132994
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 150,
+        "Id" : 200,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500709.002936814,
+        "y" : 5787423.5537868934
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 151,
+        "Id" : 201,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.8819656959,
+        "y" : 5787456.9090214809
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 152,
+        "Id" : 202,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500698.346355835,
+        "y" : 5787419.9984424356
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 153,
+        "Id" : 203,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500704.8848542674,
+        "y" : 5787461.7844290538
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 154,
+        "Id" : 204,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500687.4938916648,
+        "y" : 5787424.6818804312
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 155,
+        "Id" : 205,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500688.4721049163,
+        "y" : 5787447.2356873527
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 156,
+        "Id" : 206,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500688.7360790512,
+        "y" : 5787485.4356806939
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 157,
+        "Id" : 207,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.1429334348,
+        "y" : 5787473.587248913
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 158,
+        "Id" : 208,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500666.86756342,
+        "y" : 5787425.0971209919
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 159,
+        "Id" : 209,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500651.8489500005,
+        "y" : 5787464.8800499998
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 160,
+        "Id" : 210,
+        "pietro" : 0,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500641.5042748004,
+        "y" : 5787431.1327559054
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 161,
+        "Id" : 226,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500651.4986185282,
+        "y" : 5787464.5458326405
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 162,
+        "Id" : 225,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.2742955564,
+        "y" : 5787421.779774365
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 163,
+        "Id" : 224,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500688.7360790512,
+        "y" : 5787485.4356806939
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 164,
+        "Id" : 223,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500673.9002,
+        "y" : 5787453.8542499989
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 165,
+        "Id" : 222,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500688.4721049163,
+        "y" : 5787447.2356873527
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 166,
+        "Id" : 221,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500687.4938916648,
+        "y" : 5787424.6818804312
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 167,
+        "Id" : 220,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500704.8848542674,
+        "y" : 5787461.7844290538
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 168,
+        "Id" : 219,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500698.346355835,
+        "y" : 5787419.9984424356
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 169,
+        "Id" : 218,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.8819656959,
+        "y" : 5787456.9090214809
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 170,
+        "Id" : 217,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500715.6101537813,
+        "y" : 5787426.8503009491
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 171,
+        "Id" : 216,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500718.2526097037,
+        "y" : 5787432.6290104203
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 172,
+        "Id" : 215,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500721.0009424556,
+        "y" : 5787438.4108845675
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 173,
+        "Id" : 214,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500721.0278881183,
+        "y" : 5787423.9626127668
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 174,
+        "Id" : 213,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500726.6370660029,
+        "y" : 5787435.8159698071
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 175,
+        "Id" : 212,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500717.9172830796,
+        "y" : 5787425.7820481593
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 176,
+        "Id" : 211,
+        "pietro" : 1,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500723.506559737,
+        "y" : 5787437.1957698576
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 177,
+        "Id" : 235,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.2742955564,
+        "y" : 5787421.779774365
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 178,
+        "Id" : 234,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500688.7360790512,
+        "y" : 5787485.4356806939
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 179,
+        "Id" : 233,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500674.6654000003,
+        "y" : 5787453.2816499993
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 180,
+        "Id" : 232,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500680.272597786,
+        "y" : 5787451.0181690324
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 181,
+        "Id" : 231,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500687.6452022363,
+        "y" : 5787447.1487424262
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 182,
+        "Id" : 230,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500686.9279445978,
+        "y" : 5787424.0115514314
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 183,
+        "Id" : 229,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500704.8848542674,
+        "y" : 5787461.7844290538
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 184,
+        "Id" : 228,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500698.346355835,
+        "y" : 5787419.9984424356
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 185,
+        "Id" : 227,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.8819656959,
+        "y" : 5787456.9090214809
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 186,
+        "Id" : 246,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500674.1573147736,
+        "y" : 5787453.7042307025
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 187,
+        "Id" : 245,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500663.8445345536,
+        "y" : 5787486.7951076608
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 188,
+        "Id" : 244,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.2742955564,
+        "y" : 5787421.779774365
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 189,
+        "Id" : 243,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500691.5328499991,
+        "y" : 5787483.2958999984
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 190,
+        "Id" : 242,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500687.2003740286,
+        "y" : 5787447.5173959211
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 191,
+        "Id" : 241,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500686.5695973374,
+        "y" : 5787423.8143934133
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 192,
+        "Id" : 240,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500704.7796268268,
+        "y" : 5787462.5536843576
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 193,
+        "Id" : 239,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500698.346355835,
+        "y" : 5787419.9984424356
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 194,
+        "Id" : 238,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.8819656959,
+        "y" : 5787456.9090214809
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 195,
+        "Id" : 237,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.1028788853,
+        "y" : 5787418.8812632468
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 196,
+        "Id" : 236,
+        "pietro" : 3,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500726.2679305356,
+        "y" : 5787444.714115493
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 197,
+        "Id" : 259,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500663.7982175108,
+        "y" : 5787420.3337527774
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 198,
+        "Id" : 258,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500697.4532848196,
+        "y" : 5787487.0088861259
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 199,
+        "Id" : 257,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500692.4791082041,
+        "y" : 5787482.1405430557
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 200,
+        "Id" : 256,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500684.012424604,
+        "y" : 5787441.6062953211
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 201,
+        "Id" : 255,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500689.8679297119,
+        "y" : 5787453.8463422898
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 202,
+        "Id" : 254,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500685.1765936008,
+        "y" : 5787421.0745875919
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 203,
+        "Id" : 253,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.073300059,
+        "y" : 5787465.948010671
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 204,
+        "Id" : 252,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500698.346355835,
+        "y" : 5787419.9984424356
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 205,
+        "Id" : 251,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.8819656959,
+        "y" : 5787456.9090214809
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 206,
+        "Id" : 250,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500705.9852730595,
+        "y" : 5787419.3558160337
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 207,
+        "Id" : 249,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500720.9687314574,
+        "y" : 5787450.4837837052
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 208,
+        "Id" : 248,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500714.1028788853,
+        "y" : 5787418.8812632468
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 209,
+        "Id" : 247,
+        "pietro" : 4,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500726.2679305356,
+        "y" : 5787444.714115493
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 210,
+        "Id" : 263,
+        "pietro" : 5,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500668.4133132678,
+        "y" : 5787456.3398608509
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 211,
+        "Id" : 262,
+        "pietro" : 5,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500653.8928868519,
+        "y" : 5787463.3504092125
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 212,
+        "Id" : 261,
+        "pietro" : 5,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500657.2011324652,
+        "y" : 5787457.2061674306
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 213,
+        "Id" : 260,
+        "pietro" : 5,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.8439176884,
+        "y" : 5787462.0478835469
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 214,
+        "Id" : 150,
+        "pietro" : 6,
+        "kategoria" : " "
+      },
+      "geometry" : {
+        "x" : 7500676.019412199,
+        "y" : 5787452.5712763052
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 215,
+        "Id" : 266,
+        "pietro" : 6,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500657.3235467523,
+        "y" : 5787457.1468136702
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 216,
+        "Id" : 265,
+        "pietro" : 6,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.8439176884,
+        "y" : 5787462.0478835469
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 217,
+        "Id" : 264,
+        "pietro" : 6,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500668.4133132678,
+        "y" : 5787456.3398608509
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 218,
+        "Id" : 270,
+        "pietro" : 7,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500653.8928868519,
+        "y" : 5787463.3504092125
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 219,
+        "Id" : 269,
+        "pietro" : 7,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500661.8942124676,
+        "y" : 5787462.3292355509
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 220,
+        "Id" : 268,
+        "pietro" : 7,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : 7500668.4610418342,
+        "y" : 5787456.4117351733
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 221,
+        "Id" : 383,
+        "pietro" : 3,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500712.3846744653,
+        "y" : 5787417.3418709356
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 222,
+        "Id" : 386,
+        "pietro" : 3,
+        "kategoria" : "sz"
+      },
+      "geometry" : {
+        "x" : 7500639.2612461429,
+        "y" : 5787447.3284536693
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 223,
+        "Id" : 384,
+        "pietro" : 3,
+        "kategoria" : "bjc"
+      },
+      "geometry" : {
+        "x" : 7500663.7412773976,
+        "y" : 5787418.907956114
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 224,
+        "Id" : 392,
+        "pietro" : 3,
+        "kategoria" : "bjc"
+      },
+      "geometry" : {
+        "x" : 7500701.914664709,
+        "y" : 5787475.2591551403
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 225,
+        "Id" : 394,
+        "pietro" : 3,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500713.6469755974,
+        "y" : 5787461.7600489557
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 226,
+        "Id" : 401,
+        "pietro" : 3,
+        "kategoria" : "si"
+      },
+      "geometry" : {
+        "x" : 7500681.5019068522,
+        "y" : 5787433.8816596782
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 227,
+        "Id" : 393,
+        "pietro" : 3,
+        "kategoria" : "sz"
+      },
+      "geometry" : {
+        "x" : 7500711.2731379196,
+        "y" : 5787463.9541572817
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 228,
+        "Id" : 390,
+        "pietro" : 3,
+        "kategoria" : "bac"
+      },
+      "geometry" : {
+        "x" : 7500663.8445345536,
+        "y" : 5787486.7951076608
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 229,
+        "Id" : 391,
+        "pietro" : 3,
+        "kategoria" : "bac"
+      },
+      "geometry" : {
+        "x" : 7500691.3276000004,
+        "y" : 5787483.3306000009
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 230,
+        "Id" : 404,
+        "pietro" : 3,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500674.8827,
+        "y" : 5787450.1493499987
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 231,
+        "Id" : 399,
+        "pietro" : 3,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500683.1273156432,
+        "y" : 5787452.2525330205
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 232,
+        "Id" : 400,
+        "pietro" : 3,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500680.9420176465,
+        "y" : 5787447.7539639696
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 233,
+        "Id" : 388,
+        "pietro" : 3,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500652.8034742801,
+        "y" : 5787480.7560232589
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 234,
+        "Id" : 389,
+        "pietro" : 3,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500657.8085221583,
+        "y" : 5787484.7279485231
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 235,
+        "Id" : 387,
+        "pietro" : 3,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500648.5294417171,
+        "y" : 5787469.5243369555
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 236,
+        "Id" : 396,
+        "pietro" : 3,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500687.7567784637,
+        "y" : 5787477.7693110593
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 237,
+        "Id" : 397,
+        "pietro" : 3,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500701.2669580495,
+        "y" : 5787467.1359736379
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 238,
+        "Id" : 398,
+        "pietro" : 3,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500697.0809499994,
+        "y" : 5787466.0108999982
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 239,
+        "Id" : 403,
+        "pietro" : 3,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500680.4145,
+        "y" : 5787424.2393499985
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 240,
+        "Id" : 402,
+        "pietro" : 3,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500679.4489999991,
+        "y" : 5787427.6932500005
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 241,
+        "Id" : 395,
+        "pietro" : 3,
+        "kategoria" : "sz sd"
+      },
+      "geometry" : {
+        "x" : 7500726.8753359625,
+        "y" : 5787447.2783939177
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 242,
+        "Id" : 385,
+        "pietro" : 3,
+        "kategoria" : "sz"
+      },
+      "geometry" : {
+        "x" : 7500639.7280193791,
+        "y" : 5787439.322136106
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 243,
+        "Id" : 300,
+        "pietro" : 0,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500711.9531695759,
+        "y" : 5787420.785458656
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 244,
+        "Id" : 309,
+        "pietro" : 0,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500722.2251963336,
+        "y" : 5787452.5657473477
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 245,
+        "Id" : 308,
+        "pietro" : 0,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500720.1497793235,
+        "y" : 5787454.8764357548
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 246,
+        "Id" : 310,
+        "pietro" : 0,
+        "kategoria" : "sklep"
+      },
+      "geometry" : {
+        "x" : 7500715.7809911836,
+        "y" : 5787439.7477988144
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 247,
+        "Id" : 307,
+        "pietro" : 0,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500711.3457063325,
+        "y" : 5787464.0226038694
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 248,
+        "Id" : 301,
+        "pietro" : 0,
+        "kategoria" : "muzeum"
+      },
+      "geometry" : {
+        "x" : 7500682.4506950388,
+        "y" : 5787417.4936264893
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 249,
+        "Id" : 314,
+        "pietro" : 0,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500701.1155331098,
+        "y" : 5787467.0219336394
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 250,
+        "Id" : 315,
+        "pietro" : 0,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500697.5845500007,
+        "y" : 5787465.7502500005
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 251,
+        "Id" : 316,
+        "pietro" : 0,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500688.6729531316,
+        "y" : 5787456.6309227562
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 252,
+        "Id" : 317,
+        "pietro" : 0,
+        "kategoria" : "bac"
+      },
+      "geometry" : {
+        "x" : 7500680.6835938366,
+        "y" : 5787447.5112385256
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 253,
+        "Id" : 318,
+        "pietro" : 0,
+        "kategoria" : "bac"
+      },
+      "geometry" : {
+        "x" : 7500680.6747992951,
+        "y" : 5787433.9695094526
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 254,
+        "Id" : 319,
+        "pietro" : 0,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500679.4393712981,
+        "y" : 5787428.0646200171
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 255,
+        "Id" : 320,
+        "pietro" : 0,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500680.4145,
+        "y" : 5787424.2393499985
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 256,
+        "Id" : 313,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500692.9647000004,
+        "y" : 5787475.6724499986
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 257,
+        "Id" : 322,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500679.9129187791,
+        "y" : 5787460.6188467415
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 258,
+        "Id" : 321,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500668.2809408773,
+        "y" : 5787424.7627976267
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 259,
+        "Id" : 311,
+        "pietro" : 0,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500688.4496067194,
+        "y" : 5787478.299774358
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 260,
+        "Id" : 312,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500686.1836455008,
+        "y" : 5787476.3202751148
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 261,
+        "Id" : 306,
+        "pietro" : 0,
+        "kategoria" : "sek zakladu"
+      },
+      "geometry" : {
+        "x" : 7500691.9074320905,
+        "y" : 5787485.7568420451
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 262,
+        "Id" : 305,
+        "pietro" : 0,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500675.2177529484,
+        "y" : 5787501.3588727722
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 263,
+        "Id" : 323,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500657.2817250825,
+        "y" : 5787451.4172453592
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 264,
+        "Id" : 324,
+        "pietro" : 0,
+        "kategoria" : "biblioteka"
+      },
+      "geometry" : {
+        "x" : 7500651.9072310124,
+        "y" : 5787464.433108802
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 265,
+        "Id" : 303,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500645.2922008997,
+        "y" : 5787443.3085480304
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 266,
+        "Id" : 302,
+        "pietro" : 0,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500638.8151993621,
+        "y" : 5787436.3936764132
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 267,
+        "Id" : 304,
+        "pietro" : 0,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500663.5782999992,
+        "y" : 5787483.8438000008
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 268,
+        "Id" : 325,
+        "pietro" : 1,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500738.6149499994,
+        "y" : 5787430.0759500004
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 269,
+        "Id" : 326,
+        "pietro" : 1,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500735.8815499991,
+        "y" : 5787424.2081499994
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 270,
+        "Id" : 327,
+        "pietro" : 1,
+        "kategoria" : "wyjscie"
+      },
+      "geometry" : {
+        "x" : 7500733.0403000005,
+        "y" : 5787418.3261500001
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 271,
+        "Id" : 328,
+        "pietro" : 1,
+        "kategoria" : "portiernia"
+      },
+      "geometry" : {
+        "x" : 7500736.5990510648,
+        "y" : 5787435.6627276232
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 272,
+        "Id" : 329,
+        "pietro" : 1,
+        "kategoria" : "szatnia"
+      },
+      "geometry" : {
+        "x" : 7500731.8543533431,
+        "y" : 5787437.7584421095
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 273,
+        "Id" : 330,
+        "pietro" : 1,
+        "kategoria" : "bankomat"
+      },
+      "geometry" : {
+        "x" : 7500723.7866500001,
+        "y" : 5787433.6741500013
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 274,
+        "Id" : 331,
+        "pietro" : 1,
+        "kategoria" : "sr"
+      },
+      "geometry" : {
+        "x" : 7500712.2258458743,
+        "y" : 5787416.1996991448
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 275,
+        "Id" : 332,
+        "pietro" : 1,
+        "kategoria" : "sr"
+      },
+      "geometry" : {
+        "x" : 7500705.4356557541,
+        "y" : 5787416.6948024761
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 276,
+        "Id" : 333,
+        "pietro" : 1,
+        "kategoria" : "sr"
+      },
+      "geometry" : {
+        "x" : 7500696.0080498969,
+        "y" : 5787417.3249929929
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 277,
+        "Id" : 334,
+        "pietro" : 1,
+        "kategoria" : "sr"
+      },
+      "geometry" : {
+        "x" : 7500689.5895411177,
+        "y" : 5787417.646778469
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 278,
+        "Id" : 335,
+        "pietro" : 1,
+        "kategoria" : "sr"
+      },
+      "geometry" : {
+        "x" : 7500663.464679583,
+        "y" : 5787419.1879345747
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 279,
+        "Id" : 336,
+        "pietro" : 1,
+        "kategoria" : "si"
+      },
+      "geometry" : {
+        "x" : 7500654.1322481362,
+        "y" : 5787419.5839861427
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 280,
+        "Id" : 337,
+        "pietro" : 1,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500638.2346418845,
+        "y" : 5787422.6010922035
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 281,
+        "Id" : 338,
+        "pietro" : 1,
+        "kategoria" : "dziekanat"
+      },
+      "geometry" : {
+        "x" : 7500639.2728030439,
+        "y" : 5787439.3363476135
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 282,
+        "Id" : 339,
+        "pietro" : 1,
+        "kategoria" : "dziekanat"
+      },
+      "geometry" : {
+        "x" : 7500640.0592350001,
+        "y" : 5787459.6168013792
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 283,
+        "Id" : 340,
+        "pietro" : 1,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500646.5343349399,
+        "y" : 5787470.6541306842
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 284,
+        "Id" : 341,
+        "pietro" : 1,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500648.2814104687,
+        "y" : 5787476.0284990072
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 285,
+        "Id" : 342,
+        "pietro" : 1,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500650.3826827276,
+        "y" : 5787478.1869715741
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 286,
+        "Id" : 343,
+        "pietro" : 1,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500655.2094360711,
+        "y" : 5787482.4026017366
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 287,
+        "Id" : 344,
+        "pietro" : 1,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500670.3342652991,
+        "y" : 5787496.3691694345
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 288,
+        "Id" : 345,
+        "pietro" : 1,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500685.4074137807,
+        "y" : 5787493.1648063567
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 289,
+        "Id" : 346,
+        "pietro" : 1,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500687.4952567564,
+        "y" : 5787490.7242508335
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 290,
+        "Id" : 347,
+        "pietro" : 1,
+        "kategoria" : "pkt gast"
+      },
+      "geometry" : {
+        "x" : 7500701.7134521352,
+        "y" : 5787474.6573665114
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 291,
+        "Id" : 348,
+        "pietro" : 1,
+        "kategoria" : "bac"
+      },
+      "geometry" : {
+        "x" : 7500711.8918293407,
+        "y" : 5787464.8168282192
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 292,
+        "Id" : 349,
+        "pietro" : 1,
+        "kategoria" : "sr"
+      },
+      "geometry" : {
+        "x" : 7500720.181765927,
+        "y" : 5787454.7037370857
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 293,
+        "Id" : 350,
+        "pietro" : 1,
+        "kategoria" : "bac"
+      },
+      "geometry" : {
+        "x" : 7500726.4877588367,
+        "y" : 5787444.3115381114
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 294,
+        "Id" : 351,
+        "pietro" : 1,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500688.2717947308,
+        "y" : 5787478.1519223778
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 295,
+        "Id" : 352,
+        "pietro" : 1,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500701.1662368895,
+        "y" : 5787467.0667573977
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 296,
+        "Id" : 353,
+        "pietro" : 1,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500697.3569275551,
+        "y" : 5787465.9624392996
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 297,
+        "Id" : 354,
+        "pietro" : 1,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500689.2192507284,
+        "y" : 5787456.4717730014
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 298,
+        "Id" : 355,
+        "pietro" : 1,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500674.8827,
+        "y" : 5787450.1493499987
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 299,
+        "Id" : 356,
+        "pietro" : 1,
+        "kategoria" : "biblioteka"
+      },
+      "geometry" : {
+        "x" : 7500673.993828088,
+        "y" : 5787453.7676893864
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 300,
+        "Id" : 357,
+        "pietro" : 1,
+        "kategoria" : "biblioteka"
+      },
+      "geometry" : {
+        "x" : 7500651.4986185282,
+        "y" : 5787464.5458326405
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 301,
+        "Id" : 358,
+        "pietro" : 1,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500680.9163242523,
+        "y" : 5787437.4557094602
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 302,
+        "Id" : 359,
+        "pietro" : 1,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500679.4489999991,
+        "y" : 5787427.6932500005
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 303,
+        "Id" : 360,
+        "pietro" : 1,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500680.4145,
+        "y" : 5787424.2393499985
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 304,
+        "Id" : 361,
+        "pietro" : 1,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500639.0151610896,
+        "y" : 5787433.1280916091
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 305,
+        "Id" : 362,
+        "pietro" : 2,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500712.1765678274,
+        "y" : 5787415.782441156
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 306,
+        "Id" : 363,
+        "pietro" : 2,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500705.3312766422,
+        "y" : 5787416.1280769398
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 307,
+        "Id" : 364,
+        "pietro" : 2,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500689.4707485149,
+        "y" : 5787417.1743548512
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 308,
+        "Id" : 365,
+        "pietro" : 2,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500638.3977664458,
+        "y" : 5787430.0424778294
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 309,
+        "Id" : 366,
+        "pietro" : 2,
+        "kategoria" : "sd"
+      },
+      "geometry" : {
+        "x" : 7500639.4635967836,
+        "y" : 5787447.3535684682
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 310,
+        "Id" : 367,
+        "pietro" : 2,
+        "kategoria" : "si"
+      },
+      "geometry" : {
+        "x" : 7500640.0073394813,
+        "y" : 5787459.9452007143
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 311,
+        "Id" : 368,
+        "pietro" : 2,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500646.2579955561,
+        "y" : 5787470.5325115295
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 312,
+        "Id" : 369,
+        "pietro" : 2,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500648.4579984378,
+        "y" : 5787476.659065132
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 313,
+        "Id" : 370,
+        "pietro" : 2,
+        "kategoria" : "sz"
+      },
+      "geometry" : {
+        "x" : 7500678.4971082956,
+        "y" : 5787500.384325075
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 314,
+        "Id" : 371,
+        "pietro" : 2,
+        "kategoria" : "bca"
+      },
+      "geometry" : {
+        "x" : 7500727.4279249879,
+        "y" : 5787447.8630233854
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 315,
+        "Id" : 372,
+        "pietro" : 2,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500721.40688146,
+        "y" : 5787431.0379866576
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 316,
+        "Id" : 373,
+        "pietro" : 2,
+        "kategoria" : "bca"
+      },
+      "geometry" : {
+        "x" : 7500682.8630003873,
+        "y" : 5787452.1496054865
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 317,
+        "Id" : 374,
+        "pietro" : 2,
+        "kategoria" : "sz"
+      },
+      "geometry" : {
+        "x" : 7500681.0003884081,
+        "y" : 5787440.1729720877
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 318,
+        "Id" : 375,
+        "pietro" : 2,
+        "kategoria" : "biblioteka"
+      },
+      "geometry" : {
+        "x" : 7500673.4998678453,
+        "y" : 5787453.6693299776
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 319,
+        "Id" : 376,
+        "pietro" : 2,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500700.8967110422,
+        "y" : 5787466.8762754379
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 320,
+        "Id" : 377,
+        "pietro" : 2,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500697.2047809791,
+        "y" : 5787465.5325227873
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 321,
+        "Id" : 378,
+        "pietro" : 2,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500687.9903114457,
+        "y" : 5787477.8575402647
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 322,
+        "Id" : 379,
+        "pietro" : 2,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500675.0473811785,
+        "y" : 5787450.1013367381
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 323,
+        "Id" : 380,
+        "pietro" : 2,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500680.437738942,
+        "y" : 5787423.9409563132
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 324,
+        "Id" : 381,
+        "pietro" : 2,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500679.0340376878,
+        "y" : 5787427.6608408699
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 325,
+        "Id" : 382,
+        "pietro" : 2,
+        "kategoria" : ""
+      },
+      "geometry" : {
+        "x" : "NaN",
+        "y" : "NaN"
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 326,
+        "Id" : 405,
+        "pietro" : 3,
+        "kategoria" : "biblioteka"
+      },
+      "geometry" : {
+        "x" : 7500673.628873907,
+        "y" : 5787453.728727621
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 327,
+        "Id" : 406,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500705.099917151,
+        "y" : 5787416.6762787094
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 328,
+        "Id" : 407,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500686.3103095079,
+        "y" : 5787417.70171287
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 329,
+        "Id" : 408,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500674.9375245944,
+        "y" : 5787418.0420177132
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 330,
+        "Id" : 409,
+        "pietro" : 4,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500639.702377378,
+        "y" : 5787417.6070511797
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 331,
+        "Id" : 410,
+        "pietro" : 4,
+        "kategoria" : "siedziba org"
+      },
+      "geometry" : {
+        "x" : 7500650.0082062772,
+        "y" : 5787417.3263721103
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 332,
+        "Id" : 411,
+        "pietro" : 4,
+        "kategoria" : "bjc"
+      },
+      "geometry" : {
+        "x" : 7500647.6934799459,
+        "y" : 5787420.8142186562
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 333,
+        "Id" : 412,
+        "pietro" : 4,
+        "kategoria" : "si"
+      },
+      "geometry" : {
+        "x" : 7500644.2381244525,
+        "y" : 5787457.3848123783
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 334,
+        "Id" : 413,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500702.498970828,
+        "y" : 5787474.9565242575
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 335,
+        "Id" : 414,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500712.6446635285,
+        "y" : 5787462.1242862865
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 336,
+        "Id" : 415,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500726.582953901,
+        "y" : 5787448.034418962
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 337,
+        "Id" : 416,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500686.8765499331,
+        "y" : 5787454.5074595585
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 338,
+        "Id" : 417,
+        "pietro" : 4,
+        "kategoria" : "sala"
+      },
+      "geometry" : {
+        "x" : 7500682.852558217,
+        "y" : 5787449.0708811218
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 339,
+        "Id" : 418,
+        "pietro" : 4,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500701.0187385892,
+        "y" : 5787467.1806241302
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 340,
+        "Id" : 419,
+        "pietro" : 4,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500697.6984253032,
+        "y" : 5787465.8825357249
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 341,
+        "Id" : 420,
+        "pietro" : 4,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500687.8959097955,
+        "y" : 5787477.6351491679
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 342,
+        "Id" : 421,
+        "pietro" : 4,
+        "kategoria" : "winda"
+      },
+      "geometry" : {
+        "x" : 7500680.6252999995,
+        "y" : 5787424.0362999998
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 343,
+        "Id" : 422,
+        "pietro" : 4,
+        "kategoria" : "toaleta"
+      },
+      "geometry" : {
+        "x" : 7500679.3727526991,
+        "y" : 5787427.6160009485
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 344,
+        "Id" : 423,
+        "pietro" : 0,
+        "kategoria" : "aula"
+      },
+      "geometry" : {
+        "x" : 7500700.938569122,
+        "y" : 5787440.6345439926
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 345,
+        "Id" : 424,
+        "pietro" : 0,
+        "kategoria" : " winda"
+      },
+      "geometry" : {
+        "x" : 7500674.9248978319,
+        "y" : 5787449.8878436806
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 346,
+        "Id" : 271,
+        "pietro" : 3,
+        "kategoria" : " "
+      },
+      "geometry" : {
+        "x" : 7500678.6838672999,
+        "y" : 5787451.5328031369
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 347,
+        "Id" : 272,
+        "pietro" : 4,
+        "kategoria" : " "
+      },
+      "geometry" : {
+        "x" : 7500711.5251294924,
+        "y" : 5787420.5709019247
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 348,
+        "Id" : 273,
+        "pietro" : 4,
+        "kategoria" : " "
+      },
+      "geometry" : {
+        "x" : 7500723.1802305542,
+        "y" : 5787447.7676736219
+      }
+    },
+    {
+      "attributes" : {
+        "FID" : 349,
+        "Id" : 425,
+        "pietro" : 6,
+        "kategoria" : " "
+      },
+      "geometry" : {
+        "x" : 7500675.0438601216,
+        "y" : 5787449.7357290154
+      }
+    }
+  ]
+}

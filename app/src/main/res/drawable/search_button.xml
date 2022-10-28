@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#E6F6E6"/>
+                    <corners android:radius="20dp"/>
+                    <padding android:left="20dp"/>
+                    <padding android:right="20dp"/>
+                    <padding android:bottom="0dp"/>
+                    <padding android:top="0dp"/>
+                    <stroke android:color="#6DA66B"
+                        android:width="3dp"/>
+                </shape>
+            </item>
+            <item android:gravity="left|center_vertical"
+                android:drawable="@drawable/ic_lupa"/>
+        </layer-list>
+    </item>
+</selector>

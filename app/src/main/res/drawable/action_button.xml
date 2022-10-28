@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#FFAD63"/>
+                    <corners android:radius="25dp"/>
+                    <padding android:left="10dp"/>
+                    <padding android:right="10dp"/>
+                    <padding android:bottom="10dp"/>
+                    <padding android:top="10dp"/>
+                </shape>
+            </item>
+            <item android:gravity="center"
+                android:drawable="@drawable/ic_three_dots"/>
+        </layer-list>
+    </item>
+</selector>

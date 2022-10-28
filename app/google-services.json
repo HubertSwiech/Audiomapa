@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "996216345964",
+    "firebase_url": "https://komunikatypw-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "komunikatypw",
+    "storage_bucket": "komunikatypw.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996216345964:android:9352ff7b41802e09b40f49",
+        "android_client_info": {
+          "package_name": "com.example.gg_dyplom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996216345964-1b569pecnddqifep0jtgi4o97thf2bpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2QzDJzRFr5Yhyla3ouRuiRtwrqdKyUEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996216345964-1b569pecnddqifep0jtgi4o97thf2bpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

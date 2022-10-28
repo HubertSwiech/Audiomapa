@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFFFF"
+    android:clickable="true"
+    tools:context=".FragmentSearchBar"
+    android:focusable="true">
+
+
+    <SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:iconifiedByDefault="false"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/search_bar_edit"
+
+        android:queryHint="ODSZUKAJ PUNKT"/>
+
+    <ListView
+        android:id="@+id/poiList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBar"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/listview_bcg"
+        android:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="720dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="5dp"
+        android:text="Powrót do mapy"
+        android:textSize="0dp"
+        android:background="@drawable/back_arrow_bcg" />
+</FrameLayout>

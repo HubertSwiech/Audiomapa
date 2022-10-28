@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#FFAD63"/>
+                    <corners android:radius="25dp"/>
+
+                </shape>
+            </item>
+            <item android:gravity="center"
+                android:width="36dp"
+                android:height="36dp"
+                android:drawable="@drawable/ic_edit"/>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:id="@+id/tableLay"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:clickable="true"
+    android:background="#FFFFFF"
+    android:focusable="true">
+
+
+    <RelativeLayout android:layout_width="600dp"
+        android:id="@+id/rel"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="300dp"
+            android:text="Powrót do mapy."
+            android:textSize="0dp"
+            android:background="@drawable/back_arrow_bcg" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Komentarze"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+
+
+    <TableRow android:background="@drawable/top_menu_btn"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:backgroundTint="#A0CA94"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="l.p."
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Lokal-\nizacja"
+            android:textColor="#000000"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Cel" />
+
+        <TextView
+            android:layout_width="147dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Komentarz" />
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B3B3B3"></TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</TableLayout>

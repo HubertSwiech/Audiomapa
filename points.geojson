@@ -1,0 +1,6726 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010798826952694,
+          52.220477012439289
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 1,
+        "IDP" : 0,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E5F86E4F-F647-4421-9E66-47517207AB36}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010758724213133,
+          52.220424213437823
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 2,
+        "IDP" : 1,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{56C77ED5-9FD3-4F98-B4B9-DBACB5429B01}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.0107155807219,
+          52.220371629948282
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 3,
+        "IDP" : 2,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{015207E2-6964-4C64-B629-91B8D3C7AD62}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010645123803513,
+          52.220527118523975
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 4,
+        "IDP" : 3,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{38C30BE6-9899-44A2-816C-B9426C03A933}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010594893621732,
+          52.220472235288192
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 5,
+        "IDP" : 4,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9B685C20-1B80-46C0-A110-627395468171}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01055635854792,
+          52.220419250298178
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 6,
+        "IDP" : 5,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{973D17F2-C8A3-4A40-B4BE-764B28BCDCFD}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010587951723206,
+          52.220605532669026
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 7,
+        "IDP" : 6,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{81758767-9877-42D6-B5C8-958F6630A1EC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010555245306435,
+          52.220547165765353
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 8,
+        "IDP" : 7,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{56018A95-A066-4D15-85DC-F89175627565}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 9,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010517481669044,
+          52.220494853912392
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 9,
+        "IDP" : 8,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{89541E5B-E81F-461C-B6DF-5970B5D2600E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 10,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010476815903566,
+          52.220443135680135
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 10,
+        "IDP" : 9,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{C7AD0F66-4D40-41FA-BC49-9B5F6AD7B189}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 11,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010434213711125,
+          52.220396173546291
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 11,
+        "IDP" : 10,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{A3F12F9F-F823-46E1-9976-D5AC3384AB1D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 12,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010384575702457,
+          52.220535588070511
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 12,
+        "IDP" : 11,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{D3D3D9C5-BD7F-42AF-BF74-672AF650E8B1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 13,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010324514407497,
+          52.220809000566206
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 13,
+        "IDP" : 12,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{18AC2CE7-C8A5-4C29-9F7D-6B4A0C3E4C51}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 14,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010024819014681,
+          52.220641262831485
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 14,
+        "IDP" : 13,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8D86A3A8-432B-4A55-BD3D-F7AB47E1A2AA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 15,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009995723191121,
+          52.220390861363235
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 15,
+        "IDP" : 14,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{7B24B7FD-427B-4C9F-92A3-2A1A966706D2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 16,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010283507161432,
+          52.220838138713745
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 16,
+        "IDP" : 15,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{52C63F83-65FA-4AF2-AAEF-F94FEE0B25C7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 17,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009933773905345,
+          52.220391341973674
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 17,
+        "IDP" : 16,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{FDB4C5C7-BAC6-43BD-A549-411C4551212A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 18,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010129007360216,
+          52.220941040358689
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 18,
+        "IDP" : 17,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{65A0FB7A-61A1-4971-AF51-AD9D6CB636EF}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 19,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009906051507858,
+          52.221089763958744
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 19,
+        "IDP" : 18,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{63C53324-69F3-4B7F-ACC0-B934350F0C35}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 20,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009383198300153,
+          52.220408508686845
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 20,
+        "IDP" : 19,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5608BD50-FD5D-4315-9838-921833FF3E54}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 21,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009696943148217,
+          52.220975637638688
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 21,
+        "IDP" : 20,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9C103DBB-0FA7-4B9B-A76F-E93EDD07B7D3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 22,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009389045236222,
+          52.220591139042185
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 22,
+        "IDP" : 21,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{56E1B039-340F-405A-82DB-0F4D4441BD3F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 23,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009485499122921,
+          52.220796591046174
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 23,
+        "IDP" : 22,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{F63C44C5-527A-4D2C-9A69-260ED11AC86A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 24,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009681751263209,
+          52.220742059518656
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 24,
+        "IDP" : 23,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{A353D4F3-42D9-4F87-9308-8F5EDD291578}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 25,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009892793341582,
+          52.220677316782002
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 25,
+        "IDP" : 24,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{40ACD76A-CBFF-489A-BDED-4C396379F934}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 26,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010237547134217,
+          52.22082043320561
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 26,
+        "IDP" : 25,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{69CCD1E5-F6DE-4987-B648-67739C8F9395}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 27,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009932256216729,
+          52.220422981487637
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 27,
+        "IDP" : 26,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{6AA4DA83-CED7-443B-8DC1-F23EE0682098}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 28,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009659648733308,
+          52.220993344825764
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 28,
+        "IDP" : 27,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{CFD8D05A-6499-41B8-A916-F9B7BBA91B62}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 29,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009339860440704,
+          52.22059479834104
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 29,
+        "IDP" : 28,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{6A695D1D-C74F-4BE9-8B1D-DB1879AF4342}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 30,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010205885673908,
+          52.220797255444282
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 30,
+        "IDP" : 29,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{92A6DE8E-1925-44D2-BF04-426F8D779A39}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 31,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00994019041681,
+          52.220450662420234
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 31,
+        "IDP" : 30,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{1DC084C0-FD5F-4125-886A-18265DF3BA99}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 32,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010085173642025,
+          52.220915614395814
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 32,
+        "IDP" : 31,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{65856374-A089-428D-96BC-E915685A03F2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 33,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010683388150834,
+          52.220147743791095
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 33,
+        "IDP" : 33,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{3E8A921E-FE07-4D79-871D-3C7CD0BA6528}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 34,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.011039186363391,
+          52.220640933073192
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 34,
+        "IDP" : 34,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{0D3518E5-899C-4A8A-BD8A-8E1416B2B787}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 35,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.011102038288122,
+          52.220332182809102
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 35,
+        "IDP" : 35,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{654C813C-766A-4436-A643-68738181FBC0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 36,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010809023382478,
+          52.220410769009462
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 36,
+        "IDP" : 32,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{CC02BF75-A360-4180-B8EA-16C1B941F122}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 37,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010584131527146,
+          52.220611222154076
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 37,
+        "IDP" : 36,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B9BA4394-E214-4BDB-8CA9-83ADE87B9B7F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 38,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010434213711125,
+          52.220396173546291
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 38,
+        "IDP" : 37,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{85319716-89D0-4D88-A240-8DF8950BC0CE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 39,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010244590537646,
+          52.220575361532831
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 39,
+        "IDP" : 39,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{D89A7C62-E40F-48EB-97C2-B01F39D246CA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 40,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010324514407497,
+          52.220809000566206
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 40,
+        "IDP" : 40,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{C447AA61-9999-440B-BEBC-3BA01FFCB7A7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 41,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009995723191121,
+          52.220390861363235
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 41,
+        "IDP" : 41,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{7D02CAF2-D2BA-4B81-9047-544B01D31635}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 42,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010283507161432,
+          52.220838138713745
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 42,
+        "IDP" : 42,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B7F6A992-3EAB-47E5-BCE5-BBF8F23DFBC9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 43,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010024819014681,
+          52.220641262831485
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 43,
+        "IDP" : 43,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{F41D015F-825B-4C45-B8F1-9A6F1E3250E3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 44,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009933773905345,
+          52.220391341973674
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 44,
+        "IDP" : 44,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{6BB0CBC3-E852-431D-97A1-CC0F742DB7E0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 45,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010129007360216,
+          52.220941040358689
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 45,
+        "IDP" : 45,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5BA8204E-6026-48F7-9962-0E5727DD4C05}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 46,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009892793341582,
+          52.220677316782002
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 46,
+        "IDP" : 46,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{CA6218F1-C662-4D7C-9FCD-34377D08C84C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 47,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009681751263209,
+          52.220742059518656
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 47,
+        "IDP" : 47,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E16DF4D3-E2D4-4944-A4DB-4E1F58A48D17}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 48,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009906051507858,
+          52.221089763958744
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 48,
+        "IDP" : 48,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{7F45AFBB-DB3E-4660-B0B2-5FDFDFFBB11B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 49,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009696943148217,
+          52.220975637638688
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 49,
+        "IDP" : 49,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B1972569-D0E0-4F36-934E-6C27274CB9B8}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 50,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009485499122921,
+          52.220796591046174
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 50,
+        "IDP" : 50,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{CBEBFBC0-5DCB-4A4A-BFBB-9269D4CA6CA0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 51,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009389045236222,
+          52.220591139042185
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 51,
+        "IDP" : 51,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{2E26090C-9FC4-41DA-867B-C677BEE98425}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 52,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00938534587619,
+          52.220467588847725
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 52,
+        "IDP" : 52,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{D4A3B8C7-AF24-448B-BF9B-E18A726A54D4}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 53,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010241477502142,
+          52.220817732591719
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 53,
+        "IDP" : 53,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{A9794348-CF7A-44A2-A5F7-0B58F2317AD9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 54,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009935718023286,
+          52.220423039444086
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 54,
+        "IDP" : 54,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{DABF6ADA-9C57-4895-B513-C4FA3D56E8D9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 55,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009659648733308,
+          52.220993344825764
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 55,
+        "IDP" : 55,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8E0C57DF-F042-478F-BA17-5B3422D1A6CB}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 56,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009339860440704,
+          52.22059479834104
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 56,
+        "IDP" : 56,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{461EAC3F-4E1F-4D76-8D15-77A93844FEF7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 57,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010208402041673,
+          52.220795738339582
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 57,
+        "IDP" : 57,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{C765E8E2-6BB9-4228-B832-DAB49C278EC7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 58,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009944303065769,
+          52.220453262883048
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 58,
+        "IDP" : 58,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8497C9BA-3241-44A9-9906-1DF65AD509B0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 59,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010085173642025,
+          52.220915614395814
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 59,
+        "IDP" : 59,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{1A92742E-DA99-48B6-B38F-B83F9439647E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 60,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010134261510245,
+          52.220888694357171
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 60,
+        "IDP" : 60,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{AF78451C-CDF0-4F4A-A6AB-D0F03DF27741}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 61,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010045021697803,
+          52.220892780026546
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 61,
+        "IDP" : 61,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9BEC87B1-840A-442B-8F1A-3E696FE89670}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 62,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009923559955077,
+          52.220912609292753
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 62,
+        "IDP" : 62,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{7C03165B-A2AF-4FD2-A703-9C1FFF7C374D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 63,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009821372019839,
+          52.221022800924757
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 63,
+        "IDP" : 63,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{027C0F70-84F1-4899-A553-7E41657AA86D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 64,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009723092660369,
+          52.220951676481803
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 64,
+        "IDP" : 64,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{404A67FB-CE74-4819-95D7-510FC422A691}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 65,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009779493906201,
+          52.220427391747045
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 65,
+        "IDP" : 65,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{7A5CD2DB-4CF2-439A-B5B2-68DD4FAB2C1E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 66,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009623262282808,
+          52.220525665684157
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 66,
+        "IDP" : 66,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{433A6967-25A1-4B3B-AEFE-934FA07B62FA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 67,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009616927376317,
+          52.220665204860836
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 67,
+        "IDP" : 67,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{AE02AE90-7D64-49AA-B971-30E0026702E9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 68,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009443115957282,
+          52.220594102952575
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 68,
+        "IDP" : 68,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{215DDC76-38ED-419C-9C25-01AB478F411E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 69,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009431074597661,
+          52.220657610902016
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 69,
+        "IDP" : 69,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E9EC86BB-0FF9-41CC-A958-3682C8515FC7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 70,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009970437878465,
+          52.221317224095486
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 70,
+        "IDP" : 70,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{980A6166-1451-4644-8D10-0012D83E724F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 71,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009672493435527,
+          52.221108849983928
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 71,
+        "IDP" : 71,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B65D3075-9767-4749-98B6-349D295105F2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 72,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00907839692055,
+          52.22094433512089
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 72,
+        "IDP" : 72,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{AD2D4332-B621-43C0-8AD3-E6CC1F9C91BA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 73,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009191922651102,
+          52.220656259971889
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 73,
+        "IDP" : 73,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5469E792-0CB9-47C9-9011-AE1097D68E8B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 74,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010366458233158,
+          52.220542431430587
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 74,
+        "IDP" : 38,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{0177E3A1-A34B-4F5D-A21A-B44F366BC7D7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 75,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010584131527146,
+          52.220611222154076
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 75,
+        "IDP" : 74,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{BD59FC68-66D8-4A89-99BF-EAE5D19F6128}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 76,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010555245306435,
+          52.220547165765353
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 76,
+        "IDP" : 75,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{F79B54A5-132F-4CB5-9FE6-14305DEE2C21}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 77,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010517481669044,
+          52.220494853912392
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 77,
+        "IDP" : 76,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{A2ECE576-1C9F-4CC0-B8D3-9DAFA193EEE9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 78,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010476815903566,
+          52.220443135680135
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 78,
+        "IDP" : 77,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8A39FFF7-B797-4731-A72B-E7068AFD24F7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 79,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010429893708942,
+          52.22039689387794
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 79,
+        "IDP" : 78,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{608C9698-E0BD-4E5F-B699-28C15D5E131A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 80,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010384575702457,
+          52.220535588070511
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 80,
+        "IDP" : 79,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{66B5CF5C-F0AA-4A61-929A-54A8F51F47B9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 81,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010324514407497,
+          52.220809000566206
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 81,
+        "IDP" : 80,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{F96A1386-BCA8-4F7D-8A3C-87D0A0B9EF2F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 82,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010024819014681,
+          52.220641262831485
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 82,
+        "IDP" : 81,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{CC3171C5-F8B5-45C3-A476-7805188D7F4E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 83,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009995723191121,
+          52.220390861363235
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 83,
+        "IDP" : 82,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{DCCD626A-00A2-4D8A-AB8C-98C2386ECBA1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 84,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010283507161432,
+          52.220838138713745
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 84,
+        "IDP" : 83,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{52B1D705-EF52-4760-935C-53C6797B3F2F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 85,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009892793341582,
+          52.220677316782002
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 85,
+        "IDP" : 84,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E2482B67-27ED-4A06-9B84-98646A7718BE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 86,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009933773905345,
+          52.220391341973674
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 86,
+        "IDP" : 85,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{867C57FB-7FC1-461C-8DA2-A9C8846A2541}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 87,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010129007360216,
+          52.220941040358689
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 87,
+        "IDP" : 86,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{ACAA1413-BA1C-4F88-A9CA-613A26F69066}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 88,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009906051507858,
+          52.221089763958744
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 88,
+        "IDP" : 87,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{28EDA440-AAB1-4BEF-B9FC-C4F92960BA66}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 89,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009383198300153,
+          52.220408508686845
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 89,
+        "IDP" : 88,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{1C8796C7-C6F9-4ACA-8F71-DB22CD9F79E9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 90,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009696943148217,
+          52.220975637638688
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 90,
+        "IDP" : 89,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8679EF2D-8ECB-42F6-A105-2E4D94448DF1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 91,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009389045236222,
+          52.220591139042185
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 91,
+        "IDP" : 90,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{4664971C-1281-4DCD-8215-442EB9F50579}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 92,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009485499122921,
+          52.220796591046174
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 92,
+        "IDP" : 91,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{392142F2-3D54-477E-8E80-2D43B334B009}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 93,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010237547134217,
+          52.22082043320561
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 93,
+        "IDP" : 92,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{CAC74164-91DE-4224-8CF5-AF3CA6337E0D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 94,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009932256216729,
+          52.220422981487637
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 94,
+        "IDP" : 93,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{C544A093-DB39-4A0A-946A-9FAB6927E709}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 95,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010085173642025,
+          52.220915614395814
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 95,
+        "IDP" : 94,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9C91258F-69F9-4488-A512-E9D46B6C8498}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 96,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009659648733308,
+          52.220993344825764
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 96,
+        "IDP" : 95,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{47D53B5C-398B-4E2F-8C4C-7194DB7EEDE9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 97,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00933662544222,
+          52.220596358247846
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 97,
+        "IDP" : 96,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{20934976-F2F4-42C1-9EE5-04D31E98F710}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 98,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010205071471109,
+          52.22079764619447
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 98,
+        "IDP" : 97,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{31ED23E0-4F80-4DD9-9F2E-E68D9BD9F256}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 99,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009940584319676,
+          52.220451180100568
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 99,
+        "IDP" : 98,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9F782F0C-E287-424A-94FA-A1EE51C402C0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 100,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009944372674461,
+          52.220453636776028
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 100,
+        "IDP" : 122,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{114F65AD-D2C0-48DB-86C2-AA417A08D602}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 101,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010584131527146,
+          52.220611222154076
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 101,
+        "IDP" : 99,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B945C9E2-2802-44A1-90F3-6058AC143DCA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 102,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010555245306435,
+          52.220547165765353
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 102,
+        "IDP" : 100,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{3096A8EA-2757-463D-A747-0F2F1496FE6D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 103,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010517481669044,
+          52.220494853912392
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 103,
+        "IDP" : 101,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{4AD9D717-5563-463A-A920-03555DF895EC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 104,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010476815903566,
+          52.220443135680135
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 104,
+        "IDP" : 102,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{397882C3-C591-4D15-A7E7-AB02C341E2B3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 105,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010429893708942,
+          52.22039689387794
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 105,
+        "IDP" : 103,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{D420E323-029F-411F-91C0-AE4A4120B1AF}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 106,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010324514407497,
+          52.220809000566206
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 106,
+        "IDP" : 104,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B6E19E47-2A9B-4630-8AF5-F744BB2175A2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 107,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010024819014681,
+          52.220641262831485
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 107,
+        "IDP" : 105,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{AA0A2A58-D400-4EC5-B137-6AC401B80C41}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 108,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009995723191121,
+          52.220390861363235
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 108,
+        "IDP" : 106,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B7DB8359-4247-4611-99E4-CE9BC76D0A2E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 109,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010283507161432,
+          52.220838138713745
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 109,
+        "IDP" : 107,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{722E31EB-7853-4EB5-8916-72984A8181A7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 110,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009892793341582,
+          52.220677316782002
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 110,
+        "IDP" : 108,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{4CC9A05B-414A-4445-8473-3F039ECC46A2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 111,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009933773905345,
+          52.220391341973674
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 111,
+        "IDP" : 109,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{F2844729-80C5-45A7-8128-51AF71527851}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 112,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010129007360216,
+          52.220941040358689
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 112,
+        "IDP" : 110,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{FDF39839-126B-4C02-B6DC-A4C48772D7F6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 113,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009906051507858,
+          52.221089763958744
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 113,
+        "IDP" : 111,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{B14A242D-5FE0-40A6-A3E6-1D5E4FE2B11D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 114,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009383198300153,
+          52.220408508686845
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 114,
+        "IDP" : 112,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5192AD59-05D2-4861-9F61-DD84EB60C58B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 115,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009696943148217,
+          52.220975637638688
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 115,
+        "IDP" : 113,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5AF5294D-FAE7-48A0-BDFF-94B255D5756E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 116,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009389045236222,
+          52.220591139042185
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 116,
+        "IDP" : 114,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{3D6D65D8-26B9-463B-9B0D-CD9F6E561CDB}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 117,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009500198934049,
+          52.220794684755745
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 117,
+        "IDP" : 115,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{1BD14B86-DBEA-48F4-A7C7-48A5FB34E43D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 118,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010237547134217,
+          52.22082043320561
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 118,
+        "IDP" : 116,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9E1B9D0D-FE83-4613-9D96-A03950DD2973}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 119,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009932256216729,
+          52.220422981487637
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 119,
+        "IDP" : 117,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{FD702256-1C1F-4FAE-B0B5-E308F3E951CE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 120,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009659648733308,
+          52.220993344825764
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 120,
+        "IDP" : 118,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E16D25F6-B7C1-4CD6-8036-59FE14515CE1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 121,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009339860440704,
+          52.22059479834104
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 121,
+        "IDP" : 119,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{EEF1A9C9-98B2-4052-94BF-14008B5EF775}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 122,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010085173642025,
+          52.220915614395814
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 122,
+        "IDP" : 120,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{4B23EDF3-11F6-4623-BFE3-08A42163B86D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 123,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010206250631544,
+          52.220797229437778
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 123,
+        "IDP" : 121,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{697C8AD7-C599-4A5D-8317-C98B57B29F68}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 124,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009941688704643,
+          52.220451604724929
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 124,
+        "IDP" : 143,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{0D6E73BC-78E7-41F9-8C3A-9961A598FD51}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 125,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010584131527146,
+          52.220611222154076
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 125,
+        "IDP" : 123,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{6BF225C1-AF07-4219-9970-F2384907DB35}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 126,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010517481669044,
+          52.220494853912392
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 126,
+        "IDP" : 124,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5083077F-7D8F-4C97-991C-63FA90C2EA14}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 127,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010429893708942,
+          52.22039689387794
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 127,
+        "IDP" : 125,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{3FB0FE51-6F33-46A1-B2EF-52CAEE3E91A6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 128,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010324514407497,
+          52.220809000566206
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 128,
+        "IDP" : 126,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9C8A117F-0C94-4FDC-A5C0-1FB88EEF74F2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 129,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010022903531382,
+          52.220642854245483
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 129,
+        "IDP" : 127,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E7E88A96-8C27-4A0F-AAA6-AC2F46F5D351}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 130,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009995723191121,
+          52.220390861363235
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 130,
+        "IDP" : 128,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8B39B0D0-A1ED-4876-81F4-2DB1E19AF1F2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 131,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010283507161432,
+          52.220838138713745
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 131,
+        "IDP" : 129,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{9A3B5B46-B8FE-4CC1-B990-0C3DB5FF82A3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 132,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009933773905345,
+          52.220391341973674
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 132,
+        "IDP" : 130,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{0596EBF0-3D6B-455E-BC35-4BD340F20245}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 133,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010129007360216,
+          52.220941040358689
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 133,
+        "IDP" : 131,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{7B456177-CC68-4096-8597-5D63E1ECEF4B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 134,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009990684807196,
+          52.221135950873055
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 134,
+        "IDP" : 132,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{4D316A0A-92A3-4F9A-B18D-92E4C74C25EC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 135,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009372705302312,
+          52.220383051612217
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 135,
+        "IDP" : 133,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{52FA2D82-FA53-4373-88A4-F8E85605410C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 136,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009696943148217,
+          52.220975637638688
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 136,
+        "IDP" : 134,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{8F63E676-DBAD-4A8D-9469-DF4624E0B584}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 137,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009389045236222,
+          52.220591139042185
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 137,
+        "IDP" : 135,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{ED35B616-7B0F-4A68-964F-C92DF6A172EC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 138,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009445662012816,
+          52.220816626126002
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 138,
+        "IDP" : 136,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{945F7B6F-20BE-4E7A-9ED3-959B45FD6EC3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 139,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010237547134217,
+          52.22082043320561
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 139,
+        "IDP" : 137,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{E0E3F507-EC00-4F18-B7D6-B4D7CF4329A9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 140,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009932256216729,
+          52.220422981487637
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 140,
+        "IDP" : 138,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{3AC87560-79D8-4699-AC02-56F338532F9B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 141,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009659648733308,
+          52.220993344825764
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 141,
+        "IDP" : 139,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{6A06F1B4-D5E4-446C-823E-EDD4F5662FBE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 142,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009339860440704,
+          52.22059479834104
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 142,
+        "IDP" : 140,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{4A35C083-9B5B-491E-9E06-26839F5A2999}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 143,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010085173642025,
+          52.220915614395814
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 143,
+        "IDP" : 141,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5FDF1076-DA0B-42AB-8E0B-DEC5B5D40D0E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 144,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010207981990472,
+          52.220795290364819
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 144,
+        "IDP" : 142,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{A2DA2328-0A12-4877-AA2C-AE82F1A13930}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 145,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009856946202618,
+          52.220690548804079
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 145,
+        "IDP" : 144,
+        "FLOOR" : 5,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{F9616B4F-7A9E-4A26-89EE-198EF54C1283}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 146,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009671976852715,
+          52.220744293892139
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 146,
+        "IDP" : 145,
+        "FLOOR" : 5,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{96E127C9-3DA0-4941-B324-E0C3D29B1355}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 147,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009856946202618,
+          52.220690548804079
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 147,
+        "IDP" : 146,
+        "FLOOR" : 6,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{DC7D87E5-4172-4A41-AE38-1C65108526E1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 148,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009671976852715,
+          52.220744293892139
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 148,
+        "IDP" : 147,
+        "FLOOR" : 6,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{43534D94-73A6-4F18-80A4-944A801EDA33}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 149,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009855680371441,
+          52.22069164073644
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 149,
+        "IDP" : 148,
+        "FLOOR" : 7,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{5606F3F6-D35F-4C5B-BF8F-B0AC4D10DDF8}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 150,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009671976852715,
+          52.220744293892139
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 150,
+        "IDP" : 149,
+        "FLOOR" : 7,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{71584C93-E80E-45E5-937B-E1FEAE4BA453}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 151,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010375409251743,
+          52.220416474583466
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 151,
+        "IDP" : 200,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{CD599DD4-170E-452B-AD45-96DA0799225D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 152,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010461512585497,
+          52.220716254177738
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 152,
+        "IDP" : 201,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{FDB52671-FEDF-4925-9E2C-5288F62FC35C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 153,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010219455598975,
+          52.220384533757475
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 153,
+        "IDP" : 202,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{3412BB33-1B99-4A0C-9208-4254332D4DC4}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 154,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010315225297354,
+          52.220760085579442
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 154,
+        "IDP" : 203,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{48D5C12E-C3C1-4CBA-B500-6D63CFE0AE1C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 155,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010060651662815,
+          52.220426640654324
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 155,
+        "IDP" : 204,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{63A2E4BB-DAC3-465A-9BAD-9AE50FC35F8B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 156,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01007501340187,
+          52.220629346904907
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 156,
+        "IDP" : 205,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{2710E41D-700A-4052-A9B4-D6408014AA61}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 157,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010078953495597,
+          52.220972676580665
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 157,
+        "IDP" : 206,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{762AD327-EE63-43E9-9CDD-4AA35C0A4825}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 158,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010084883109105,
+          52.220866186296327
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 158,
+        "IDP" : 207,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{EBE7DA5D-8B3D-43EF-B714-18A8FDDBE953}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 159,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009758811571722,
+          52.220430398392807
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 159,
+        "IDP" : 208,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{CA79F6C3-26DC-4128-A5D5-A4CC13BEF303}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 160,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009539108682343,
+          52.220787974003365
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 160,
+        "IDP" : 209,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{69776ACE-E8CC-4A08-9D85-C6C1552DF66E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 161,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009387660897374,
+          52.220484674420902
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 161,
+        "IDP" : 210,
+        "FLOOR" : 0,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{0A048516-367A-4A63-8751-A9DC1C28A1F2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 162,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009533981917851,
+          52.220784969847514
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 162,
+        "IDP" : 226,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{9855C495-7020-4850-B123-1D278D07674B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 163,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009676953656975,
+          52.220400589257402
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 163,
+        "IDP" : 225,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{15743E7B-A25C-4248-ABDD-D6B200DDA509}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 164,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010078953495597,
+          52.220972676580665
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 164,
+        "IDP" : 224,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{27819DD2-2F32-4FC9-AB16-AE33FCE23F9F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 165,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009861782969143,
+          52.22068885006238
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 165,
+        "IDP" : 223,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{E5A287C3-1EEE-47A7-AF93-D7AE90C1D3C6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 166,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01007501340187,
+          52.220629346904907
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 166,
+        "IDP" : 222,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{1F8C2C57-204F-4989-B6E1-F48C493A9348}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 167,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010060651662815,
+          52.220426640654324
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 167,
+        "IDP" : 221,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{CE20D2D3-73C8-4FB7-84EF-045EED01C323}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 168,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010315225297354,
+          52.220760085579442
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 168,
+        "IDP" : 220,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{E69CC9B8-3B52-4A59-9A31-41AAD2F92188}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 169,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010219455598975,
+          52.220384533757475
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 169,
+        "IDP" : 219,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{41E9952D-DE9B-4F0D-811A-0A0F7C4EF4FE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 170,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010461512585497,
+          52.220716254177738
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 170,
+        "IDP" : 218,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{61FCF49B-351D-4E84-BE06-353CD13295DE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 171,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01047210493163,
+          52.220446094259891
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 171,
+        "IDP" : 217,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{ECE42692-E7BF-4E57-91E7-EEF287E1F824}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 172,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010510785754946,
+          52.22049802801137
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 172,
+        "IDP" : 216,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{77B2ADBA-8EAD-4B01-B058-97FC160E5B71}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 173,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010551017418283,
+          52.220549990190136
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 173,
+        "IDP" : 215,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{A5243476-FE70-4336-80C2-85620AAB59D2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 174,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010551380987764,
+          52.220420132950657
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 174,
+        "IDP" : 214,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{733BB2C7-D03D-4DD9-BFC0-C0A55B7978E2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 175,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010633489448246,
+          52.220526660180944
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 175,
+        "IDP" : 213,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{E9AD994D-26CB-40DA-9C4E-F88AA82DC036}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 176,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010505864622822,
+          52.220436490101193
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 176,
+        "IDP" : 212,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{361243D3-400E-4229-B22C-1ADD7F2C7DF0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 177,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010587681706095,
+          52.220539065560615
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 177,
+        "IDP" : 211,
+        "FLOOR" : 1,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{D016C632-8D80-450A-9442-45873565CF59}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 178,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009676953656975,
+          52.220400589257402
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 178,
+        "IDP" : 235,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{BFCB8D41-EB8F-4694-B620-D4346D9759FF}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 179,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010078953495597,
+          52.220972676580665
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 179,
+        "IDP" : 234,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{4FC3D3BB-EF22-4C3F-816B-1E5F439E296F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 180,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009872979689519,
+          52.220683703246799
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 180,
+        "IDP" : 233,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{0038F045-6F93-4558-BEA3-973E006DD1E1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 181,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009955030357645,
+          52.220663352742186
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 181,
+        "IDP" : 232,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{3A0A48FE-9728-43A2-B494-19CE25866704}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 182,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010062911936306,
+          52.220628566358222
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 182,
+        "IDP" : 231,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{C3606268-57B5-4754-A3BD-39B2A4BCB74A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 183,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010052368685926,
+          52.220420616805079
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 183,
+        "IDP" : 230,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{7B7D6162-5537-4D54-B310-611F2E960ED5}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 184,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010315225297354,
+          52.220760085579442
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 184,
+        "IDP" : 229,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{ED0262BB-E7D4-436B-B060-0B5C307B2200}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 185,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010219455598975,
+          52.220384533757475
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 185,
+        "IDP" : 228,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{428EECD3-8907-4137-A02B-16109A8DDA72}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 186,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010461512585497,
+          52.220716254177738
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 186,
+        "IDP" : 227,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{7A8FB063-15D4-4358-B2C1-7355AEDEE972}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 187,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009865545943558,
+          52.220687501516984
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 187,
+        "IDP" : 246,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{AE9BF1EF-48D0-46E3-ADE8-8135B197F0AF}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 188,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00971469387903,
+          52.220984925420858
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 188,
+        "IDP" : 245,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{C6790EC6-C738-44C6-AD26-EE11E2123223}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 189,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009676953656975,
+          52.220400589257402
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 189,
+        "IDP" : 244,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{FC82EADC-110A-4348-9755-898C46E7850A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 190,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010119878121731,
+          52.220953441275341
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 190,
+        "IDP" : 243,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{87D2BD1A-2D60-4B29-9268-35FD5DF5F067}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 191,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010056403884992,
+          52.220631880246039
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 191,
+        "IDP" : 242,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{6E1E3014-2FCD-4A13-B8D0-CF2A945F44C6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 192,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01004712478198,
+          52.220418845141587
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 192,
+        "IDP" : 241,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{8D0F08B2-432F-46D8-8A4F-6BE6F280B9D6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 193,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010313687929823,
+          52.220766999913025
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 193,
+        "IDP" : 240,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{5DFA1C30-F30C-4626-90A3-1F430E030149}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 194,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010219455598975,
+          52.220384533757475
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 194,
+        "IDP" : 239,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{03677AA7-07EC-4A0E-97E0-1D3641CA64E9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 195,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010461512585497,
+          52.220716254177738
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 195,
+        "IDP" : 238,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{2569E074-88D3-4080-BAA9-4929873D500E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 196,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010450031380532,
+          52.220374472347004
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 196,
+        "IDP" : 237,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{040D50FF-B9E2-424C-B15C-BA50226CA4DC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 197,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010628107477412,
+          52.220606634702357
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 197,
+        "IDP" : 236,
+        "FLOOR" : 3,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{3E4D5E70-A606-4508-80BF-7AB9FDD97F3E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 198,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009713886071701,
+          52.22038758975372
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 198,
+        "IDP" : 259,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{AEBA77FF-0C9F-454B-AD26-97437AF024BD}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 199,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010206524396931,
+          52.220986805081239
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 199,
+        "IDP" : 258,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{70CC291B-F96F-463B-8AE1-112921FF09C5}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 200,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010133721967996,
+          52.220943056697699
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 200,
+        "IDP" : 257,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{3EAF8CB1-0A50-41A9-8F68-BBE69964408B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 201,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010009739343232,
+          52.220578756545322
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 201,
+        "IDP" : 256,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{4CD3D2A1-B448-437D-865C-3526567EBD19}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 202,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010095452744761,
+          52.220688759440165
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 202,
+        "IDP" : 255,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{4FC9E37E-8050-4252-9392-7CD871C71EF1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 203,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010026733804242,
+          52.220394222359161
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 203,
+        "IDP" : 254,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{A3779299-D6F4-419A-8694-4348564D84CA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 204,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010317992103552,
+          52.220797506742741
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 204,
+        "IDP" : 253,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{2275554F-FDD4-4B2A-B48D-3DB9302F3012}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 205,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010219455598975,
+          52.220384533757475
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 205,
+        "IDP" : 252,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{B4B48352-FBDE-4A15-AE18-C82031C60A61}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 206,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010461512585497,
+          52.220716254177738
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 206,
+        "IDP" : 251,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{901BB23F-58CF-41C0-B1E5-57490A368ADE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 207,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010331239952368,
+          52.220378747886542
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 207,
+        "IDP" : 250,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{E58BE60C-DCF6-43BA-8ACC-7FFDAE25D8E4}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 208,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010550571008441,
+          52.220658498127079
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 208,
+        "IDP" : 249,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{10B25EE1-F7FA-4CCF-BC2B-CD4C8EE25F38}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 209,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010450031380532,
+          52.220374472347004
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 209,
+        "IDP" : 248,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{34A5E59D-1190-49D3-BD2B-57A0BDA0FF8B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 210,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010628107477412,
+          52.220606634702357
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 210,
+        "IDP" : 247,
+        "FLOOR" : 4,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{A328191B-2635-4786-8F26-63EB39D608D7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 211,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009781493395739,
+          52.220711197007077
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 211,
+        "IDP" : 263,
+        "FLOOR" : 5,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{2CE799A7-7744-4E72-8288-36940DB35810}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 212,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009569015885631,
+          52.22077422351768
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 212,
+        "IDP" : 262,
+        "FLOOR" : 5,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{7E043D1C-510E-4E71-813D-9F8EB8321F11}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 213,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009617417349673,
+          52.220718996486973
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 213,
+        "IDP" : 261,
+        "FLOOR" : 5,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{D375B036-28F4-4511-B617-08356FFC12FC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 214,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009685369336008,
+          52.220762506694918
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 214,
+        "IDP" : 260,
+        "FLOOR" : 5,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{8D69BE3E-6121-446C-AB1B-5003903CD073}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 215,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009892793341582,
+          52.220677316782002
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 215,
+        "IDP" : 150,
+        "FLOOR" : 6,
+        "INFO" : "",
+        "TYP" : "location",
+        "GlobalID" : "{01A7CE6A-5B68-48F7-A20D-0408DB8F14F1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 216,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009619207816513,
+          52.220718463186365
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 216,
+        "IDP" : 266,
+        "FLOOR" : 6,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{5FC85005-1F5E-4129-B67D-B0D2C303AF1E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 217,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009685369336008,
+          52.220762506694918
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 217,
+        "IDP" : 265,
+        "FLOOR" : 6,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{7B1EF246-47FD-48B0-BB5B-13A9FE318B6B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 218,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009781493395739,
+          52.220711197007077
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 218,
+        "IDP" : 264,
+        "FLOOR" : 6,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{6EBD40BF-F8EE-40F4-80BD-98B6A3DD469A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 219,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009569015885631,
+          52.22077422351768
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 219,
+        "IDP" : 270,
+        "FLOOR" : 7,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{AD795DC6-FBBA-4911-8FC8-421BFA8457C6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 220,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009686104516312,
+          52.220765036073068
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 220,
+        "IDP" : 269,
+        "FLOOR" : 7,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{193F28C9-B860-4213-8525-5729876E725D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 221,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009782191839989,
+          52.220711842621689
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 221,
+        "IDP" : 268,
+        "FLOOR" : 7,
+        "INFO" : "",
+        "TYP" : "warning",
+        "GlobalID" : "{8FBAB26F-7860-4B08-BF4F-C1AA52A90DCD}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 222,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010424883163068,
+          52.220360638882795
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 222,
+        "IDP" : 383,
+        "FLOOR" : 3,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{CF41F595-4ACB-4594-A38E-9E6EABAC8CA3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 223,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009354868327012,
+          52.220630239991721
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 223,
+        "IDP" : 386,
+        "FLOOR" : 3,
+        "INFO" : "sz",
+        "TYP" : "poi",
+        "GlobalID" : "{4809DD34-9B75-4596-962A-EB9F4A02CD99}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 224,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009713049669468,
+          52.220374775765507
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 224,
+        "IDP" : 384,
+        "FLOOR" : 3,
+        "INFO" : "bjc",
+        "TYP" : "poi",
+        "GlobalID" : "{BE0D1A6A-0A98-473A-AEB2-D84AE2ED2FFB}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 225,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010271788036405,
+          52.22088119631978
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 225,
+        "IDP" : 392,
+        "FLOOR" : 3,
+        "INFO" : "bjc",
+        "TYP" : "poi",
+        "GlobalID" : "{C3AF8D71-3050-4A37-AED6-2AAF70845031}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 226,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010443448979526,
+          52.220759855257455
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 226,
+        "IDP" : 394,
+        "FLOOR" : 3,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{14FA61B4-0356-475E-A420-47501B008BB0}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 227,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009972985814336,
+          52.220509332893734
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 227,
+        "IDP" : 401,
+        "FLOOR" : 3,
+        "INFO" : "si",
+        "TYP" : "poi",
+        "GlobalID" : "{B892049C-A709-465E-B144-4AE785C14A07}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 228,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010408715319535,
+          52.220779578835291
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 228,
+        "IDP" : 393,
+        "FLOOR" : 3,
+        "INFO" : "sz",
+        "TYP" : "poi",
+        "GlobalID" : "{16B9C91B-27BB-4E8D-A582-BD5F95FC4D4A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 229,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00971469387903,
+          52.220984925420858
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 229,
+        "IDP" : 390,
+        "FLOOR" : 3,
+        "INFO" : "bac",
+        "TYP" : "poi",
+        "GlobalID" : "{BB036AA0-EC21-41F1-BB55-7F088191E60F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 230,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010116873850436,
+          52.220953754205603
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 230,
+        "IDP" : 391,
+        "FLOOR" : 3,
+        "INFO" : "bac",
+        "TYP" : "poi",
+        "GlobalID" : "{E1F1D047-FA53-47CF-8D24-D07962947BC3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 231,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009876153107662,
+          52.220655550656524
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 231,
+        "IDP" : 404,
+        "FLOOR" : 3,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{F4E68969-946E-4BC4-96E3-F3437846FD7A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 232,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009996808873144,
+          52.220674442939469
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 232,
+        "IDP" : 399,
+        "FLOOR" : 3,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{90F08D9F-DAAE-4D8C-A123-504275FAA778}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 233,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009964819611035,
+          52.220634014374738
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 233,
+        "IDP" : 400,
+        "FLOOR" : 3,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{9419D2A7-31BB-41C3-9A68-69DA52A6A9A2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 234,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009553107172287,
+          52.220930661280562
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 234,
+        "IDP" : 388,
+        "FLOOR" : 3,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{3A8B72EB-B391-4D33-B17E-ED56CB4708E2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 235,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009626359514627,
+          52.220966353902057
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 235,
+        "IDP" : 389,
+        "FLOOR" : 3,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{C3542753-BF05-4A65-A445-583A5BACBE08}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 236,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009490540579531,
+          52.220829718991503
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 236,
+        "IDP" : 387,
+        "FLOOR" : 3,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{593FB02D-BED2-4FBF-A58E-FB618ED6A28F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 237,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010064607023359,
+          52.220903775175735
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 237,
+        "IDP" : 396,
+        "FLOOR" : 3,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{18EB90B4-0881-46E8-87FD-35C36FC7F7BA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 238,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010262292348386,
+          52.220808188957882
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 238,
+        "IDP" : 397,
+        "FLOOR" : 3,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{5A4893E3-50FF-458A-80F7-A2E58DF84863}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 239,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010201032944583,
+          52.220798081986544
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 239,
+        "IDP" : 398,
+        "FLOOR" : 3,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{5978EF3E-4333-497D-A1AB-6E6419B87A65}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 240,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009957052639137,
+          52.220422672391912
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 240,
+        "IDP" : 403,
+        "FLOOR" : 3,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{E9917216-D7D1-4BEE-8CE3-43B137D68EDA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 241,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009942930782557,
+          52.220453716207572
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 241,
+        "IDP" : 402,
+        "FLOOR" : 3,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{7DF5EFA0-CA35-4B36-AA9E-7A355507350A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 242,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010637001466971,
+          52.220629681356662
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 242,
+        "IDP" : 395,
+        "FLOOR" : 3,
+        "INFO" : "sz sd",
+        "TYP" : "poi",
+        "GlobalID" : "{AF74A458-20E4-46AC-8352-032B85962A8A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 243,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009361683569676,
+          52.220558280592982
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 243,
+        "IDP" : 385,
+        "FLOOR" : 3,
+        "INFO" : "sz",
+        "TYP" : "poi",
+        "GlobalID" : "{F9CA446B-B9DD-4E32-A4F6-63177ABD9BD8}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 244,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010418576517047,
+          52.220391590063045
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 244,
+        "IDP" : 300,
+        "FLOOR" : 0,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{A3408E65-C785-45DE-A19F-02BFEB934FBA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 245,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010568962762676,
+          52.220677208495751
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 245,
+        "IDP" : 309,
+        "FLOOR" : 0,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{D8BE78F2-DA90-43CD-B833-7458DEC33CBB}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 246,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010538596884256,
+          52.22069797931956
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 246,
+        "IDP" : 308,
+        "FLOOR" : 0,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{93EB8547-6C29-4C2A-A7A0-FC3CD12A5D2D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 247,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010474632156317,
+          52.220562012626154
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 247,
+        "IDP" : 310,
+        "FLOOR" : 0,
+        "INFO" : "sklep",
+        "TYP" : "poi",
+        "GlobalID" : "{C261A7A7-0E6A-4A3E-9B40-0960362D7A2D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 248,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010409778528256,
+          52.220780193945089
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 248,
+        "IDP" : 307,
+        "FLOOR" : 0,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{6CC5992D-C1D1-449A-A8C1-7C9383BB1E4C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 249,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009986836823202,
+          52.220362040836839
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 249,
+        "IDP" : 301,
+        "FLOOR" : 0,
+        "INFO" : "muzeum",
+        "TYP" : "poi",
+        "GlobalID" : "{3E92961F-128B-490C-AAB1-5927654EF732}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 250,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010260077060792,
+          52.220807163530012
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 250,
+        "IDP" : 314,
+        "FLOOR" : 0,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{58CB2278-654A-44E8-884C-4D3BB847BB0B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 251,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010208402041673,
+          52.220795738339582
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 251,
+        "IDP" : 315,
+        "FLOOR" : 0,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{0C9F6318-F76A-415A-B56B-68C045B7850E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 252,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010077972004193,
+          52.220713788177164
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 252,
+        "IDP" : 316,
+        "FLOOR" : 0,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{47A4C96F-E20A-458B-A4C6-FC55113B2F2D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 253,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009961037807059,
+          52.220631832825966
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 253,
+        "IDP" : 317,
+        "FLOOR" : 0,
+        "INFO" : "bac",
+        "TYP" : "poi",
+        "GlobalID" : "{9682BB53-A060-448D-9C58-53FCE823D9C3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 254,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009960882127064,
+          52.220510123748085
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 254,
+        "IDP" : 318,
+        "FLOOR" : 0,
+        "INFO" : "bac",
+        "TYP" : "poi",
+        "GlobalID" : "{7D24A0E6-34A0-4975-9EB3-44E38C8A017A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 255,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009942791543484,
+          52.220457053812986
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 255,
+        "IDP" : 319,
+        "FLOOR" : 0,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{303BA21A-BD76-4AEA-8F12-48F5662A0B4E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 256,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009957052639137,
+          52.220422672391912
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 256,
+        "IDP" : 320,
+        "FLOOR" : 0,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{C57FA4C2-1F38-48EB-9E10-4E89A80C055C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 257,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010140814823231,
+          52.220884922763702
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 257,
+        "IDP" : 313,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{570AF916-A35A-4DB2-917F-257989D8278B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 258,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009949785852779,
+          52.220749640956171
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 258,
+        "IDP" : 322,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{88ABCC05-B59B-40AE-93F6-6B6BBC4EB928}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 259,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009779493906201,
+          52.220427391747045
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 259,
+        "IDP" : 321,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{F269173E-5E9F-4532-9440-9FD026D5730D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 260,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010074747435993,
+          52.220908541402338
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 260,
+        "IDP" : 311,
+        "FLOOR" : 0,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{AFAA9415-7DA8-4458-8AD0-2A22EBC0A59A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 261,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010041583717388,
+          52.220890753627707
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 261,
+        "IDP" : 312,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{B4234027-A27D-413C-8A27-6B894631E335}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 262,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010125364475687,
+          52.220975559304399
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 262,
+        "IDP" : 306,
+        "FLOOR" : 0,
+        "INFO" : "sek zakladu",
+        "TYP" : "poi",
+        "GlobalID" : "{68DB9DE4-8EBA-48ED-916A-8982EC7597B7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 263,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009881158868591,
+          52.221115806704454
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 263,
+        "IDP" : 305,
+        "FLOOR" : 0,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{2925A1FD-2246-43EB-AEA8-9BACC4D4B90F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 264,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009618585725644,
+          52.22066696745793
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 264,
+        "IDP" : 323,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{7ADB0CA6-1954-46C1-869A-176E713AA83B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 265,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009539961247889,
+          52.220783956842759
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 265,
+        "IDP" : 324,
+        "FLOOR" : 0,
+        "INFO" : "biblioteka",
+        "TYP" : "poi",
+        "GlobalID" : "{743FF173-2907-45BB-8D12-32000FA798C8}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 266,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009443115957282,
+          52.220594102952575
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 266,
+        "IDP" : 303,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{E08BB033-4D5A-4B54-9D32-A03630591D18}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 267,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00934831923318,
+          52.220531961255453
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 267,
+        "IDP" : 302,
+        "FLOOR" : 0,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{FC0441DB-40F3-4778-93EF-4112B4A25E36}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 268,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009710792539703,
+          52.220958400858173
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 268,
+        "IDP" : 304,
+        "FLOOR" : 0,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{159FEB7A-6C6E-4DD3-96EF-BA08485E5C4D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 269,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010808760214267,
+          52.22047505499927
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 269,
+        "IDP" : 325,
+        "FLOOR" : 1,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{1BC59BF1-5DA6-4FE2-955B-D36F889EA069}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 270,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010768746769244,
+          52.22042232014055
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 270,
+        "IDP" : 326,
+        "FLOOR" : 1,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{CA3D8AD3-D96A-4C6A-8F8B-333A0A44434E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 271,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010727156260625,
+          52.220369458336314
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 271,
+        "IDP" : 327,
+        "FLOOR" : 1,
+        "INFO" : "wyjscie",
+        "TYP" : "poi",
+        "GlobalID" : "{01B1A0D0-B9B7-46B8-BD56-224DECF28ACE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 272,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010779270894144,
+          52.220525269481115
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 272,
+        "IDP" : 328,
+        "FLOOR" : 1,
+        "INFO" : "portiernia",
+        "TYP" : "poi",
+        "GlobalID" : "{C3B62787-36F2-48BF-84A9-C2E225EE9C56}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 273,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010709842791204,
+          52.220544112008909
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 273,
+        "IDP" : 329,
+        "FLOOR" : 1,
+        "INFO" : "szatnia",
+        "TYP" : "poi",
+        "GlobalID" : "{C831AA81-A3E7-4EC4-B43B-F4DAEBDBAAC9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 274,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010591772996722,
+          52.220507413659398
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 274,
+        "IDP" : 330,
+        "FLOOR" : 1,
+        "INFO" : "bankomat",
+        "TYP" : "poi",
+        "GlobalID" : "{5CA94C14-968B-4C1D-9C31-88BA2004DB49}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 275,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010422556609466,
+          52.22035037420229
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 275,
+        "IDP" : 331,
+        "FLOOR" : 1,
+        "INFO" : "sr",
+        "TYP" : "poi",
+        "GlobalID" : "{0B43F753-629F-438F-8EE2-C8FCB7B94415}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 276,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010323191491974,
+          52.220354832306477
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 276,
+        "IDP" : 332,
+        "FLOOR" : 1,
+        "INFO" : "sr",
+        "TYP" : "poi",
+        "GlobalID" : "{FEF10D7B-252E-4C41-A879-F49C484916AA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 277,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010185231351219,
+          52.220360508282106
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 277,
+        "IDP" : 333,
+        "FLOOR" : 1,
+        "INFO" : "sr",
+        "TYP" : "poi",
+        "GlobalID" : "{3D0160D7-4DAF-454D-B6B9-63BCF85C28E7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 278,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010091305323527,
+          52.220363408283532
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 278,
+        "IDP" : 334,
+        "FLOOR" : 1,
+        "INFO" : "sr",
+        "TYP" : "poi",
+        "GlobalID" : "{CB3C5AA0-EF1E-431E-A4AC-CE880503D8FA}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 279,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009709002615132,
+          52.220377292159434
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 279,
+        "IDP" : 335,
+        "FLOOR" : 1,
+        "INFO" : "sr",
+        "TYP" : "poi",
+        "GlobalID" : "{A54ADFC5-452A-4199-9D60-2072E9533E83}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 280,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009572435241164,
+          52.220380863219724
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 280,
+        "IDP" : 336,
+        "FLOOR" : 1,
+        "INFO" : "si",
+        "TYP" : "poi",
+        "GlobalID" : "{1A682030-BC80-48AF-BF16-367A4EC4305B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 281,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009339797754187,
+          52.220407998475601
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 281,
+        "IDP" : 337,
+        "FLOOR" : 1,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{3F995FBD-6A72-4B9B-A8F8-2734FBF81A5A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 282,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009355021376795,
+          52.22055840844753
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 282,
+        "IDP" : 338,
+        "FLOOR" : 1,
+        "INFO" : "dziekanat",
+        "TYP" : "poi",
+        "GlobalID" : "{1CEA0DDC-98E6-4D21-B78A-0ECA416A0B45}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 283,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009366568204758,
+          52.220740682677985
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 283,
+        "IDP" : 339,
+        "FLOOR" : 1,
+        "INFO" : "dziekanat",
+        "TYP" : "poi",
+        "GlobalID" : "{A0D43607-956D-445E-9D26-EE6BA22F4B25}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 284,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009461345369477,
+          52.220839875642724
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 284,
+        "IDP" : 340,
+        "FLOOR" : 1,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{910F4E65-F0F6-4F0D-B0D9-5C96A2B52A16}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 285,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009486922199006,
+          52.220888176878226
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 285,
+        "IDP" : 341,
+        "FLOOR" : 1,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{7FFFA902-EDFB-4328-A949-1A8F658D913B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 286,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009517677463599,
+          52.220907574503386
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 286,
+        "IDP" : 342,
+        "FLOOR" : 1,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{1885B0C8-E61D-4171-8621-BD5ABC087EC4}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 287,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00958831926939,
+          52.220945457745486
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 287,
+        "IDP" : 343,
+        "FLOOR" : 1,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{AD8245BE-59A3-4F30-A55D-757D0ECD3372}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 288,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009809683926992,
+          52.221070966938612
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 288,
+        "IDP" : 344,
+        "FLOOR" : 1,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{D07120A4-2C4E-4C40-9DFD-56F2E2F21B9D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 289,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010030258401372,
+          52.221042148305656
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 289,
+        "IDP" : 345,
+        "FLOOR" : 1,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{CD821E2D-AEF4-4988-B870-B9C99BCF62B8}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 290,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010060806367488,
+          52.22102021060126
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 290,
+        "IDP" : 346,
+        "FLOOR" : 1,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{942BC373-59B5-4E6C-AB54-55B231B6FA64}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 291,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010268841700906,
+          52.220875788539551
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 291,
+        "IDP" : 347,
+        "FLOOR" : 1,
+        "INFO" : "pkt gast",
+        "TYP" : "poi",
+        "GlobalID" : "{40A30A4A-A597-45FC-8CAD-02B711EA420E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 292,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010417772132598,
+          52.220787330847166
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 292,
+        "IDP" : 348,
+        "FLOOR" : 1,
+        "INFO" : "bac",
+        "TYP" : "poi",
+        "GlobalID" : "{32EC9A86-E08D-4972-BB6D-E7ED0FE35E1D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 293,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010539064235349,
+          52.220696426966057
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 293,
+        "IDP" : 349,
+        "FLOOR" : 1,
+        "INFO" : "sr",
+        "TYP" : "poi",
+        "GlobalID" : "{FA910686-E8D1-44E0-ACE7-7E8B9CD76312}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 294,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010631322654408,
+          52.220603016211456
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 294,
+        "IDP" : 350,
+        "FLOOR" : 1,
+        "INFO" : "bac",
+        "TYP" : "poi",
+        "GlobalID" : "{5BC7A72B-EF6D-4C1C-AEFD-D7BE4A04C035}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 295,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010072145014284,
+          52.220907213148934
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 295,
+        "IDP" : 351,
+        "FLOOR" : 1,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{D61046F6-8884-4527-A4FD-B2A7EE65355A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 296,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010260818738459,
+          52.220807566447895
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 296,
+        "IDP" : 352,
+        "FLOOR" : 1,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{8F5E5F8E-5792-4064-A21F-CF695F106DFC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 297,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010205071471109,
+          52.22079764619447
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 297,
+        "IDP" : 353,
+        "FLOOR" : 1,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{10CE5A7C-418B-45EF-86E1-3687B1055CAB}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 298,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010085965177545,
+          52.22071235676124
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 298,
+        "IDP" : 354,
+        "FLOOR" : 1,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{34F2DEA9-341D-4F61-AB52-41DAF4C1451C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 299,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009876153107662,
+          52.220655550656524
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 299,
+        "IDP" : 355,
+        "FLOOR" : 1,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{63D51EF5-F22F-4B79-850A-8AEC8B426A34}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 300,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.00986315231458,
+          52.220688072080414
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 300,
+        "IDP" : 356,
+        "FLOOR" : 1,
+        "INFO" : "biblioteka",
+        "TYP" : "poi",
+        "GlobalID" : "{79D19D0E-765E-4F54-ADD0-EF62B01DD147}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 301,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009533981917851,
+          52.220784969847514
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 301,
+        "IDP" : 357,
+        "FLOOR" : 1,
+        "INFO" : "biblioteka",
+        "TYP" : "poi",
+        "GlobalID" : "{3FF5EB16-5BD1-4559-BAB9-80258A43FE7D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 302,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009964423711075,
+          52.220541456702072
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 302,
+        "IDP" : 358,
+        "FLOOR" : 1,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{C6356AE2-F2D7-4FE6-81AB-5D930C4D97F3}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 303,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009942930782557,
+          52.220453716207572
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 303,
+        "IDP" : 359,
+        "FLOOR" : 1,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{01FC7853-6BCF-4406-B9DA-54363FE5FB8A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 304,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009957052639137,
+          52.220422672391912
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 304,
+        "IDP" : 360,
+        "FLOOR" : 1,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{0E23AF8E-6879-447C-A167-E63B6CB745A6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 305,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009351239739669,
+          52.220502611296837
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 305,
+        "IDP" : 361,
+        "FLOOR" : 1,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{4A0A7263-BCD0-41D7-9736-0E2625D22B05}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 306,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010421835078873,
+          52.220346624015377
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 306,
+        "IDP" : 362,
+        "FLOOR" : 2,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{23858D64-EAE6-4421-AF4A-04E02B61F382}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 307,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010321663841371,
+          52.220349738554795
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 307,
+        "IDP" : 363,
+        "FLOOR" : 2,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{BC5BB355-E60F-443D-B2F9-97136804B758}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 308,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01008956557747,
+          52.220359162744558
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 308,
+        "IDP" : 364,
+        "FLOOR" : 2,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{161E31C1-CD27-413E-B90A-9D0407D9DD81}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 309,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009342199330973,
+          52.220474879008222
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 309,
+        "IDP" : 365,
+        "FLOOR" : 2,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{198E32C0-7B0C-4147-AE42-DEF17643C863}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 310,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009357829492192,
+          52.220630464798212
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 310,
+        "IDP" : 366,
+        "FLOOR" : 2,
+        "INFO" : "sd",
+        "TYP" : "poi",
+        "GlobalID" : "{7533B2D3-8443-430A-8725-405AB78A392F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 311,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009365809568035,
+          52.22074363416516
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 311,
+        "IDP" : 367,
+        "FLOOR" : 2,
+        "INFO" : "si",
+        "TYP" : "poi",
+        "GlobalID" : "{F0E71D36-CB6D-426E-A530-8377BF5A8FB4}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 312,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009457302272047,
+          52.2208387832884
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 312,
+        "IDP" : 368,
+        "FLOOR" : 2,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{6A33FB22-1C1C-492C-AA27-6382341C9046}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 313,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009489508179865,
+          52.220893844465287
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 313,
+        "IDP" : 369,
+        "FLOOR" : 2,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{177F0B1C-C012-4AB4-995F-D7163632588F}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 314,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009929147123131,
+          52.221107044189132
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 314,
+        "IDP" : 370,
+        "FLOOR" : 2,
+        "INFO" : "sz",
+        "TYP" : "poi",
+        "GlobalID" : "{2C574B0C-A402-4B7E-A545-3636D5CBABEC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 315,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010645088666919,
+          52.220634934957928
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 315,
+        "IDP" : 371,
+        "FLOOR" : 2,
+        "INFO" : "bca",
+        "TYP" : "poi",
+        "GlobalID" : "{3D7B0DC4-C0C0-4AFF-9CBA-E1A9C178B977}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 316,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010556942674729,
+          52.220483724226732
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 316,
+        "IDP" : 372,
+        "FLOOR" : 2,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{DAADD829-281E-4610-A549-6729ECA6F62D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 317,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009992940318334,
+          52.220673518529182
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 317,
+        "IDP" : 373,
+        "FLOOR" : 2,
+        "INFO" : "bca",
+        "TYP" : "poi",
+        "GlobalID" : "{01684A95-44AF-4B97-8A17-88B51543D464}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 318,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009965658460871,
+          52.220565877854042
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 318,
+        "IDP" : 374,
+        "FLOOR" : 2,
+        "INFO" : "sz",
+        "TYP" : "poi",
+        "GlobalID" : "{D8CEC20E-6B18-4637-BAED-C3B03063E13E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 319,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009855924528015,
+          52.220687188700147
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 319,
+        "IDP" : 375,
+        "FLOOR" : 2,
+        "INFO" : "biblioteka",
+        "TYP" : "poi",
+        "GlobalID" : "{BF6D4DD7-5AC5-4031-A1E1-B94474761265}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 320,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010256873586872,
+          52.220805854516392
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 320,
+        "IDP" : 376,
+        "FLOOR" : 2,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{07444687-6728-4ADF-A00B-09407BE3201C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 321,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01020284366988,
+          52.220793782252606
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 321,
+        "IDP" : 377,
+        "FLOOR" : 2,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{1C2A7FD5-E59A-430B-A838-E688D5F3F22E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 322,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010068024431941,
+          52.220904567852109
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 322,
+        "IDP" : 378,
+        "FLOOR" : 2,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{22688817-77EB-492F-BE05-7A617D9A48CB}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 323,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009878563270028,
+          52.22065511922893
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 323,
+        "IDP" : 379,
+        "FLOOR" : 2,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{D48FD578-E6CE-4B5C-9C7E-F03E3A1BA08C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 324,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009957392806854,
+          52.220419989775202
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 324,
+        "IDP" : 380,
+        "FLOOR" : 2,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{6793C5F1-4E9F-4380-A88F-AB1BA781BA7A}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 325,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009936858910002,
+          52.220453424779826
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 325,
+        "IDP" : 381,
+        "FLOOR" : 2,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{206E094C-8101-4308-8D2E-C9F8FB29D94B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 326,
+      "geometry" : null,
+      "properties" : {
+        "OBJECTID" : 326,
+        "Shape" : null,
+        "IDP" : 382,
+        "FLOOR" : 2,
+        "INFO" : "",
+        "TYP" : "poi",
+        "GlobalID" : "{35A2ADB9-150D-4918-9F1A-1828567C71B9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 327,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009857811503654,
+          52.220687722321692
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 327,
+        "IDP" : 405,
+        "FLOOR" : 3,
+        "INFO" : "biblioteka",
+        "TYP" : "poi",
+        "GlobalID" : "{910567E2-DA73-421E-8C38-BE8AEC53732D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 328,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010318279317485,
+          52.220354665952847
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 328,
+        "IDP" : 406,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{A1ADE2C7-1858-44D2-9E64-2FF73610EA85}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 329,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010043318094471,
+          52.220363906526913
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 329,
+        "IDP" : 407,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{D8FDA131-355C-4D9F-B10B-D7AF46EB4DD8}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 330,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009876891708181,
+          52.220366979230334
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 330,
+        "IDP" : 408,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{50758123-7DD5-400C-9065-38259ACC17D6}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 331,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009361267838223,
+          52.22036311177758
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 331,
+        "IDP" : 409,
+        "FLOOR" : 4,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{0D844A56-70A9-494E-B728-9BE9DE7E450D}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 332,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009512080408943,
+          52.220360576481369
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 332,
+        "IDP" : 410,
+        "FLOOR" : 4,
+        "INFO" : "siedziba org",
+        "TYP" : "poi",
+        "GlobalID" : "{2C769ECF-0E8F-4235-9663-1B761ACDDD9C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 333,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009478212896521,
+          52.220391927767267
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 333,
+        "IDP" : 411,
+        "FLOOR" : 4,
+        "INFO" : "bjc",
+        "TYP" : "poi",
+        "GlobalID" : "{90C5D514-B934-4983-87DC-9B095B9E49AE}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 334,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009427718641945,
+          52.220720617433209
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 334,
+        "IDP" : 412,
+        "FLOOR" : 4,
+        "INFO" : "si",
+        "TYP" : "poi",
+        "GlobalID" : "{F086B52D-A079-47B2-99A7-022A0A94F01E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 335,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010280338091516,
+          52.220878475457127
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 335,
+        "IDP" : 413,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{2C0B5AA6-CE41-4A31-8D7F-99E18E5143C2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 336,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010428783214394,
+          52.220763130078474
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 336,
+        "IDP" : 414,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{B5CBF092-FC17-43CA-8826-3CB863D85ACF}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 337,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010632724519034,
+          52.220636476879626
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 337,
+        "IDP" : 415,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{AF198F00-0118-479D-8EDC-4E22E64EA3E4}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 338,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010051678598749,
+          52.220694705051152
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 338,
+        "IDP" : 416,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{A6F041F8-139C-4FE4-A4AF-BA6019260A33}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 339,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009992781678065,
+          52.220645848150085
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 339,
+        "IDP" : 417,
+        "FLOOR" : 4,
+        "INFO" : "sala",
+        "TYP" : "poi",
+        "GlobalID" : "{55AD15A0-72C3-45E6-B0BB-9E34D6E059C1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 340,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010258660852536,
+          52.220808589933199
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 340,
+        "IDP" : 418,
+        "FLOOR" : 4,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{22A25A71-F9F5-4B31-BB1D-B4A8CE3DA266}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 341,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.01021006821707,
+          52.220796927833014
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 341,
+        "IDP" : 419,
+        "FLOOR" : 4,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{AD041DC9-BDB6-46FB-9A95-3F6AE8D2FF64}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 342,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010066642450813,
+          52.220902569389104
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 342,
+        "IDP" : 420,
+        "FLOOR" : 4,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{002422EF-3C25-4A1D-B614-ECEC5E1D5A8B}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 343,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009960137947896,
+          52.220420846975962
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 343,
+        "IDP" : 421,
+        "FLOOR" : 4,
+        "INFO" : "winda",
+        "TYP" : "poi",
+        "GlobalID" : "{09D3606F-1B29-49BA-949D-9FB4C7A0C6C2}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 344,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009941815683533,
+          52.220453021924804
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 344,
+        "IDP" : 422,
+        "FLOOR" : 4,
+        "INFO" : "toaleta",
+        "TYP" : "poi",
+        "GlobalID" : "{9A4B9725-71D3-44E7-96E9-4E42EAA790A9}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 345,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010257432458449,
+          52.220570001357835
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 345,
+        "IDP" : 423,
+        "FLOOR" : 0,
+        "INFO" : "aula",
+        "TYP" : "poi",
+        "GlobalID" : "{D6099030-B735-4586-A233-08E8EE1DB61E}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 346,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009876770451378,
+          52.220653200619516
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 346,
+        "IDP" : 424,
+        "FLOOR" : 0,
+        "INFO" : " winda",
+        "TYP" : "poi",
+        "GlobalID" : "{7C572B88-3E10-4208-9C63-DF9E36B8AC7C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 347,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009937172674395,
+          52.22066722785739
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 347,
+        "IDP" : 271,
+        "FLOOR" : 3,
+        "INFO" : null,
+        "TYP" : "warning",
+        "GlobalID" : "{A6606B3E-D42B-4270-B175-7B149EFA5AFD}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 348,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010416323245614,
+          52.220382234397071
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 348,
+        "IDP" : 272,
+        "FLOOR" : 4,
+        "INFO" : null,
+        "TYP" : "warning",
+        "GlobalID" : "{7313F213-6973-4F76-90D9-2029BC6C1363}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 349,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.010573580378043,
+          52.22064060863881
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 349,
+        "IDP" : 273,
+        "FLOOR" : 4,
+        "INFO" : null,
+        "TYP" : "warning",
+        "GlobalID" : "{BD89C648-98F3-4893-A42A-12E517129EEC}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 350,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009876895914225,
+          52.220654778850289
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 350,
+        "IDP" : 425,
+        "FLOOR" : 6,
+        "INFO" : null,
+        "TYP" : "poi",
+        "GlobalID" : "{8E322FCA-B98E-4148-86ED-1235D5801778}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 351,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009830729676576,
+          52.220736856657226
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 351,
+        "IDP" : 426,
+        "FLOOR" : 5,
+        "INFO" : null,
+        "TYP" : "poi",
+        "GlobalID" : "{104703C5-2949-4ADD-8B7B-A87CFBEF62D7}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 352,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009825365136294,
+          52.220663404710699
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 352,
+        "IDP" : 427,
+        "FLOOR" : 5,
+        "INFO" : null,
+        "TYP" : "poi",
+        "GlobalID" : "{5E96EA27-0760-4D3D-BB5F-56CB44307E5C}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 353,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009823352881611,
+          52.220664637082564
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 353,
+        "IDP" : 428,
+        "FLOOR" : 6,
+        "INFO" : null,
+        "TYP" : "poi",
+        "GlobalID" : "{502A364F-1BA4-4F00-B274-6CCDCA423BF1}"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 354,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          21.009822683099689,
+          52.22066874467663
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 354,
+        "IDP" : 429,
+        "FLOOR" : 7,
+        "INFO" : null,
+        "TYP" : "poi",
+        "GlobalID" : "{31AF3905-90D6-4A07-84DC-4CFBD8A51C65}"
+      }
+    }
+  ]
+}
