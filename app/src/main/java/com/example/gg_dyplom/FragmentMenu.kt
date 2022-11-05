@@ -138,7 +138,9 @@ class FragmentMenu(floor: TextView) : Fragment(R.layout.fragment_menu){
         val newarkMap = GroundOverlayOptions()
             .image(BitmapDescriptorFactory.fromResource(overlay))
             .position(newarkLatLng, 270f)
-        ACTIVITY.imageOverlay = ACTIVITY.mMap.addGroundOverlay(newarkMap)!!
+        ACTIVITY.mMap?.let {
+            ACTIVITY.imageOverlay = it.addGroundOverlay(newarkMap)!!
+        }
     }
 
     private fun makeMarkerInvisible(markerListLoc1: MutableList<Marker>){
