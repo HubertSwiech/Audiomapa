@@ -467,7 +467,9 @@ fun replaceOverlay(ACTIVITY: MapsActivity, pkt:String, floorTextView: TextView, 
         .image(BitmapDescriptorFactory.fromResource(overlay))
         .position(newarkLatLng, 270f)
 
-    ACTIVITY.imageOverlay = ACTIVITY.mMap.addGroundOverlay(newarkMap)!!
+    ACTIVITY.mMap?.let {
+        ACTIVITY.imageOverlay = it.addGroundOverlay(newarkMap)!!
+    }
 
     when (nr) {
         "L1" -> { ACTIVITY.floorVisibility = 5 }
@@ -571,14 +573,16 @@ fun drawCircle(number: String, ACTIVITY: MapsActivity) {
             circleOptions.strokeWidth(50f)
             circleOptions.zIndex(2F)
             // Adding the circle to the GoogleMap
-            ACTIVITY.mapCircle = ACTIVITY.mMap.addCircle(circleOptions)
+            ACTIVITY.mMap?.let {
+                ACTIVITY.mapCircle = it.addCircle(circleOptions)
+            }
             val cp = CameraPosition.Builder()
                 .bearing(-65f)
                 .target(LatLng(i.value[0]-0.00002, i.value[1]+0.000035))
                 .zoom(20f)
                 .build()
             val cu = CameraUpdateFactory.newCameraPosition(cp)
-            ACTIVITY.mMap.animateCamera(cu)
+            ACTIVITY.mMap?.animateCamera(cu)
         }
     }
 
@@ -606,7 +610,9 @@ fun drawLine(nrStart: String, nrEnd: String, ACTIVITY: MapsActivity){
             LatLng(startValue[0]-0.00002, startValue[1]+0.000035),
             LatLng(endValue[0]-0.00002, endValue[1]+0.000035))
 
-    ACTIVITY.mapLine = ACTIVITY.mMap.addPolyline(polyOptions)
+    ACTIVITY.mMap?.let {
+        ACTIVITY.mapLine = it.addPolyline(polyOptions)
+    }
 
 
 val HeadingRotation = SphericalUtil.computeHeading(LatLng(startValue[0]-0.00002, startValue[1]+0.000035), LatLng(endValue[0]-0.00002, endValue[1]+0.000035))
@@ -621,8 +627,9 @@ val HeadingRotation = SphericalUtil.computeHeading(LatLng(startValue[0]-0.00002,
         .draggable(false)
 
 
-
-    ACTIVITY.lineMarker = ACTIVITY.mMap.addMarker(marOptions)!!
+    ACTIVITY.mMap?.let {
+        ACTIVITY.lineMarker = it.addMarker(marOptions)!!
+    }
 
 }
 

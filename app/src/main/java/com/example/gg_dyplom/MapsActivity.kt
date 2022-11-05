@@ -2,7 +2,10 @@ package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -17,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.example.gg_dyplom.MarkerConfig.MarkerSizeFactor
 import com.example.gg_dyplom.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -29,7 +33,11 @@ import java.io.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    lateinit var mMap: GoogleMap
+    companion object {
+        private const val SMALL_SCALE_MAX_ZOOM_LEVEL = 19.24
+    }
+
+    var mMap: GoogleMap? = null
     private lateinit var binding: ActivityMapsBinding
     var ttsHelper: TtsHelper? = null
     lateinit var imageOverlay: GroundOverlay
@@ -46,6 +54,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var mapCircle: Circle
     lateinit var mapLine: Polyline
     lateinit var lineMarker: Marker
+
     //małe przyciski do zmiany punktów
     lateinit var locButton: Button
     lateinit var warButton: Button
@@ -60,7 +69,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var db: Database
     lateinit var dbCom: DatabaseCom
 
-    val markerMap = mutableMapOf<Int,List<Double>>()//wszystkie markery
+    val markerMap = mutableMapOf<Int, List<Double>>()//wszystkie markery
     var polygonListN = mutableListOf<LatLng>()//poligon północny
     var polygonListS = mutableListOf<LatLng>()//poligon południowy
     var polygonListE = mutableListOf<LatLng>()//poligon wschodni
@@ -124,11 +133,91 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     val markerListFloor3 = mutableListOf<Marker>()
     val markerListFloor4 = mutableListOf<Marker>()
 
-    val markerLocListArray = arrayOf(markerListLoc0, markerListLoc1, markerListLoc2, markerListLoc3, markerListLoc4, markerListLocL1, markerListLocL2, markerListLocL3)
-    val markerWarListArray = arrayOf(markerListWar0, markerListWar1, markerListWar2, markerListWar3, markerListWar4, markerListWarL1, markerListWarL2, markerListWarL3)
-    val markerPoiListArray = arrayOf(markerListPoi0, markerListPoi1, markerListPoi2, markerListPoi3, markerListPoi4, markerListPoiL1, markerListPoiL2, markerListPoiL3)
-    val markerZoneListArray = arrayOf(markerListZone0, markerListZone1, markerListZone2, markerListZone3, markerListZone4, markerListZoneL1, markerListZoneL2, markerListZoneL3)
-    val markerFloorListArray = arrayOf(markerListFloor0, markerListFloor1, markerListFloor2, markerListFloor3, markerListFloor4)
+    val markerLocListArray = arrayOf(
+        markerListLoc0,
+        markerListLoc1,
+        markerListLoc2,
+        markerListLoc3,
+        markerListLoc4,
+        markerListLocL1,
+        markerListLocL2,
+        markerListLocL3
+    )
+    val markerWarListArray = arrayOf(
+        markerListWar0,
+        markerListWar1,
+        markerListWar2,
+        markerListWar3,
+        markerListWar4,
+        markerListWarL1,
+        markerListWarL2,
+        markerListWarL3
+    )
+    val markerPoiListArray = arrayOf(
+        markerListPoi0,
+        markerListPoi1,
+        markerListPoi2,
+        markerListPoi3,
+        markerListPoi4,
+        markerListPoiL1,
+        markerListPoiL2,
+        markerListPoiL3
+    )
+    val markerZoneListArray = arrayOf(
+        markerListZone0,
+        markerListZone1,
+        markerListZone2,
+        markerListZone3,
+        markerListZone4,
+        markerListZoneL1,
+        markerListZoneL2,
+        markerListZoneL3
+    )
+    val markerFloorListArray = arrayOf(
+        markerListFloor0,
+        markerListFloor1,
+        markerListFloor2,
+        markerListFloor3,
+        markerListFloor4
+    )
+    val locationArray0: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArray1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArray2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArray3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArray4: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArrayL1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArrayL2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val locationArrayL3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+
+    val warningArray0: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArray1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArray2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArray3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArray4: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArrayL1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArrayL2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val warningArrayL3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+
+    val poiArray0: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArray1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArray2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArray3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArray4: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArrayL1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArrayL2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val poiArrayL3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+
+    val zoneArray0: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArray1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArray2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArray3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArray4: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArrayL1: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArrayL2: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+    val zoneArrayL3: MutableMap<Int, List<Double>> = mutableMapOf(0 to listOf(0.0, 0.0))
+
+    private var markerSizeFactor = MarkerSizeFactor.SMALL.value
+    private var currentZoomLevel = 0f
 
     lateinit var mapFragment: SupportMapFragment
 
@@ -150,59 +239,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
     }
-
 
 
     @SuppressLint("ResourceType")
     override fun onMapReady(googleMap: GoogleMap) {
-
-        val markers = readJson("markersLoc.json")//wczytuje markery z .json do strumienia
-        val myMarkers = Gson().fromJson(markers, MarkersModelClass::class.java)//pobiera markery ze strumienia
-
-        val polygons = readJson("strefy_all.json")//wczytuje poligony korytarzy z .json do strumienia
-        val myPolygons = Gson().fromJson(polygons, PolygonModelClass::class.java)//pobiera markery ze strumienia
+        googleMap.setUpCameraMoveListener()
+        mMap = googleMap
+        val polygons =
+            readJson("strefy_all.json")//wczytuje poligony korytarzy z .json do strumienia
+        val myPolygons =
+            Gson().fromJson(polygons, PolygonModelClass::class.java)//pobiera markery ze strumienia
 
         val floors = readJson("pietra.json")
         val myFloors = Gson().fromJson(floors, PolygonModelClass::class.java)
-
-
-        val locationArray0: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArray1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArray2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArray3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArray4: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArrayL1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArrayL2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val locationArrayL3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-
-        val warningArray0: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArray1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArray2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArray3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArray4: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArrayL1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArrayL2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val warningArrayL3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-
-        val poiArray0: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArray1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArray2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArray3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArray4: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArrayL1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArrayL2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val poiArrayL3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-
-        val zoneArray0: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArray1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArray2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArray3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArray4: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArrayL1: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArrayL2: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
-        val zoneArrayL3: MutableMap<Int,List<Double>> = mutableMapOf(0 to listOf(0.0,0.0))
 
         locationArray0.remove(0)
         locationArray1.remove(0)
@@ -240,59 +290,119 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         zoneArrayL2.remove(0)
         zoneArrayL3.remove(0)
 
-        sortingMarkers(myMarkers, 0,200,0, locationArray0, googleMap, markerListLoc0, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,1, locationArray1, googleMap, markerListLoc1, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,2, locationArray2, googleMap, markerListLoc2, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,3, locationArray3, googleMap, markerListLoc3, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,4, locationArray4, googleMap, markerListLoc4, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,5, locationArrayL1, googleMap, markerListLocL1, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,6, locationArrayL2, googleMap, markerListLocL2, R.drawable.ic_location_sign)
-        sortingMarkers(myMarkers, 0,200,7, locationArrayL3, googleMap, markerListLocL3, R.drawable.ic_location_sign)
-
-        sortingMarkers(myMarkers, 200,300,0, warningArray0, googleMap, markerListWar0, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,1, warningArray1, googleMap, markerListWar1, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,2, warningArray2, googleMap, markerListWar2, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,3, warningArray3, googleMap, markerListWar3, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,4, warningArray4, googleMap, markerListWar4, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,5, warningArrayL1, googleMap, markerListWarL1, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,6, warningArrayL2, googleMap, markerListWarL2, R.drawable.ic_warning_sign)
-        sortingMarkers(myMarkers, 200,300,7, warningArrayL3, googleMap, markerListWarL3, R.drawable.ic_warning_sign)
-
-        sortingMarkers(myMarkers, 300,450,0, poiArray0, googleMap, markerListPoi0, R.drawable.ic_poi_sign )
-        sortingMarkers(myMarkers, 300,450,1, poiArray1, googleMap, markerListPoi1, R.drawable.ic_poi_sign )
-        sortingMarkers(myMarkers, 300,450,2, poiArray2, googleMap, markerListPoi2, R.drawable.ic_poi_sign )
-        sortingMarkers(myMarkers, 300,450,3, poiArray3, googleMap, markerListPoi3, R.drawable.ic_poi_sign )
-        sortingMarkers(myMarkers, 300,450,4, poiArray4, googleMap, markerListPoi4, R.drawable.ic_poi_sign )
-        sortingMarkers(myMarkers, 300,450,5, poiArrayL1, googleMap, markerListPoiL1, R.drawable.ic_poi_sign)
-        sortingMarkers(myMarkers, 300,450,6, poiArrayL2, googleMap, markerListPoiL2, R.drawable.ic_poi_sign)
-        sortingMarkers(myMarkers, 300,450,7, poiArrayL3, googleMap, markerListPoiL3, R.drawable.ic_poi_sign)
-
-
+        drawMarkers()
 
         db = Database(this)
         dbCom = DatabaseCom(this)
-        mMap = googleMap
 
 //        mMap.addPolygon(addingPolygons)
-        addPolygonToMap(myPolygons, googleMap,         allPolygonsAtFloor, "north", polygonListN,   "#66D8DE66", "#999E2C")
-        addPolygonToMap(myPolygons, googleMap,         allPolygonsAtFloor, "south", polygonListS,   "#66E25555", "#B51616")
-        addPolygonToMap(myPolygons, googleMap,         allPolygonsAtFloor, "east", polygonListE,    "#6650C1E5", "#057AA0")
-        addPolygonToMap(myPolygons, googleMap,         allPolygonsAtFloor, "west", polygonListW,    "#666BCE5A", "#1E7110")
-        addPolygonToMap(myPolygons, googleMap,         allPolygonsAtFloor, "center", polygonListC,  "#667D4AD3", "#5F458C")
-        addPolygonToMap(myPolygons, googleMap,         allPolygonsLibrary, "library", polygonListL, "#66B36B3F", "#752F05")
-        addPolygonToMap(myPolygons, googleMap, allPolygonsOutsideOnGround, "east_yard", polygonListED, "#66FFFFFF", "#FFFFFF")
-        addPolygonToMap(myPolygons, googleMap, allPolygonsOutsideOnGround, "west_yard", polygonListWD, "#66FFFFFF", "#FFFFFF")
-        addPolygonToMap(myPolygons, googleMap, allPolygonsOutsideOnGround, "aula", polygonListA ,      "#66FFFFFF", "#FFFFFF")
-        addPolygonToMap(myPolygons, googleMap,  allPolygonsOutsideOnFront, "front", polygonListF ,     "#66FFFFFF", "#FFFFFF")
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "north",
+            polygonListN,
+            "#66D8DE66",
+            "#999E2C"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "south",
+            polygonListS,
+            "#66E25555",
+            "#B51616"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "east",
+            polygonListE,
+            "#6650C1E5",
+            "#057AA0"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "west",
+            polygonListW,
+            "#666BCE5A",
+            "#1E7110"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "center",
+            polygonListC,
+            "#667D4AD3",
+            "#5F458C"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsLibrary,
+            "library",
+            polygonListL,
+            "#66B36B3F",
+            "#752F05"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "east_yard",
+            polygonListED,
+            "#66FFFFFF",
+            "#FFFFFF"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "west_yard",
+            polygonListWD,
+            "#66FFFFFF",
+            "#FFFFFF"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "aula",
+            polygonListA,
+            "#66FFFFFF",
+            "#FFFFFF"
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnFront,
+            "front",
+            polygonListF,
+            "#66FFFFFF",
+            "#FFFFFF"
+        )
 
-        addFloorPolygonToMap(myFloors,googleMap, allFloorPolygons, polygonFloorList, "#66FFB1FF", "#5F458C")
+        addFloorPolygonToMap(
+            myFloors,
+            googleMap,
+            allFloorPolygons,
+            polygonFloorList,
+            "#66FFB1FF",
+            "#5F458C"
+        )
 
 
-        mMap.uiSettings.isMapToolbarEnabled = false
+        mMap?.uiSettings?.isMapToolbarEnabled = false
 //        mMap.uiSettings.isCompassEnabled = false
 
         var mapView = mapFragment.view
-        val compassButton: View = mapView!!.findViewWithTag("GoogleMapCompass")   //to access the compass button
+        val compassButton: View =
+            mapView!!.findViewWithTag("GoogleMapCompass")   //to access the compass button
 
         val rlp = compassButton.layoutParams as RelativeLayout.LayoutParams
 //        rlp.addRule(RelativeLayout.ALIGN_PARENT_END)
@@ -317,12 +427,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         //ustawia custom'owe info window dla markerów
-        mMap.setInfoWindowAdapter(CustomInfoWindowForGoogleMap(this))
-        mMap.setOnInfoWindowClickListener { marker ->
+        mMap?.setInfoWindowAdapter(CustomInfoWindowForGoogleMap(this))
+        mMap?.setOnInfoWindowClickListener { marker ->
             Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
             val dialog = PopupMenu(marker.title.toString(), db, dbCom)
 //            dialog.setStyle(R.style.PopupStyle)
-            
+
             dialog.show(supportFragmentManager, "customDialog")
         }
 
@@ -330,34 +440,32 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val circleOptions = CircleOptions()
         circleOptions.center(LatLng(0.0, 0.0))
         circleOptions.radius(5.0)
-        mapCircle = mMap.addCircle(circleOptions)
+        mMap?.let {
+            mapCircle = it.addCircle(circleOptions)
+            val polyOptions = PolylineOptions()
+            polyOptions.add(LatLng(0.0, 0.0))
+            polyOptions.width(5.0F)
+            mapLine = it.addPolyline(polyOptions)
+            val marOptions = MarkerOptions()
+            marOptions.position(LatLng(0.0, 0.0))
+            it.addMarker(marOptions)?.let { marker ->
+                lineMarker = marker
+            }
+            //Ustawia styl mapy
+            it.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json))
+            //tak raczej nie powinno to wyglądać i nie wiem jak to poprawić
+            //być może zrobić osobną klase dla Circle
+            //Ustawia pozycje kamery, obrót i zoom
+            val cp = CameraPosition.Builder()
+                .bearing(-65f)
+                .target(LatLng(52.220585, 21.010170))
+                .zoom(18.4f).build()
+            val cu = CameraUpdateFactory.newCameraPosition(cp)
+            it.animateCamera(cu)
+        }
         mapCircle.remove()
-
-        val polyOptions = PolylineOptions()
-        polyOptions.add(LatLng(0.0, 0.0))
-        polyOptions.width(5.0F)
-        mapLine = mMap.addPolyline(polyOptions)
         mapLine.remove()
-
-        val marOptions = MarkerOptions()
-        marOptions.position(LatLng(0.0, 0.0))
-        lineMarker = mMap.addMarker(marOptions)!!
         lineMarker.remove()
-        //tak raczej nie powinno to wyglądać i nie wiem jak to poprawić
-        //być może zrobić osobną klase dla Circle
-        // problem jest w lateinit
-
-        //Ustawia styl mapy
-        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json))
-
-
-        //Ustawia pozycje kamery, obrót i zoom
-        val cp = CameraPosition.Builder()
-            .bearing(-65f)
-            .target(LatLng(52.220585, 21.010170))
-            .zoom(18.4f).build()
-        val cu = CameraUpdateFactory.newCameraPosition(cp)
-        mMap.animateCamera(cu)
 
 
         setGroundOverlay(R.drawable.pietro1)//Nakłada pierwsze piętro na mapę
@@ -373,59 +481,119 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         floorButton = findViewById(R.id.floorBtn)
         bottomButton = findViewById<Button>(R.id.bottomPanelBtn)
 
-        binding.menu.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+        binding.menu.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             this.window.decorView.rootView.announceForAccessibility("Z lewej strony ekranu otworzono pionową listwę z numerami pięter.")
 
             var frag = supportFragmentManager.findFragmentById(R.id.fragmentContainerMenu)
-            if(frag!=null){
+            if (frag != null) {
                 val transaction: FragmentTransaction = fragmentManager.beginTransaction()
                 transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_left)
                 transaction.remove(frag)
                 transaction.commit()
-            }else{
+            } else {
                 hideBottomPanel(R.id.ContainerBottomPanel)
-                replaceFragment(FragmentMenu(floorNumber), R.anim.enter_from_left, R.anim.exit_to_left, R.id.fragmentContainerMenu)
+                replaceFragment(
+                    FragmentMenu(floorNumber),
+                    R.anim.enter_from_left,
+                    R.anim.exit_to_left,
+                    R.id.fragmentContainerMenu
+                )
             }
         }
 
-        locButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
-            clickLoc(locButton) }
-        warButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
-            clickWar(warButton) }
-        poiButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
-            clickPoi(poiButton) }
-        polyButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+        locButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
+            clickLoc(locButton)
+        }
+        warButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
+            if (clickedWar) {
+                warButton.setBackgroundResource(R.drawable.marker_invis_btn)
+            } else {
+                warButton.setBackgroundResource(R.drawable.marker_vis_btn)
+            }
+            toggleWarningMarkersVisibility()
+        }
+        poiButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
+            if (clickedPoi) {
+                poiButton.setBackgroundResource(R.drawable.marker_invis_btn)
+            } else {
+                poiButton.setBackgroundResource(R.drawable.marker_vis_btn)
+            }
+            togglePoiMarkersVisibility()
+        }
+        polyButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             clickPoly(polyButton)
         }
-        floorButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+        floorButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             clickFloor(floorButton)
         }
         commentBtn = findViewById<Button>(R.id.commentListBtn)
         settingsBtn = findViewById<Button>(R.id.settingsBtn)
 
 
-        bottomButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+        bottomButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
 //            commentBtn.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
 
@@ -433,106 +601,537 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
 
-        mMap.setOnMarkerClickListener { marker ->
+        mMap?.setOnMarkerClickListener { marker ->
             ttsHelper?.stopSpeaking()
             pointNumber = marker.title.toString()
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             //Jeżeli panel dolny nie jest jeszcze otrzowony to się otwiera
-            if(!clickedPanel) {
+            if (!clickedPanel) {
                 openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
                 this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
-            }else{
+            } else {
                 bottomButton.visibility = View.INVISIBLE
-                replaceFragment(FragmentBottomPanel(bottomButton, floorNumber, db, commentBtn), 0,0, R.id.ContainerBottomPanel)
+                replaceFragment(
+                    FragmentBottomPanel(bottomButton, floorNumber, db, commentBtn),
+                    0,
+                    0,
+                    R.id.ContainerBottomPanel
+                )
                 clickedPanel = true
             }
             false
         }
 
 
-        mMap.setOnPolygonClickListener { polygon ->
+        mMap?.setOnPolygonClickListener { polygon ->
 //            println("qqqqqqqq ${zonesMap.filter { it.value == polygon }.keys}")
             ttsHelper?.stopSpeaking()
-            pointNumber = zonesMap.filter { it.value == polygon }.keys.elementAt(floorVisibility).toString()
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+            pointNumber =
+                zonesMap.filter { it.value == polygon }.keys.elementAt(floorVisibility).toString()
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
 //            //Jeżeli panel dolny nie jest jeszcze otrzowony to się otwiera
-            if(!clickedPanel) {
+            if (!clickedPanel) {
                 openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
                 this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
-            }else{
+            } else {
                 bottomButton.visibility = View.INVISIBLE
-                replaceFragment(FragmentBottomPanel(bottomButton, floorNumber, db, commentBtn), 0,0, R.id.ContainerBottomPanel)
+                replaceFragment(
+                    FragmentBottomPanel(bottomButton, floorNumber, db, commentBtn),
+                    0,
+                    0,
+                    R.id.ContainerBottomPanel
+                )
                 clickedPanel = true
             }
             false
         }
 
 
-        commentBtn.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+        commentBtn.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             this.window.decorView.rootView.announceForAccessibility("Na całym ekranie otworzono widok z komentarzami.")
             hideBottomPanel(R.id.ContainerBottomPanel)
-            replaceFragment(FragmentComments(floorNumber, supportFragmentManager),R.anim.enter_from_left, R.anim.exit_to_left, R.id.fragmentContainer)
+            replaceFragment(
+                FragmentComments(floorNumber, supportFragmentManager),
+                R.anim.enter_from_left,
+                R.anim.exit_to_left,
+                R.id.fragmentContainer
+            )
         }
-
 
 
         val searchButton = findViewById<Button>(R.id.searchButton)
         var poiList = mutableMapOf<Int, MutableList<String>>()
 
 
-        searchButton.setOnClickListener{
-            if(mapCircle!=null){ mapCircle.remove() }
-            if(mapLine!=null){ mapLine.remove() }
-            if(lineMarker!=null){ lineMarker.remove() }
+        searchButton.setOnClickListener {
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
             db.open()
             poiList = db.getPOI()
             db.close()
             this.window.decorView.rootView.announceForAccessibility("Na całym ekranie otworzono widok wyszukiwania punktów.")
             hideBottomPanel(R.id.ContainerBottomPanel)
-            replaceFragment(FragmentSearchBar(poiList, floorNumber), R.anim.enter_from_top, R.anim.exit_to_top, R.id.fragmentContainer)
+            replaceFragment(
+                FragmentSearchBar(poiList, floorNumber),
+                R.anim.enter_from_top,
+                R.anim.exit_to_top,
+                R.id.fragmentContainer
+            )
         }
 
 
         //copy database to app
         copyDatabase("gmach_glowny_nowy.db")
 //        copyDatabase("komentarze.db")
-
-
-
-
-
     }//=======================FUNKCJE=====================================================================================
+
+    private fun removeMarkers() {
+        markerListFloor0.removeMarkersAndClear()
+        markerListFloor1.removeMarkersAndClear()
+        markerListFloor2.removeMarkersAndClear()
+        markerListFloor3.removeMarkersAndClear()
+        markerListFloor4.removeMarkersAndClear()
+        markerListLoc0.removeMarkersAndClear()
+        markerListLoc1.removeMarkersAndClear()
+        markerListLoc2.removeMarkersAndClear()
+        markerListLoc3.removeMarkersAndClear()
+        markerListLoc4.removeMarkersAndClear()
+        markerListLocL1.removeMarkersAndClear()
+        markerListLocL2.removeMarkersAndClear()
+        markerListLocL3.removeMarkersAndClear()
+        markerListWar0.removeMarkersAndClear()
+        markerListWar1.removeMarkersAndClear()
+        markerListWar2.removeMarkersAndClear()
+        markerListWar3.removeMarkersAndClear()
+        markerListWar4.removeMarkersAndClear()
+        markerListWarL1.removeMarkersAndClear()
+        markerListWarL2.removeMarkersAndClear()
+        markerListWarL3.removeMarkersAndClear()
+        markerListPoi0.removeMarkersAndClear()
+        markerListPoi1.removeMarkersAndClear()
+        markerListPoi2.removeMarkersAndClear()
+        markerListPoi3.removeMarkersAndClear()
+        markerListPoi4.removeMarkersAndClear()
+        markerListPoiL1.removeMarkersAndClear()
+        markerListPoiL2.removeMarkersAndClear()
+        markerListPoiL3.removeMarkersAndClear()
+        locationArray0.clear()
+        locationArray1.clear()
+        locationArray2.clear()
+        locationArray3.clear()
+        locationArray4.clear()
+        locationArrayL1.clear()
+        locationArrayL2.clear()
+        locationArrayL3.clear()
+        warningArray0.clear()
+        warningArray1.clear()
+        warningArray2.clear()
+        warningArray3.clear()
+        warningArray4.clear()
+        warningArrayL1.clear()
+        warningArrayL2.clear()
+        warningArrayL3.clear()
+        poiArray0.clear()
+        poiArray1.clear()
+        poiArray2.clear()
+        poiArray3.clear()
+        poiArray4.clear()
+        poiArrayL1.clear()
+        poiArrayL2.clear()
+        poiArrayL3.clear()
+        markerMap.clear()
+    }
+
+    private fun MutableList<Marker>.removeMarkersAndClear() {
+        forEach {
+            it.remove()
+        }
+        clear()
+    }
+
+    private fun drawMarkers(markerConfig: MarkerConfig = MarkerConfig()) {
+        val googleMap = mMap ?: return
+        val markers = readJson("markersLoc.json")//wczytuje markery z .json do strumienia
+        val myMarkers =
+            Gson().fromJson(markers, MarkersModelClass::class.java)//pobiera markery ze strumienia
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            0,
+            locationArray0,
+            googleMap,
+            markerListLoc0,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            1,
+            locationArray1,
+            googleMap,
+            markerListLoc1,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            2,
+            locationArray2,
+            googleMap,
+            markerListLoc2,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            3,
+            locationArray3,
+            googleMap,
+            markerListLoc3,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            4,
+            locationArray4,
+            googleMap,
+            markerListLoc4,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            5,
+            locationArrayL1,
+            googleMap,
+            markerListLocL1,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            6,
+            locationArrayL2,
+            googleMap,
+            markerListLocL2,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            0,
+            200,
+            7,
+            locationArrayL3,
+            googleMap,
+            markerListLocL3,
+            R.drawable.ic_location_sign,
+            markerConfig
+        )
+
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            0,
+            warningArray0,
+            googleMap,
+            markerListWar0,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            1,
+            warningArray1,
+            googleMap,
+            markerListWar1,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            2,
+            warningArray2,
+            googleMap,
+            markerListWar2,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            3,
+            warningArray3,
+            googleMap,
+            markerListWar3,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            4,
+            warningArray4,
+            googleMap,
+            markerListWar4,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            5,
+            warningArrayL1,
+            googleMap,
+            markerListWarL1,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            6,
+            warningArrayL2,
+            googleMap,
+            markerListWarL2,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            200,
+            300,
+            7,
+            warningArrayL3,
+            googleMap,
+            markerListWarL3,
+            R.drawable.ic_warning_sign,
+            markerConfig
+        )
+
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            0,
+            poiArray0,
+            googleMap,
+            markerListPoi0,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            1,
+            poiArray1,
+            googleMap,
+            markerListPoi1,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            2,
+            poiArray2,
+            googleMap,
+            markerListPoi2,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            3,
+            poiArray3,
+            googleMap,
+            markerListPoi3,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            4,
+            poiArray4,
+            googleMap,
+            markerListPoi4,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            5,
+            poiArrayL1,
+            googleMap,
+            markerListPoiL1,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            6,
+            poiArrayL2,
+            googleMap,
+            markerListPoiL2,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        sortingMarkers(
+            myMarkers,
+            300,
+            450,
+            7,
+            poiArrayL3,
+            googleMap,
+            markerListPoiL3,
+            R.drawable.ic_poi_sign,
+            markerConfig
+        )
+    }
+
+    private fun toggleMarkersSize() {
+        val markerConfig = MarkerConfig()
+        if (markerSizeFactor == MarkerSizeFactor.BIG.value) {
+            markerConfig.textSize *= markerSizeFactor
+            markerConfig.threeDigitsNumTextSizeOffset *= markerSizeFactor
+            markerConfig.threeDigitsNumTextPositionX *= markerSizeFactor
+            markerConfig.threeDigitsNumTextPositionY *= markerSizeFactor
+            markerConfig.twoDigitsNumTextPositionX *= markerSizeFactor
+            markerConfig.twoDigitsNumTextPositionY *= markerSizeFactor
+            markerConfig.oneDigitsNumTextPositionX *= markerSizeFactor
+            markerConfig.oneDigitsNumTextPositionY *= markerSizeFactor
+            markerConfig.warningTextPositionX *= markerSizeFactor
+            markerConfig.warningTextPositionY *= markerSizeFactor
+            markerConfig.warningTextSizeOffset *= markerSizeFactor
+        }
+        drawMarkers(markerConfig)
+    }
+
+    private fun GoogleMap.setUpCameraMoveListener() {
+        setOnCameraMoveListener {
+            val zoomLevel = cameraPosition.zoom
+            if (zoomLevel == currentZoomLevel) {
+                return@setOnCameraMoveListener
+            }
+            currentZoomLevel = zoomLevel
+            val newMarkerSizeFactor = if (currentZoomLevel > SMALL_SCALE_MAX_ZOOM_LEVEL) {
+                MarkerSizeFactor.BIG.value
+            } else {
+                MarkerSizeFactor.SMALL.value
+            }
+            if (newMarkerSizeFactor == markerSizeFactor) {
+                return@setOnCameraMoveListener
+            }
+            markerSizeFactor = newMarkerSizeFactor
+            removeMarkers()
+            toggleMarkersSize()
+            toggleMarkersVisibility()
+        }
+    }
+
+    private fun toggleMarkersVisibility() {
+        if (clickedLoc) {
+            clickedLoc = false
+            toggleLocationMarkersVisibility()
+        }
+        if (clickedWar) {
+            clickedWar = false
+            toggleWarningMarkersVisibility()
+        }
+        if (clickedPoi) {
+            clickedPoi = false
+            togglePoiMarkersVisibility()
+        }
+    }
 
     override fun onPause() {
         ttsHelper?.stopSpeaking()
         super.onPause()
     }
 
-    private fun makePolygonInvisible(polygon: Polygon){
+    private fun makePolygonInvisible(polygon: Polygon) {
         polygon.isVisible = false
         polygon.isClickable = false
     }
 
-    private fun makePolygonVisible(polygon: Polygon){
+    private fun makePolygonVisible(polygon: Polygon) {
         polygon.isVisible = true
         polygon.isClickable = true
     }
 
-    private fun makeMarkerInvisible(markerListLoc1: MutableList<Marker>){
-        for(i in markerListLoc1){
+    private fun makeMarkerInvisible(markerListLoc1: MutableList<Marker>) {
+        for (i in markerListLoc1) {
             i.isVisible = false
         }
     }
 
-    private fun makeMarkerVisible(markerListLoc1: MutableList<Marker>){
-        for(i in markerListLoc1){
+    private fun makeMarkerVisible(markerListLoc1: MutableList<Marker>) {
+        for (i in markerListLoc1) {
             i.isVisible = true
         }
     }
@@ -550,10 +1149,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         return center
     }
 
-    fun addPolygonToMap(myPolygons: PolygonModelClass, googleMap: GoogleMap, polygonList: MutableList<Polygon>, zone: String, polyList:  MutableList<LatLng>, color: String, strokeColor: String) {
+    fun addPolygonToMap(
+        myPolygons: PolygonModelClass,
+        googleMap: GoogleMap,
+        polygonList: MutableList<Polygon>,
+        zone: String,
+        polyList: MutableList<LatLng>,
+        color: String,
+        strokeColor: String
+    ) {
         myPolygons.features?.filter { it.attributes?.zone == zone }?.forEach { it ->
-            it.geometry?.rings?.elementAt(0)?.forEach{
-                polyList.add(LatLng(it.elementAt(1)-0.00002, it.elementAt(0)+0.000028))
+            it.geometry?.rings?.elementAt(0)?.forEach {
+                polyList.add(LatLng(it.elementAt(1) - 0.00002, it.elementAt(0) + 0.000028))
             }
         }
 
@@ -568,7 +1175,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         )
 
         myPolygons.features?.filter { it.attributes?.zone == zone }?.forEach { it ->
-            for(i in it.attributes?.number?.split(",")!!){
+            for (i in it.attributes?.number?.split(",")!!) {
                 zonesMap[i] = addingPolygons
                 val addingMarkers = googleMap.addMarker(
                     MarkerOptions()
@@ -588,14 +1195,24 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     in 537..539 -> addingMarkers?.let { it1 -> markerListZone0.add(it1) }
                     500, 501 -> addingMarkers?.let { it1 -> markerListZone1.add(it1) }
                 }
-                markerMap[i.toInt()] = listOf(centroid(polyList).latitude+0.00002, centroid(polyList).longitude-0.000035)
+                markerMap[i.toInt()] = listOf(
+                    centroid(polyList).latitude + 0.00002,
+                    centroid(polyList).longitude - 0.000035
+                )
             }
         }
         polygonList.add(addingPolygons)
         makePolygonInvisible(addingPolygons)
     }
 
-    fun addFloorPolygonToMap(myPolygons: PolygonModelClass, googleMap: GoogleMap, polygonList: MutableList<Polygon>, polyList:  MutableList<LatLng>, color: String, strokeColor: String) {
+    fun addFloorPolygonToMap(
+        myPolygons: PolygonModelClass,
+        googleMap: GoogleMap,
+        polygonList: MutableList<Polygon>,
+        polyList: MutableList<LatLng>,
+        color: String,
+        strokeColor: String
+    ) {
         myPolygons.features?.forEach { it ->
             it.geometry?.rings?.elementAt(0)?.forEach {
                 polyList.add(LatLng(it.elementAt(1) - 0.00002, it.elementAt(0) + 0.000028))
@@ -625,11 +1242,21 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 )
 
                 when (i.toInt()) {
-                    503 -> addingMarkers?.let { it1 -> markerListFloor0.add(it1) }
-                    510 -> addingMarkers?.let { it1 -> markerListFloor1.add(it1) }
-                    517 -> addingMarkers?.let { it1 -> markerListFloor2.add(it1) }
-                    524 -> addingMarkers?.let { it1 -> markerListFloor3.add(it1) }
-                    531 -> addingMarkers?.let { it1 -> markerListFloor4.add(it1) }
+                    503 -> addingMarkers?.let { it1 ->
+                        markerListFloor0.add(it1)
+                    }
+                    510 -> addingMarkers?.let { it1 ->
+                        markerListFloor1.add(it1)
+                    }
+                    517 -> addingMarkers?.let { it1 ->
+                        markerListFloor2.add(it1)
+                    }
+                    524 -> addingMarkers?.let { it1 ->
+                        markerListFloor3.add(it1)
+                    }
+                    531 -> addingMarkers?.let { it1 ->
+                        markerListFloor4.add(it1)
+                    }
 
                 }
                 markerMap[i.toInt()] = listOf(
@@ -642,17 +1269,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         makePolygonInvisible(addingPolygons)
     }
 
-    private fun addMarkersToMap(locationArray: MutableMap<Int,List<Double>>, googleMap: GoogleMap, markerList: MutableList<Marker>, shape: Int){
-        for(i in locationArray.entries.iterator()){
-            val point = LatLng(i.value.elementAt(0)-0.00002, i.value.elementAt(1)+0.000035)
+    private fun addMarkersToMap(
+        locationArray: MutableMap<Int, List<Double>>,
+        googleMap: GoogleMap,
+        markerList: MutableList<Marker>, shape: Int,
+        markerConfig: MarkerConfig = MarkerConfig()
+    ) {
+        for (i in locationArray.entries.iterator()) {
+            val point = LatLng(i.value.elementAt(0) - 0.00002, i.value.elementAt(1) + 0.000035)
             //Dodane przesunięcie żeby lepiej zgrać punktu z podkładem
-
             val addingMarkers = googleMap.addMarker(
                 MarkerOptions()
                     .position(point)
                     .title(i.key.toString())
 //                    .snippet(i.key.toString())
-                    .icon(bitmapFromVector(applicationContext, shape, i.key.toString()))
+                    .icon(
+                        bitmapFromVector(
+                            applicationContext,
+                            shape,
+                            i.key.toString(),
+                            markerConfig
+                        )
+                    )
                     .anchor(0.5f, 0.5f)
             )
             if (addingMarkers != null) {
@@ -663,31 +1301,41 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
-    private fun sortingMarkers(myMarkers: MarkersModelClass, idFirst: Int, idLast: Int, floor: Int, locationArray1: MutableMap<Int,List<Double>>, googleMap: GoogleMap, markerListLoc1: MutableList<Marker>, shape: Int){
-        myMarkers.features?.filter { it.properties?.IDP!! in idFirst until idLast && it.properties?.FLOOR == floor}?.forEach{
+    private fun sortingMarkers(
+        myMarkers: MarkersModelClass,
+        idFirst: Int,
+        idLast: Int,
+        floor: Int,
+        locationArray1: MutableMap<Int, List<Double>>,
+        googleMap: GoogleMap,
+        markerListLoc1: MutableList<Marker>,
+        shape: Int,
+        markerConfig: MarkerConfig = MarkerConfig()
+    ) {
+        myMarkers.features?.filter { it.properties?.IDP!! in idFirst until idLast && it.properties?.FLOOR == floor }
+            ?.forEach {
 
-            val coordLong = it.geometry?.coordinates?.elementAt(0)?.toDouble() ?: 0.0
-            val coordLat = it.geometry?.coordinates?.elementAt(1)?.toDouble() ?: 0.0
-            val pointId = it.properties?.IDP ?: 0
-            val floorNr = it.properties?.FLOOR?.toDouble() ?: 0.0
+                val coordLong = it.geometry?.coordinates?.elementAt(0)?.toDouble() ?: 0.0
+                val coordLat = it.geometry?.coordinates?.elementAt(1)?.toDouble() ?: 0.0
+                val pointId = it.properties?.IDP ?: 0
+                val floorNr = it.properties?.FLOOR?.toDouble() ?: 0.0
 
-            locationArray1[pointId] = listOf(coordLat, coordLong)
-            markerMap[pointId] = listOf(coordLat, coordLong, floorNr)
-        }
-        addMarkersToMap(locationArray1, googleMap, markerListLoc1, shape)
+                locationArray1[pointId] = listOf(coordLat, coordLong)
+                markerMap[pointId] = listOf(coordLat, coordLong, floorNr)
+            }
+        addMarkersToMap(locationArray1, googleMap, markerListLoc1, shape, markerConfig)
     }
 
 
-
-    private fun setGroundOverlay(overlay: Int){
+    private fun setGroundOverlay(overlay: Int) {
         val newarkLatLng = LatLng(52.220550, 21.011190)//współrzędne wstawienia
         val newarkMap = GroundOverlayOptions()
             .image(BitmapDescriptorFactory.fromResource(overlay))
             .position(newarkLatLng, 270f)
-        imageOverlay = mMap.addGroundOverlay(newarkMap)!!
+        imageOverlay = mMap?.addGroundOverlay(newarkMap)!!
     }
 
-    private fun replaceFragment(fragment : Fragment, anim1: Int, anim2: Int, container: Int) {
+    private fun replaceFragment(fragment: Fragment, anim1: Int, anim2: Int, container: Int) {
 
         hideFragment(R.id.fragmentContainerMenu, R.anim.enter_from_left, R.anim.exit_to_left)
 //        hideBottomPanel(R.id.ContainerBottomPanel)
@@ -699,18 +1347,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         transaction.commit()
     }
 
-    fun hideFragment(container: Int, anim1: Int, anim2: Int){
+    fun hideFragment(container: Int, anim1: Int, anim2: Int) {
         var frag = supportFragmentManager.findFragmentById(container)
-        if(frag!=null){
+        if (frag != null) {
             val transaction: FragmentTransaction = fragmentManager.beginTransaction()
             transaction.setCustomAnimations(anim1, anim2)
             transaction.remove(frag)
             transaction.commit()
         }
     }
-    fun hideBottomPanel(container: Int){
+
+    fun hideBottomPanel(container: Int) {
         var frag = supportFragmentManager.findFragmentById(container)
-        if(frag!=null){
+        if (frag != null) {
             ttsHelper?.stopSpeaking()
             val transaction: FragmentTransaction = fragmentManager.beginTransaction()
             transaction.setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_bottom)
@@ -721,14 +1370,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
             val view: View? = this.currentFocus
-            if(view != null){
+            if (view != null) {
                 val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(view.windowToken, 0)
             }
 
             this.window.decorView.rootView.announceForAccessibility("Zamknięto panel do odczytywania komunikatów.")
 
-            if(clickedPanel){
+            if (clickedPanel) {
                 val animation: Animation = TranslateAnimation(0F, 0F, -750F, 0F)
                 animation.duration = 500
                 animation.fillAfter = true
@@ -743,7 +1392,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
-    private fun copyDatabase(dbName: String){
+    private fun copyDatabase(dbName: String) {
         //get context by calling "this" in activity or getActivity() in fragment
         //call this if API level is lower than 17  String appDataPath = "/data/data/" + context.getPackageName() + "/databases/"
         val appDataPath: String = this.applicationInfo.dataDir
@@ -767,88 +1416,81 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun readJson(file: String): String {
-        val json:String?
+        val json: String?
         val inputStream: InputStream = assets.open(file)
         json = inputStream.bufferedReader().use { it.readText() }
         return json
     }
+
     private fun readJsonPoly(): String {
-        val json:String?
+        val json: String?
         val inputStream: InputStream = assets.open("strefy_all.json")
         json = inputStream.bufferedReader().use { it.readText() }
         return json
     }
 
     @SuppressLint("ResourceAsColor")
-    private fun bitmapFromVector(context: Context, vectorResId: Int, numer: String): BitmapDescriptor {
+    private fun bitmapFromVector(
+        context: Context,
+        vectorResId: Int,
+        numer: String,
+        markerConfig: MarkerConfig = MarkerConfig()
+    ): BitmapDescriptor {
         // below line is use to generate a drawable.
         val vectorDrawable = ContextCompat.getDrawable(context, vectorResId)
+            ?: throw NullPointerException("Cannot get drawable for number $numer")
         // below line is use to set bounds to our vector drawable.
-        vectorDrawable!!.setBounds(0, 0, vectorDrawable.intrinsicWidth, vectorDrawable.intrinsicHeight)
+        val width = vectorDrawable.intrinsicWidth * markerSizeFactor
+        val height = vectorDrawable.intrinsicHeight * markerSizeFactor
+        vectorDrawable.setBounds(0, 0, width, height)
         // below line is use to create a bitmap for our drawable which we have added.
-        var bitmap = Bitmap.createBitmap(
-            vectorDrawable.intrinsicWidth,
-            vectorDrawable.intrinsicHeight,
+        val bitmap = Bitmap.createBitmap(
+            width,
+            height,
             Bitmap.Config.ARGB_8888
         )
-
-//        googleMaps.event.addListener(mMap, 'zoom_changed', function() {
-//            var pixelSizeAtZoom0 = 8; //the size of the icon at zoom level 0
-//            var maxPixelSize = 350; //restricts the maximum size of the icon, otherwise the browser will choke at higher zoom levels trying to scale an image to millions of pixels
-//
-//            var zoom = map.getZoom();
-//            var relativePixelSize = Math.round(pixelSizeAtZoom0*Math.pow(2,zoom)); // use 2 to the power of current zoom to calculate relative pixel size.  Base of exponent is 2 because relative size should double every time you zoom in
-//
-//            if(relativePixelSize > maxPixelSize) //restrict the maximum size of the icon
-//                relativePixelSize = maxPixelSize;
-//
-//            //change the size of the icon
-//            marker.setIcon(
-//                new google.maps.MarkerImage(
-//                        marker.getIcon().url, //marker's same icon graphic
-//                null,//size
-//                null,//origin
-//                null, //anchor
-//                new google.maps.Size(relativePixelSize, relativePixelSize) //changes the scale
-//            )
-//            );
-//        });
-
-//        bitmap = getResizedBitmap(bitmap, 100, 100)
         // below line is use to add bitmap in our canvas.
         val canvas = Canvas(bitmap)
         val paint = Paint()
         paint.color = Color.parseColor("#E2FFDF")
-
-//        mMap.setOnCameraMoveListener {
-////            for (mark in markerListLoc0) {
-////                mark.
-////                getResizedBitmap(bitmapArrayList.get(mark), 250, 250);
-////                mark.setIcon(BitmapDescriptorFactory.fromBitmap(resizedBitmap));
-////            }
-//            val matrix = Matrix()
-//            matrix.postScale(2f, 2f) // douple the size
-//
-//            canvas.drawBitmap(bitmap, matrix, paint)
-//        }
         //Rozmiar testu na markerze
-        paint.textSize = 30f
+        paint.textSize = markerConfig.textSize
 
         // below line is use to draw our vector drawable in canvas.
         vectorDrawable.draw(canvas)
 
         //Przesunięcie i rozmiar teksu na markerze w zależności od długości numeru i kształtu markera
-        if((numer.toInt() in 100..199) || numer.toInt() >= 300){
-            paint.textSize = 28f
-            canvas.drawText(numer, 8F, 40f, paint)
-        } else if(numer.toInt() in 10..99){
-            canvas.drawText(numer, 14F, 40f, paint)
-        } else if(numer.toInt() < 10){
-            canvas.drawText(numer, 22F, 40f, paint)
-        } else if(numer.toInt() in 200..299){
-            paint.textSize = 28f
+        if ((numer.toInt() in 100..199) || numer.toInt() >= 300) {
+            paint.textSize = markerConfig.textSize - markerConfig.threeDigitsNumTextSizeOffset
+            canvas.drawText(
+                numer,
+                markerConfig.threeDigitsNumTextPositionX,
+                markerConfig.threeDigitsNumTextPositionY,
+                paint
+            )
+        } else if (numer.toInt() in 10..99) {
+            canvas.drawText(
+                numer,
+                markerConfig.twoDigitsNumTextPositionX,
+                markerConfig.twoDigitsNumTextPositionY,
+                paint
+            )
+        } else if (numer.toInt() < 10) {
+            canvas.drawText(
+                numer,
+                markerConfig.oneDigitsNumTextPositionX,
+                markerConfig.oneDigitsNumTextPositionY,
+                paint
+            )
+        } else if (numer.toInt() in 200..299) {
+            paint.textSize = markerConfig.textSize - markerConfig.warningTextSizeOffset
             paint.color = Color.parseColor("#353536")
-            canvas.drawText(numer, 8F, 57f, paint)
+            canvas.drawText(
+                numer,
+                markerConfig.warningTextPositionX,
+                markerConfig.warningTextPositionY,
+                paint
+            )
         }
 
         // after generating our bitmap we are returning our bitmap.
@@ -856,7 +1498,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////DO ZROBIENIA
 
-    private fun clickFloor(floorBtn: Button){
+    private fun clickFloor(floorBtn: Button) {
         when (floorVisibility) {
             0 -> switchVisibilityFloor(markerListFloor0, allFloorPolygons, floorBtn)
             1 -> switchVisibilityFloor(markerListFloor1, allFloorPolygons, floorBtn)
@@ -869,13 +1511,31 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    private fun clickPoly(polyBtn: Button){
+    private fun clickPoly(polyBtn: Button) {
         when (floorVisibility) {
-            0 -> switchVisibilityPoly(markerListZone0, (allPolygonsAtFloor.plus(allPolygonsOutsideOnGround).plus(allPolygonsLibrary) as MutableList<Polygon>) , polyBtn)
-            1 -> switchVisibilityPoly(markerListZone1, (allPolygonsAtFloor.plus(allPolygonsOutsideOnFront).plus(allPolygonsLibrary) as MutableList<Polygon>) , polyBtn)
-            2 -> switchVisibilityPoly(markerListZone2,  allPolygonsAtFloor.plus(allPolygonsLibrary) as MutableList<Polygon> , polyBtn)
-            3 -> switchVisibilityPoly(markerListZone3,  allPolygonsAtFloor.plus(allPolygonsLibrary) as MutableList<Polygon> , polyBtn)
-            4 -> switchVisibilityPoly(markerListZone4,  allPolygonsAtFloor, polyBtn)
+            0 -> switchVisibilityPoly(
+                markerListZone0,
+                (allPolygonsAtFloor.plus(allPolygonsOutsideOnGround)
+                    .plus(allPolygonsLibrary) as MutableList<Polygon>),
+                polyBtn
+            )
+            1 -> switchVisibilityPoly(
+                markerListZone1,
+                (allPolygonsAtFloor.plus(allPolygonsOutsideOnFront)
+                    .plus(allPolygonsLibrary) as MutableList<Polygon>),
+                polyBtn
+            )
+            2 -> switchVisibilityPoly(
+                markerListZone2,
+                allPolygonsAtFloor.plus(allPolygonsLibrary) as MutableList<Polygon>,
+                polyBtn
+            )
+            3 -> switchVisibilityPoly(
+                markerListZone3,
+                allPolygonsAtFloor.plus(allPolygonsLibrary) as MutableList<Polygon>,
+                polyBtn
+            )
+            4 -> switchVisibilityPoly(markerListZone4, allPolygonsAtFloor, polyBtn)
             5 -> switchVisibilityPoly(markerListZoneL1, allPolygonsLibrary, polyBtn)
             6 -> switchVisibilityPoly(markerListZoneL2, allPolygonsLibrary, polyBtn)
             7 -> switchVisibilityPoly(markerListZoneL3, allPolygonsLibrary, polyBtn)
@@ -883,60 +1543,73 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     //W zależności od wybranego piętra dostosowywane jest wyświetlanie markerów
-    private fun clickLoc(locBtn: Button){
+    private fun clickLoc(locBtn: Button) {
+        if (clickedLoc) {
+            locBtn.setBackgroundResource(R.drawable.marker_invis_btn)
+        } else {
+            locBtn.setBackgroundResource(R.drawable.marker_vis_btn)
+        }
+        toggleLocationMarkersVisibility()
+    }
+
+    private fun toggleLocationMarkersVisibility() {
         when (floorVisibility) {
-            0 -> switchVisibilityLoc(markerListLoc0 , locBtn)
-            1 -> switchVisibilityLoc(markerListLoc1 , locBtn)
-            2 -> switchVisibilityLoc(markerListLoc2 , locBtn)
-            3 -> switchVisibilityLoc(markerListLoc3 , locBtn)
-            4 -> switchVisibilityLoc(markerListLoc4 , locBtn)
-            5 -> switchVisibilityLoc(markerListLocL1, locBtn)
-            6 -> switchVisibilityLoc(markerListLocL2, locBtn)
-            7 -> switchVisibilityLoc(markerListLocL3, locBtn)
+            0 -> switchLocMarkersVisibility(markerListLoc0)
+            1 -> switchLocMarkersVisibility(markerListLoc1)
+            2 -> switchLocMarkersVisibility(markerListLoc2)
+            3 -> switchLocMarkersVisibility(markerListLoc3)
+            4 -> switchLocMarkersVisibility(markerListLoc4)
+            5 -> switchLocMarkersVisibility(markerListLocL1)
+            6 -> switchLocMarkersVisibility(markerListLocL2)
+            7 -> switchLocMarkersVisibility(markerListLocL3)
         }
     }
 
-    private fun clickWar(warBtn: Button){
+    private fun toggleWarningMarkersVisibility() {
         when (floorVisibility) {
-            0 -> switchVisibilityWar(markerListWar0 , warBtn)
-            1 -> switchVisibilityWar(markerListWar1 , warBtn)
-            2 -> switchVisibilityWar(markerListWar2 , warBtn)
-            3 -> switchVisibilityWar(markerListWar3 , warBtn)
-            4 -> switchVisibilityWar(markerListWar4 , warBtn)
-            5 -> switchVisibilityWar(markerListWarL1, warBtn)
-            6 -> switchVisibilityWar(markerListWarL2, warBtn)
-            7 -> switchVisibilityWar(markerListWarL3, warBtn)
+            0 -> switchVisibilityWar(markerListWar0)
+            1 -> switchVisibilityWar(markerListWar1)
+            2 -> switchVisibilityWar(markerListWar2)
+            3 -> switchVisibilityWar(markerListWar3)
+            4 -> switchVisibilityWar(markerListWar4)
+            5 -> switchVisibilityWar(markerListWarL1)
+            6 -> switchVisibilityWar(markerListWarL2)
+            7 -> switchVisibilityWar(markerListWarL3)
         }
     }
 
-    private fun clickPoi(poiBtn: Button){
+    private fun togglePoiMarkersVisibility() {
         when (floorVisibility) {
-            0 -> switchVisibilityPoi(markerListPoi0 , poiBtn)
-            1 -> switchVisibilityPoi(markerListPoi1 , poiBtn)
-            2 -> switchVisibilityPoi(markerListPoi2 , poiBtn)
-            3 -> switchVisibilityPoi(markerListPoi3 , poiBtn)
-            4 -> switchVisibilityPoi(markerListPoi4 , poiBtn)
-            5 -> switchVisibilityPoi(markerListPoiL1, poiBtn)
-            6 -> switchVisibilityPoi(markerListPoiL2, poiBtn)
-            7 -> switchVisibilityPoi(markerListPoiL3, poiBtn)
+            0 -> switchVisibilityPoi(markerListPoi0)
+            1 -> switchVisibilityPoi(markerListPoi1)
+            2 -> switchVisibilityPoi(markerListPoi2)
+            3 -> switchVisibilityPoi(markerListPoi3)
+            4 -> switchVisibilityPoi(markerListPoi4)
+            5 -> switchVisibilityPoi(markerListPoiL1)
+            6 -> switchVisibilityPoi(markerListPoiL2)
+            7 -> switchVisibilityPoi(markerListPoiL3)
         }
     }
 
-    private fun switchVisibilityFloor(markerList: MutableList<Marker>, allPolygon: MutableList<Polygon>, btn: Button){
-        clickedFloor = if(!clickedFloor){
-            for(i in allPolygon){
+    private fun switchVisibilityFloor(
+        markerList: MutableList<Marker>,
+        allPolygon: MutableList<Polygon>,
+        btn: Button
+    ) {
+        clickedFloor = if (!clickedFloor) {
+            for (i in allPolygon) {
                 makePolygonVisible(i)
             }
-            for(j in markerList){
+            for (j in markerList) {
                 j.isVisible = true
             }
             btn.setBackgroundResource(R.drawable.marker_vis_btn)
             true
-        }else{
-            for(i in allPolygon){
+        } else {
+            for (i in allPolygon) {
                 makePolygonInvisible(i)
             }
-            for(j in markerList){
+            for (j in markerList) {
                 j.isVisible = false
             }
             btn.setBackgroundResource(R.drawable.marker_invis_btn)
@@ -944,21 +1617,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    private fun switchVisibilityPoly(markerList: MutableList<Marker>, allPolygon: MutableList<Polygon>, btn: Button){
-        clickedPoly = if(!clickedPoly){
-            for(i in allPolygon){
+    private fun switchVisibilityPoly(
+        markerList: MutableList<Marker>,
+        allPolygon: MutableList<Polygon>,
+        btn: Button
+    ) {
+        clickedPoly = if (!clickedPoly) {
+            for (i in allPolygon) {
                 makePolygonVisible(i)
             }
-            for(j in markerList){
+            for (j in markerList) {
                 j.isVisible = true
             }
             btn.setBackgroundResource(R.drawable.marker_vis_btn)
             true
-        }else{
-            for(i in allPolygon){
+        } else {
+            for (i in allPolygon) {
                 makePolygonInvisible(i)
             }
-            for(j in markerList){
+            for (j in markerList) {
                 j.isVisible = false
             }
             btn.setBackgroundResource(R.drawable.marker_invis_btn)
@@ -966,53 +1643,53 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    private fun switchVisibilityLoc(markerList: MutableList<Marker>, btn: Button){
-        clickedLoc = if(!clickedLoc){
+    private fun switchLocMarkersVisibility(markerList: MutableList<Marker>) {
+        clickedLoc = if (!clickedLoc) {
             makeMarkerVisible(markerList)
-            btn.setBackgroundResource(R.drawable.marker_vis_btn)
             true
-        }else{
+        } else {
             makeMarkerInvisible(markerList)
-            btn.setBackgroundResource(R.drawable.marker_invis_btn)
             false
         }
     }
 
-    private fun switchVisibilityWar(markerList: MutableList<Marker>, btn: Button){
-        clickedWar = if(!clickedWar){
+    private fun switchVisibilityWar(markerList: MutableList<Marker>) {
+        clickedWar = if (!clickedWar) {
             makeMarkerVisible(markerList)
-            btn.setBackgroundResource(R.drawable.marker_vis_btn)
             true
-        }else{
+        } else {
             makeMarkerInvisible(markerList)
-            btn.setBackgroundResource(R.drawable.marker_invis_btn)
             false
         }
     }
 
-    private fun switchVisibilityPoi(markerList: MutableList<Marker>, btn: Button){
-        clickedPoi = if(!clickedPoi){
+    private fun switchVisibilityPoi(markerList: MutableList<Marker>) {
+        clickedPoi = if (!clickedPoi) {
             makeMarkerVisible(markerList)
-            btn.setBackgroundResource(R.drawable.marker_vis_btn)
             true
-        }else{
+        } else {
             makeMarkerInvisible(markerList)
-            btn.setBackgroundResource(R.drawable.marker_invis_btn)
             false
         }
     }
 
-    private fun openBottomPanel(bottomButton: Button, floorNumber: TextView, db: Database, btn: Button, setBtn: Button){
+    private fun openBottomPanel(
+        bottomButton: Button,
+        floorNumber: TextView,
+        db: Database,
+        btn: Button,
+        setBtn: Button
+    ) {
 
 //        if(!clickedPanel){
-            val animation: Animation = TranslateAnimation(0F, 0F, 750F, 0F)
-            animation.duration = 500
-            animation.fillAfter = true
-            btn.startAnimation(animation)
-            btn.y = btn.y - 750F
+        val animation: Animation = TranslateAnimation(0F, 0F, 750F, 0F)
+        animation.duration = 500
+        animation.fillAfter = true
+        btn.startAnimation(animation)
+        btn.y = btn.y - 750F
 
-            setBtn.startAnimation(animation)
-            setBtn.y = setBtn.y - 750F
+        setBtn.startAnimation(animation)
+        setBtn.y = setBtn.y - 750F
 //        }
 
 
@@ -1021,10 +1698,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         Handler().postDelayed({
             bottomButton.visibility = View.INVISIBLE
         }, 300)
-        replaceFragment(FragmentBottomPanel(bottomButton, floorNumber, db, btn), R.anim.enter_from_bottom, R.anim.exit_to_bottom, R.id.ContainerBottomPanel)
+        replaceFragment(
+            FragmentBottomPanel(bottomButton, floorNumber, db, btn),
+            R.anim.enter_from_bottom,
+            R.anim.exit_to_bottom,
+            R.id.ContainerBottomPanel
+        )
         clickedPanel = true
     }
-
 
 
 }
