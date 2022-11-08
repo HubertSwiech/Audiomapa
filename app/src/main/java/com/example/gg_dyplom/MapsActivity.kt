@@ -297,108 +297,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         db = Database(this)
         dbCom = DatabaseCom(this)
 
-//        mMap.addPolygon(addingPolygons)
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "north",
-//            polygonListN,
-//            "#66D8DE66",
-//            "#999E2C"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "south",
-//            polygonListS,
-//            "#66E25555",
-//            "#B51616"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "east",
-//            polygonListE,
-//            "#6650C1E5",
-//            "#057AA0"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "west",
-//            polygonListW,
-//            "#666BCE5A",
-//            "#1E7110"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "center",
-//            polygonListC,
-//            "#667D4AD3",
-//            "#5F458C"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsLibrary,
-//            "library",
-//            polygonListL,
-//            "#66B36B3F",
-//            "#752F05"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnGround,
-//            "east_yard",
-//            polygonListED,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnGround,
-//            "west_yard",
-//            polygonListWD,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnGround,
-//            "aula",
-//            polygonListA,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnFront,
-//            "front",
-//            polygonListF,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//
-//        addFloorPolygonToMap(
-//            myFloors,
-//            googleMap,
-//            allFloorPolygons,
-//            polygonFloorList,
-//            "#66FFB1FF",
-//            "#5F458C"
-//        )
-
-
         mMap?.uiSettings?.isMapToolbarEnabled = false
 //        mMap.uiSettings.isCompassEnabled = false
 
@@ -1300,7 +1198,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    fun centroid(points: MutableList<LatLng>): LatLng {
+    private fun centroid(points: MutableList<LatLng>): LatLng {
         val centroid = doubleArrayOf(0.0, 0.0)
         for (i in points) {
             centroid[0] += i.latitude
