@@ -1,8 +1,6 @@
 package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
-import android.app.Dialog
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -14,9 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.DialogFragment
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragment() {
 
