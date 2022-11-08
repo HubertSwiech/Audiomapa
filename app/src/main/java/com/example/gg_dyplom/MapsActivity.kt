@@ -482,18 +482,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         bottomButton = findViewById<Button>(R.id.bottomPanelBtn)
 
         binding.menu.setOnClickListener {
-            if (mapCircle != null) {
-                mapCircle.remove()
-            }
-            if (mapLine != null) {
-                mapLine.remove()
-            }
-            if (lineMarker != null) {
-                lineMarker.remove()
-            }
+            mapCircle.remove()
+            mapLine.remove()
+            lineMarker.remove()
             this.window.decorView.rootView.announceForAccessibility("Z lewej strony ekranu otworzono pionową listwę z numerami pięter.")
 
-            var frag = supportFragmentManager.findFragmentById(R.id.fragmentContainerMenu)
+            val frag = supportFragmentManager.findFragmentById(R.id.fragmentContainerMenu)
             if (frag != null) {
                 val transaction: FragmentTransaction = fragmentManager.beginTransaction()
                 transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_left)
