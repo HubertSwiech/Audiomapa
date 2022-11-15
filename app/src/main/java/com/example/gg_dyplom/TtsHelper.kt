@@ -345,9 +345,9 @@ fun changeFloor(ACTIVITY: MapsActivity){
             2 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
             3 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
             4 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
-//            5 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
-//            6 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
-//            7 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            5 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            6 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            7 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
         }
     } else {
         for(i in ACTIVITY.allFloorPolygons){
@@ -383,7 +383,11 @@ fun switchFloorOverlay(stringNumber: String, ACTIVITY: MapsActivity, floorTextVi
             in 524..530 -> pointFloor = 3
             in 531..536 -> pointFloor = 4
             in 537..539 -> pointFloor = 0
-            500, 501 -> pointFloor = 1
+            540 -> pointFloor = 5
+            541 -> pointFloor = 6
+            542 -> pointFloor = 7
+            500, 543 -> pointFloor = 1
+            501, 502 -> pointFloor = 0
         }
     }
 
