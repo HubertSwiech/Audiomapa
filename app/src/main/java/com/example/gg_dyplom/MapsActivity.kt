@@ -8,7 +8,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
+import android.text.Html
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
@@ -16,7 +16,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -300,107 +300,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         db = Database(this)
         dbCom = DatabaseCom(this)
 
-//        mMap.addPolygon(addingPolygons)
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "north",
-//            polygonListN,
-//            "#66D8DE66",
-//            "#999E2C"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "south",
-//            polygonListS,
-//            "#66E25555",
-//            "#B51616"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "east",
-//            polygonListE,
-//            "#6650C1E5",
-//            "#057AA0"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "west",
-//            polygonListW,
-//            "#666BCE5A",
-//            "#1E7110"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsAtFloor,
-//            "center",
-//            polygonListC,
-//            "#667D4AD3",
-//            "#5F458C"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsLibrary,
-//            "library",
-//            polygonListL,
-//            "#66B36B3F",
-//            "#752F05"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnGround,
-//            "east_yard",
-//            polygonListED,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnGround,
-//            "west_yard",
-//            polygonListWD,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnGround,
-//            "aula",
-//            polygonListA,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//        addPolygonToMap(
-//            myPolygons,
-//            googleMap,
-//            allPolygonsOutsideOnFront,
-//            "front",
-//            polygonListF,
-//            "#66FFFFFF",
-//            "#FFFFFF"
-//        )
-//
-//        addFloorPolygonToMap(
-//            myFloors,
-//            googleMap,
-//            allFloorPolygons,
-//            polygonFloorList,
-//            "#66FFB1FF",
-//            "#5F458C"
-//        )
-
 
         mMap?.uiSettings?.isMapToolbarEnabled = false
 //        mMap.uiSettings.isCompassEnabled = false
@@ -416,25 +315,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         rlp.topMargin = 250
         rlp.leftMargin = 70
 
-////mMap.on
-//        mMap.setOnCameraMoveListener {
-//            for (mark in markerListLoc1) {
-//                var bitmap = Bitmap.createBitmap(
-//                    60,60,
-//                    Bitmap.Config.ARGB_8888
-//                )
-////                getResizedBitmap(bitmap, 250, 250);
-//                mark.setIcon(getResizedBitmap(bitmap, 250, 250)?.let {
-//                    BitmapDescriptorFactory.fromBitmap(it)
-//                });
-//            }
-//        }
-
 
         //ustawia custom'owe info window dla markerów
         mMap?.setInfoWindowAdapter(CustomInfoWindowForGoogleMap(this))
         mMap?.setOnInfoWindowClickListener { marker ->
-            Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
             val dialog = PopupMenu(marker.title.toString(), db, dbCom)
 //            dialog.setStyle(R.style.PopupStyle)
 
@@ -711,10 +596,62 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
 
+
+
+
+
         //copy database to app
         copyDatabase("gmach_glowny_nowy.db")
 //        copyDatabase("komentarze.db")
     }//=======================FUNKCJE=====================================================================================
+
+
+    override fun onBackPressed()
+    {
+//        println("klikniete")
+        val currentFragmentBottomPanel =this.supportFragmentManager.findFragmentById(R.id.ContainerBottomPanel)
+        val currentFragmentMenu =this.supportFragmentManager.findFragmentById(R.id.fragmentContainerMenu)
+        val currentFragmentComment =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+        val currentFragmentSearchBar =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+
+        if(currentFragmentBottomPanel is FragmentBottomPanel) {
+            hideBottomPanel(R.id.ContainerBottomPanel)
+        }
+        else if(currentFragmentMenu is FragmentMenu){
+            hideFragment(R.id.fragmentContainerMenu, R.anim.enter_from_left, R.anim.exit_to_left)
+        }
+        else if(currentFragmentComment is FragmentComments){
+            var frag = supportFragmentManager.findFragmentById(R.id.ButtonAction)
+            if(frag!=null){
+                val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                transaction.remove(frag)
+                transaction.commit()
+            }
+            hideFragment(R.id.fragmentContainer, R.anim.enter_from_right, R.anim.exit_to_left)
+            this.window.decorView.rootView.announceForAccessibility("Zamknięto widok z komentarzami.")
+            ttsHelper?.stopSpeaking()
+        }
+        else if(currentFragmentSearchBar is FragmentSearchBar){
+            hideFragment(R.id.fragmentContainer, R.anim.enter_from_top, R.anim.exit_to_top)
+        }
+        else{
+            val alertDialog = AlertDialog.Builder(this)
+//            alertDialog.setTitle("Exit Alert")
+            alertDialog.setMessage(Html.fromHtml("<font color='#062e04'> <big> <big> Czy na pewno chcesz wyjść z aplikacji? <br> </big> </big> </font>"))
+            alertDialog.setPositiveButton(Html.fromHtml("<font color='#633a0e'> <big> <big> <b> Wyjdź </b> </big> </big> </font>")) { dialog, whichButton ->
+                super.onBackPressed()
+            }
+            alertDialog.setNegativeButton(Html.fromHtml("<font color='#633a0e'> <big> <big> Anuluj </big> </big> </font>")) { dialog, whichButton ->
+
+            }
+
+            alertDialog.show()
+
+        //            super.onBackPressed()
+        }
+    }
+
 
     private fun removeMarkers() {
         markerListFloor0.removeMarkersAndClear()

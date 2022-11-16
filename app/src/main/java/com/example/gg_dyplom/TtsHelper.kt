@@ -121,7 +121,7 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                 val number2 = endEditText.selectedItem.toString()
                 ACTIVITY.targetNumber = number2
 
-                if(!isNumber(number1) || number1.toInt() > 149 || !isNumber(number2) || number2.toInt() > 149){
+                if(!isNumber(number1) || number1.toInt() > 153 || !isNumber(number2) || number2.toInt() > 153){
                     val blad = "Sprawdź, czy numery są wpisane prawidłowo."
                     Toast.makeText(mContext, blad, Toast.LENGTH_SHORT).show()
                 } else {
