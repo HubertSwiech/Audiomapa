@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
+import android.text.Html
 import android.view.*
 import android.view.accessibility.AccessibilityEvent
 import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
@@ -89,17 +91,27 @@ class FragmentActionButton(
 
         val usun = v.findViewById<Button>(R.id.usun)
         usun.setOnClickListener{
-            ACTIVITY.dbCom.deleteRow(data.key)
-            Handler().postDelayed({
-                actionButton.background = resources.getDrawable(R.drawable.action_button)
+            val deleteDialog = AlertDialog.Builder(ACTIVITY)
+//            deleteDialog.setTitle("Delete Alert")
+            deleteDialog.setMessage(Html.fromHtml("<font color='#062e04'> <big> <big> Czy na pewno chcesz usunąć ten komentarz? <br> </big> </big> </font>"))
+            deleteDialog.setPositiveButton(Html.fromHtml("<font color='#633a0e'> <big> <big> <b> Usuń </b> </big> </big> </font>")) { dialog, whichButton ->
+                ACTIVITY.dbCom.deleteRow(data.key)
+                Handler().postDelayed({
+                    actionButton.background = resources.getDrawable(R.drawable.action_button)
 //                rel.setPadding(0,0,0,0)
-            }, 300)
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.hide(this)
+                }, 300)
+                val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                transaction.remove(this)
 //            transaction.detach(comments).attach(comments)
-            this.view?.announceForAccessibility("Usunięto komentarz.")
-            transaction.replace(R.id.fragmentContainer, FragmentComments(floorTextView, supportFragmentManager))
-            transaction.commitAllowingStateLoss()
+                this.view?.announceForAccessibility("Usunięto komentarz.")
+                transaction.replace(R.id.fragmentContainer, FragmentComments(floorTextView, supportFragmentManager))
+                transaction.commitAllowingStateLoss()
+            }
+            deleteDialog.setNegativeButton(Html.fromHtml("<font color='#633a0e'> <big> <big> Anuluj </big> </big> </font>")) { dialog, whichButton ->
+
+            }
+
+            deleteDialog.show()
         }
 
         val lokalizuj = v.findViewById<Button>(R.id.lokalizuj)
@@ -114,8 +126,8 @@ class FragmentActionButton(
             this.view?.announceForAccessibility("Zamknięto widok komentarzy. Zaznaczono na mapie punkt o numerze ${data.value[0]} .")
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-            transaction.hide(this)
-            transaction.hide(comments)
+            transaction.remove(this)
+            transaction.remove(comments)
             transaction.commit()
         }
 
@@ -129,7 +141,7 @@ class FragmentActionButton(
             }, 300)
             this.view?.announceForAccessibility("Otworzono okienko do edycji komentarza.")
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.hide(this)
+            transaction.remove(this)
             transaction.commit()
         }
 

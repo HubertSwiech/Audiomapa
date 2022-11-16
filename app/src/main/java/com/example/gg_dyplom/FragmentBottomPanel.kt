@@ -154,7 +154,7 @@ class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: Database,
     private fun hideFragment() {
         val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
         transaction.setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_bottom)
-        transaction.hide(this)
+        transaction.remove(this)
         ACTIVITY.ttsHelper?.stopSpeaking()
         transaction.commit()
     }

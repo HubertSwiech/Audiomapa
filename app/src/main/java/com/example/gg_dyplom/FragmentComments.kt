@@ -69,7 +69,7 @@ class FragmentComments(
             val myFrag = fragmentManager?.findFragmentByTag("action_bar")
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-            transaction.hide(this)
+            transaction.remove(this)
             transaction.commit()
             ACTIVITY.ttsHelper?.stopSpeaking()
 
@@ -82,6 +82,16 @@ class FragmentComments(
 //            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.commentListBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
 //            ACTIVITY.window.decorView.rootView.findViewById<TextView>(R.id.floor).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
 
+        }
+
+        val addCommentBtn = v.findViewById<Button>(R.id.addComment)
+
+        addCommentBtn.setOnClickListener{
+            ACTIVITY.pointNumber = ""
+            val dialog = PopupMenu("null", ACTIVITY.db, ACTIVITY.dbCom)
+//            dialog.setStyle(R.style.PopupStyle)
+
+            dialog.show(ACTIVITY.fragmentManager, "customDialog")
         }
 
 
