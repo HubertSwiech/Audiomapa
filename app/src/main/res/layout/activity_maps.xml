@@ -183,14 +183,14 @@
         android:textSize="0dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/settingsBtn"
+        android:id="@+id/qrScannerBtn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="340dp"
         android:layout_marginTop="560dp"
-        android:background="@drawable/settings_button"
-        android:text="Ustawienia"
+        android:background="@drawable/scanner_button"
+        android:text="Skaner kodów QR"
         android:textSize="0dp" />
 
     <androidx.appcompat.widget.AppCompatButton

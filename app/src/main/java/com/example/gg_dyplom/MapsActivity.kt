@@ -8,6 +8,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
 import android.os.Handler
+import android.text.Html
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
@@ -15,7 +16,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -54,6 +55,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var mapCircle: Circle
     lateinit var mapLine: Polyline
     lateinit var lineMarker: Marker
+    lateinit var floorNumber: TextView
 
     //małe przyciski do zmiany punktów
     lateinit var locButton: Button
@@ -64,7 +66,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     lateinit var bottomButton: Button
     lateinit var commentBtn: Button
-    lateinit var settingsBtn: Button
+    lateinit var scannerBtn: Button
 
     lateinit var db: Database
     lateinit var dbCom: DatabaseCom
@@ -80,6 +82,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     var polygonListWD = mutableListOf<LatLng>()//poligon zachodni dziedziniec
     var polygonListA = mutableListOf<LatLng>()//poligon Duża Aula
     var polygonListF = mutableListOf<LatLng>()//poligon wejście - front
+    var polygonListEDWejscie = mutableListOf<LatLng>()//poligon wejście - wschodni dziedziniec
+    var polygonListWDWejscie = mutableListOf<LatLng>()//poligon wejście - zachodni dziedziniec
+    var polygonListInside = mutableListOf<LatLng>()//poligon komunikat na wejście w budynku
     var allPolygonsAtFloor = mutableListOf<Polygon>()
     var allPolygonsOutsideOnGround = mutableListOf<Polygon>()
     var allPolygonsOutsideOnFront = mutableListOf<Polygon>()
@@ -244,6 +249,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     @SuppressLint("ResourceType")
     override fun onMapReady(googleMap: GoogleMap) {
+        googleMap.setMapClickListener()
         googleMap.setUpCameraMoveListener()
         mMap = googleMap
         val polygons =
@@ -295,107 +301,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         db = Database(this)
         dbCom = DatabaseCom(this)
 
-//        mMap.addPolygon(addingPolygons)
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsAtFloor,
-            "north",
-            polygonListN,
-            "#66D8DE66",
-            "#999E2C"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsAtFloor,
-            "south",
-            polygonListS,
-            "#66E25555",
-            "#B51616"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsAtFloor,
-            "east",
-            polygonListE,
-            "#6650C1E5",
-            "#057AA0"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsAtFloor,
-            "west",
-            polygonListW,
-            "#666BCE5A",
-            "#1E7110"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsAtFloor,
-            "center",
-            polygonListC,
-            "#667D4AD3",
-            "#5F458C"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsLibrary,
-            "library",
-            polygonListL,
-            "#66B36B3F",
-            "#752F05"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsOutsideOnGround,
-            "east_yard",
-            polygonListED,
-            "#66FFFFFF",
-            "#FFFFFF"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsOutsideOnGround,
-            "west_yard",
-            polygonListWD,
-            "#66FFFFFF",
-            "#FFFFFF"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsOutsideOnGround,
-            "aula",
-            polygonListA,
-            "#66FFFFFF",
-            "#FFFFFF"
-        )
-        addPolygonToMap(
-            myPolygons,
-            googleMap,
-            allPolygonsOutsideOnFront,
-            "front",
-            polygonListF,
-            "#66FFFFFF",
-            "#FFFFFF"
-        )
-
-        addFloorPolygonToMap(
-            myFloors,
-            googleMap,
-            allFloorPolygons,
-            polygonFloorList,
-            "#66FFB1FF",
-            "#5F458C"
-        )
-
 
         mMap?.uiSettings?.isMapToolbarEnabled = false
 //        mMap.uiSettings.isCompassEnabled = false
@@ -411,25 +316,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         rlp.topMargin = 250
         rlp.leftMargin = 70
 
-////mMap.on
-//        mMap.setOnCameraMoveListener {
-//            for (mark in markerListLoc1) {
-//                var bitmap = Bitmap.createBitmap(
-//                    60,60,
-//                    Bitmap.Config.ARGB_8888
-//                )
-////                getResizedBitmap(bitmap, 250, 250);
-//                mark.setIcon(getResizedBitmap(bitmap, 250, 250)?.let {
-//                    BitmapDescriptorFactory.fromBitmap(it)
-//                });
-//            }
-//        }
-
 
         //ustawia custom'owe info window dla markerów
         mMap?.setInfoWindowAdapter(CustomInfoWindowForGoogleMap(this))
         mMap?.setOnInfoWindowClickListener { marker ->
-            Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
             val dialog = PopupMenu(marker.title.toString(), db, dbCom)
 //            dialog.setStyle(R.style.PopupStyle)
 
@@ -471,7 +362,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setGroundOverlay(R.drawable.pietro1)//Nakłada pierwsze piętro na mapę
 
 
-        val floorNumber = findViewById<TextView>(R.id.floor)//Numer piętra w prawym górnym rogu
+        floorNumber = findViewById<TextView>(R.id.floor)//Numer piętra w prawym górnym rogu
 
 
         locButton = findViewById(R.id.locBtn)
@@ -575,7 +466,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             clickFloor(floorButton)
         }
         commentBtn = findViewById<Button>(R.id.commentListBtn)
-        settingsBtn = findViewById<Button>(R.id.settingsBtn)
+//        settingsBtn = findViewById<Button>(R.id.qrScannerBtn)
 
 
         bottomButton.setOnClickListener {
@@ -591,7 +482,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
 //            commentBtn.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
 
-            openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
+            openBottomPanel(bottomButton, floorNumber, db, commentBtn, scannerBtn)
         }
 
 
@@ -609,7 +500,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
             //Jeżeli panel dolny nie jest jeszcze otrzowony to się otwiera
             if (!clickedPanel) {
-                openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
+                openBottomPanel(bottomButton, floorNumber, db, commentBtn, scannerBtn)
                 this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
             } else {
                 bottomButton.visibility = View.INVISIBLE
@@ -641,7 +532,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
 //            //Jeżeli panel dolny nie jest jeszcze otrzowony to się otwiera
             if (!clickedPanel) {
-                openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
+                openBottomPanel(bottomButton, floorNumber, db, commentBtn, scannerBtn)
                 this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
             } else {
                 bottomButton.visibility = View.INVISIBLE
@@ -706,10 +597,106 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
 
+        scannerBtn = findViewById(R.id.qrScannerBtn)
+        scannerBtn.setOnClickListener{
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
+            this.window.decorView.rootView.announceForAccessibility("Na całym ekranie otworzono widok ze skanerem kodów QR.")
+            hideBottomPanel(R.id.ContainerBottomPanel)
+            replaceFragment(
+                FragmentQRScanner(floorNumber),
+                R.anim.enter_from_left,
+                R.anim.exit_to_left,
+                R.id.fragmentContainer
+            )
+        }
+
+
+
+
         //copy database to app
         copyDatabase("gmach_glowny_nowy.db")
 //        copyDatabase("komentarze.db")
-    }//=======================FUNKCJE=====================================================================================
+    }//================ =======FUNKCJE=====================================================================================
+
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, @Nullable data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        val intentResult: IntentResult =
+//            IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+//        // if the intentResult is null then
+//        // toast a message as "cancelled"
+//        if (intentResult != null) {
+//            if (intentResult.getContents() == null) {
+//                Toast.makeText(baseContext, "Cancelled", Toast.LENGTH_SHORT).show()
+//            } else {
+//                // if the intentResult is not null we'll set
+//                // the content and format of scan message
+//                messageText.setText(intentResult.getContents())
+//                messageFormat.setText(intentResult.getFormatName())
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data)
+//        }
+//    }
+
+    override fun onBackPressed()
+    {
+//        println("klikniete")
+        val currentFragmentBottomPanel =this.supportFragmentManager.findFragmentById(R.id.ContainerBottomPanel)
+        val currentFragmentMenu =this.supportFragmentManager.findFragmentById(R.id.fragmentContainerMenu)
+        val currentFragmentComment =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+        val currentFragmentSearchBar =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+        val currentFragmentQRScanner =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+
+        if(currentFragmentBottomPanel is FragmentBottomPanel) {
+            hideBottomPanel(R.id.ContainerBottomPanel)
+        }
+        else if(currentFragmentMenu is FragmentMenu){
+            hideFragment(R.id.fragmentContainerMenu, R.anim.enter_from_left, R.anim.exit_to_left)
+        }
+        else if(currentFragmentComment is FragmentComments){
+            var frag = supportFragmentManager.findFragmentById(R.id.ButtonAction)
+            if(frag!=null){
+                val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                transaction.remove(frag)
+                transaction.commit()
+            }
+            hideFragment(R.id.fragmentContainer, R.anim.enter_from_right, R.anim.exit_to_left)
+            this.window.decorView.rootView.announceForAccessibility("Zamknięto widok z komentarzami.")
+            ttsHelper?.stopSpeaking()
+        }
+        else if(currentFragmentSearchBar is FragmentSearchBar){
+            hideFragment(R.id.fragmentContainer, R.anim.enter_from_top, R.anim.exit_to_top)
+        }
+        else if(currentFragmentQRScanner is FragmentQRScanner){
+            hideFragment(R.id.fragmentContainer, R.anim.enter_from_right, R.anim.exit_to_left)
+        }
+        else{
+            val alertDialog = AlertDialog.Builder(this)
+//            alertDialog.setTitle("Exit Alert")
+            alertDialog.setMessage(Html.fromHtml("<font color='#062e04'> <big> <big> Czy na pewno chcesz wyjść z aplikacji? <br> </big> </big> </font>"))
+            alertDialog.setPositiveButton(Html.fromHtml("<font color='#633a0e'> <big> <big> <b> Wyjdź </b> </big> </big> </font>")) { dialog, whichButton ->
+                super.onBackPressed()
+            }
+            alertDialog.setNegativeButton(Html.fromHtml("<font color='#633a0e'> <big> <big> Anuluj </big> </big> </font>")) { dialog, whichButton ->
+
+            }
+
+            alertDialog.show()
+
+        //            super.onBackPressed()
+        }
+    }
+
 
     private fun removeMarkers() {
         markerListFloor0.removeMarkersAndClear()
@@ -717,6 +704,34 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         markerListFloor2.removeMarkersAndClear()
         markerListFloor3.removeMarkersAndClear()
         markerListFloor4.removeMarkersAndClear()
+        markerListZone0.removeMarkersAndClear()
+        markerListZone1.removeMarkersAndClear()
+        markerListZone2.removeMarkersAndClear()
+        markerListZone3.removeMarkersAndClear()
+        markerListZone4.removeMarkersAndClear()
+        markerListZoneL1.removeMarkersAndClear()
+        markerListZoneL2.removeMarkersAndClear()
+        markerListZoneL3.removeMarkersAndClear()
+        allPolygonsAtFloor.removePolygonsAndClear()
+        allPolygonsOutsideOnGround.removePolygonsAndClear()
+        allPolygonsOutsideOnFront.removePolygonsAndClear()
+        allPolygonsLibrary.removePolygonsAndClear()
+        allFloorPolygons.removePolygonsAndClear()
+        polygonListN.removePolygonsLatLngAndClear()
+        polygonListS.removePolygonsLatLngAndClear()
+        polygonListE.removePolygonsLatLngAndClear()
+        polygonListW.removePolygonsLatLngAndClear()
+        polygonListC.removePolygonsLatLngAndClear()
+        polygonListL.removePolygonsLatLngAndClear()
+        polygonListED.removePolygonsLatLngAndClear()
+        polygonListWD.removePolygonsLatLngAndClear()
+        polygonListA.removePolygonsLatLngAndClear()
+        polygonListF.removePolygonsLatLngAndClear()
+        polygonListEDWejscie.removePolygonsLatLngAndClear()
+        polygonListWDWejscie.removePolygonsLatLngAndClear()
+        polygonListInside.removePolygonsLatLngAndClear()
+        polygonFloorList.removePolygonsLatLngAndClear()
+
         markerListLoc0.removeMarkersAndClear()
         markerListLoc1.removeMarkersAndClear()
         markerListLoc2.removeMarkersAndClear()
@@ -774,10 +789,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         clear()
     }
+    private fun MutableList<Polygon>.removePolygonsAndClear() {
+        forEach {
+            it.remove()
+        }
+        clear()
+    }
+    private fun MutableList<LatLng>.removePolygonsLatLngAndClear() {
+        clear()
+    }
+
 
     private fun drawMarkers(markerConfig: MarkerConfig = MarkerConfig()) {
         val googleMap = mMap ?: return
-        val markers = readJson("markersLoc.json")//wczytuje markery z .json do strumienia
+        val markers = readJson("point_location.json")//wczytuje markery z .json do strumienia
         val myMarkers =
             Gson().fromJson(markers, MarkersModelClass::class.java)//pobiera markery ze strumienia
         sortingMarkers(
@@ -961,7 +986,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             0,
             poiArray0,
             googleMap,
@@ -972,7 +997,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             1,
             poiArray1,
             googleMap,
@@ -983,7 +1008,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             2,
             poiArray2,
             googleMap,
@@ -994,7 +1019,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             3,
             poiArray3,
             googleMap,
@@ -1005,7 +1030,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             4,
             poiArray4,
             googleMap,
@@ -1016,7 +1041,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             5,
             poiArrayL1,
             googleMap,
@@ -1027,7 +1052,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             6,
             poiArrayL2,
             googleMap,
@@ -1038,12 +1063,164 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         sortingMarkers(
             myMarkers,
             300,
-            450,
+            500,
             7,
             poiArrayL3,
             googleMap,
             markerListPoiL3,
             R.drawable.ic_poi_sign,
+            markerConfig
+        )
+        ///////////////////////////
+        val polygons =
+            readJson("strefy_all.json")//wczytuje poligony korytarzy z .json do strumienia
+
+        val myPolygons =
+            Gson().fromJson(polygons, PolygonModelClass::class.java)//pobiera markery ze strumienia
+        val floors = readJson("pietra.json")
+        val myFloors = Gson().fromJson(floors, PolygonModelClass::class.java)
+
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "north",
+            polygonListN,
+            "#66D8DE66",
+            "#999E2C",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "south",
+            polygonListS,
+            "#66E25555",
+            "#B51616",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "east",
+            polygonListE,
+            "#6650C1E5",
+            "#057AA0",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "west",
+            polygonListW,
+            "#666BCE5A",
+            "#1E7110",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsAtFloor,
+            "center",
+            polygonListC,
+            "#667D4AD3",
+            "#5F458C",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsLibrary,
+            "library",
+            polygonListL,
+            "#66B36B3F",
+            "#752F05",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "east_yard",
+            polygonListED,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "west_yard",
+            polygonListWD,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "aula",
+            polygonListA,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnFront,
+            "front",
+            polygonListF,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "east_yard_back",
+            polygonListEDWejscie,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnGround,
+            "west_yard_back",
+            polygonListWDWejscie,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+
+        addPolygonToMap(
+            myPolygons,
+            googleMap,
+            allPolygonsOutsideOnFront,
+            "inside",
+            polygonListInside,
+            "#66FFFFFF",
+            "#FFFFFF",
+            markerConfig
+        )
+
+        addFloorPolygonToMap(
+            myFloors,
+            googleMap,
+            allFloorPolygons,
+            polygonFloorList,
+            "#66FFB1FF",
+            "#5F458C",
             markerConfig
         )
     }
@@ -1101,6 +1278,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             clickedPoi = false
             togglePoiMarkersVisibility()
         }
+        if (clickedPoly) {
+            clickedPoly = false
+            togglePolyMarkersVisibility()
+        }
+        if (clickedFloor) {
+            clickedFloor = false
+            toggleFloorMarkersVisibility()
+        }
     }
 
     override fun onPause() {
@@ -1150,14 +1335,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         zone: String,
         polyList: MutableList<LatLng>,
         color: String,
-        strokeColor: String
+        strokeColor: String,
+        markerConfig: MarkerConfig = MarkerConfig()
     ) {
         myPolygons.features?.filter { it.attributes?.zone == zone }?.forEach { it ->
             it.geometry?.rings?.elementAt(0)?.forEach {
                 polyList.add(LatLng(it.elementAt(1) - 0.00002, it.elementAt(0) + 0.000028))
             }
         }
-
         val addingPolygons = googleMap.addPolygon(
             PolygonOptions()
                 .addAll(polyList)
@@ -1175,7 +1360,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     MarkerOptions()
                         .position(centroid(polyList))
                         .title(i)
-                        .icon(bitmapFromVector(applicationContext, R.drawable.ic_zone_sign, i))
+                        .icon(bitmapFromVector(applicationContext, R.drawable.ic_zone_sign, i, markerConfig))
                         .anchor(0.35f, 0.3f)
                         .visible(false)
                 )
@@ -1187,7 +1372,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     in 525..530 -> addingMarkers?.let { it1 -> markerListZone3.add(it1) }
                     in 532..536 -> addingMarkers?.let { it1 -> markerListZone4.add(it1) }
                     in 537..539 -> addingMarkers?.let { it1 -> markerListZone0.add(it1) }
-                    500, 501 -> addingMarkers?.let { it1 -> markerListZone1.add(it1) }
+                    540 -> addingMarkers?.let { it1 -> markerListZoneL1.add(it1) }
+                    541 -> addingMarkers?.let { it1 -> markerListZoneL2.add(it1) }
+                    542 -> addingMarkers?.let { it1 -> markerListZoneL3.add(it1) }
+                    500, 543 -> addingMarkers?.let { it1 -> markerListZone1.add(it1) }
+                    501, 502 -> addingMarkers?.let { it1 -> markerListZone0.add(it1) }
                 }
                 markerMap[i.toInt()] = listOf(
                     centroid(polyList).latitude + 0.00002,
@@ -1205,7 +1394,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         polygonList: MutableList<Polygon>,
         polyList: MutableList<LatLng>,
         color: String,
-        strokeColor: String
+        strokeColor: String,
+        markerConfig: MarkerConfig = MarkerConfig()
     ) {
         myPolygons.features?.forEach { it ->
             it.geometry?.rings?.elementAt(0)?.forEach {
@@ -1230,7 +1420,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     MarkerOptions()
                         .position(centroid(polyList))
                         .title(i)
-                        .icon(bitmapFromVector(applicationContext, R.drawable.ic_floor_sign, i))
+                        .icon(bitmapFromVector(applicationContext, R.drawable.ic_floor_sign, i,
+                            markerConfig))
                         .anchor(0.35f, 0.3f)
                         .visible(false)
                 )
@@ -1309,6 +1500,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         myMarkers.features?.filter { it.properties?.IDP!! in idFirst until idLast && it.properties?.FLOOR == floor }
             ?.forEach {
 
+//                println("ttt ${it.properties?.IDP}")
                 val coordLong = it.geometry?.coordinates?.elementAt(0)?.toDouble() ?: 0.0
                 val coordLat = it.geometry?.coordinates?.elementAt(1)?.toDouble() ?: 0.0
                 val pointId = it.properties?.IDP ?: 0
@@ -1377,8 +1569,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 animation.fillAfter = true
                 commentBtn.startAnimation(animation)
                 commentBtn.y = commentBtn.y + 750F
-                settingsBtn.startAnimation(animation)
-                settingsBtn.y = settingsBtn.y + 750F
+                scannerBtn.startAnimation(animation)
+                scannerBtn.y = scannerBtn.y + 750F
             }
 
             clickedPanel = false
@@ -1585,6 +1777,48 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    private fun togglePolyMarkersVisibility() {
+        when (floorVisibility) {
+            0 -> switchVisibilityPoly(
+                markerListZone0,
+                (allPolygonsAtFloor.plus(allPolygonsOutsideOnGround)
+                    .plus(allPolygonsLibrary) as MutableList<Polygon>),
+                polyButton
+            )
+            1 -> switchVisibilityPoly(
+                markerListZone1,
+                (allPolygonsAtFloor.plus(allPolygonsOutsideOnFront)
+                    .plus(allPolygonsLibrary) as MutableList<Polygon>),
+                polyButton
+            )
+            2 -> switchVisibilityPoly(
+                markerListZone2,
+                allPolygonsAtFloor.plus(allPolygonsLibrary) as MutableList<Polygon>,
+                polyButton
+            )
+            3 -> switchVisibilityPoly(
+                markerListZone3,
+                allPolygonsAtFloor.plus(allPolygonsLibrary) as MutableList<Polygon>,
+                polyButton
+            )
+            4 -> switchVisibilityPoly(markerListZone4, allPolygonsAtFloor, polyButton)
+            5 -> switchVisibilityPoly(markerListZoneL1, allPolygonsLibrary, polyButton)
+            6 -> switchVisibilityPoly(markerListZoneL2, allPolygonsLibrary, polyButton)
+            7 -> switchVisibilityPoly(markerListZoneL3, allPolygonsLibrary, polyButton)
+
+        }
+    }
+    private fun toggleFloorMarkersVisibility() {
+        when (floorVisibility) {
+            0 -> switchVisibilityFloor(markerListFloor0, allFloorPolygons, floorButton)
+            1 -> switchVisibilityFloor(markerListFloor1, allFloorPolygons, floorButton)
+            2 -> switchVisibilityFloor(markerListFloor2, allFloorPolygons, floorButton)
+            3 -> switchVisibilityFloor(markerListFloor3, allFloorPolygons, floorButton)
+            4 -> switchVisibilityFloor(markerListFloor4, allFloorPolygons, floorButton)
+
+        }
+    }
+
     private fun switchVisibilityFloor(
         markerList: MutableList<Marker>,
         allPolygon: MutableList<Polygon>,
@@ -1702,6 +1936,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
 
+    private fun GoogleMap.setMapClickListener () {
+        setOnMapClickListener {
+            currentFocus?.windowToken?.let {
+                val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                inputMethodManager.hideSoftInputFromWindow(it, 0)
+            }
+        }
+    }
+
+
+
 }
 
 //fun getResizedBitmap(bm: Bitmap, newHeight: Int, newWidth: Int): Bitmap? {
@@ -1714,6 +1959,5 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //    return Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false)
 ////    return Bitmap.createScaledBitmap(bm, width, height, false)
 //}
-
 
 

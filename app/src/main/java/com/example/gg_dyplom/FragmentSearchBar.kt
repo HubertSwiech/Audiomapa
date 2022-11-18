@@ -69,7 +69,7 @@ var poiMap = list
             Handler().postDelayed({
                 val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
                 transaction.setCustomAnimations(R.anim.enter_from_top, R.anim.exit_to_top)
-                transaction.hide(this)
+                transaction.remove(this)
                 transaction.commit()
             }, 700)
 
