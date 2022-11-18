@@ -10,6 +10,7 @@ import android.view.accessibility.AccessibilityEvent
 import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
@@ -67,7 +68,7 @@ class FragmentActionButton(
         actionButton.background = resources.getDrawable(R.drawable.action_button_clicked)
     }
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint("ClickableViewAccessibility", "UseCompatLoadingForDrawables")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -96,10 +97,7 @@ class FragmentActionButton(
             deleteDialog.setMessage(Html.fromHtml("<font color='#062e04'> <big> <big> Czy na pewno chcesz usunąć ten komentarz? <br> </big> </big> </font>"))
             deleteDialog.setPositiveButton(Html.fromHtml("<font color='#633a0e'> <big> <big> <b> Usuń </b> </big> </big> </font>")) { dialog, whichButton ->
                 ACTIVITY.dbCom.deleteRow(data.key)
-                Handler().postDelayed({
-                    actionButton.background = resources.getDrawable(R.drawable.action_button)
-//                rel.setPadding(0,0,0,0)
-                }, 300)
+
                 val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
                 transaction.remove(this)
 //            transaction.detach(comments).attach(comments)
@@ -116,29 +114,34 @@ class FragmentActionButton(
 
         val lokalizuj = v.findViewById<Button>(R.id.lokalizuj)
         lokalizuj.setOnClickListener{
-            drawCircle(data.value[0], ACTIVITY)
-            if(isNumber(data.value[1])){
-                drawLine(data.value[0],data.value[1], ACTIVITY)
+            if(isNumber(data.value[0])){
+                drawCircle(data.value[0], ACTIVITY)
+                if(isNumber(data.value[1])){
+                    drawLine(data.value[0],data.value[1], ACTIVITY)
+                }
+                switchFloorOverlay(data.value[0], ACTIVITY, floorTextView)
+                ACTIVITY.pointNumber = data.value[0]
+                ACTIVITY.targetNumber = data.value[1]
+                this.view?.announceForAccessibility("Zamknięto widok komentarzy. Zaznaczono na mapie punkt o numerze ${data.value[0]} .")
+                val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                transaction.remove(this)
+                transaction.remove(comments)
+                transaction.commit()
+            } else {
+                Toast.makeText(context, "Numer lokalizacji nie jest liczbą.", Toast.LENGTH_SHORT).show()
             }
-            switchFloorOverlay(data.value[0], ACTIVITY, floorTextView)
-            ACTIVITY.pointNumber = data.value[0]
-            ACTIVITY.targetNumber = data.value[1]
-            this.view?.announceForAccessibility("Zamknięto widok komentarzy. Zaznaczono na mapie punkt o numerze ${data.value[0]} .")
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-            transaction.remove(this)
-            transaction.remove(comments)
-            transaction.commit()
+
         }
 
         val edytuj = v.findViewById<Button>(R.id.edytuj)
         edytuj.setOnClickListener{
             val dialog = PopupMenuEdit(ACTIVITY.db, ACTIVITY.dbCom, data, FragmentComments(floorTextView, supportFragmentManager))
             dialog.show(supportFragmentManager, "customDialog")
-            Handler().postDelayed({
+//            Handler().postDelayed({
                 actionButton.background = resources.getDrawable(R.drawable.action_button)
 //                rel.setPadding(0,0,0,0)
-            }, 300)
+//            }, 300)
             this.view?.announceForAccessibility("Otworzono okienko do edycji komentarza.")
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.remove(this)

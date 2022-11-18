@@ -92,6 +92,8 @@ class FragmentComments(
 //            dialog.setStyle(R.style.PopupStyle)
 
             dialog.show(ACTIVITY.fragmentManager, "customDialog")
+
+
         }
 
 

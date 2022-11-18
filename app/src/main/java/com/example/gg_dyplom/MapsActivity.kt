@@ -55,6 +55,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var mapCircle: Circle
     lateinit var mapLine: Polyline
     lateinit var lineMarker: Marker
+    lateinit var floorNumber: TextView
 
     //małe przyciski do zmiany punktów
     lateinit var locButton: Button
@@ -65,7 +66,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     lateinit var bottomButton: Button
     lateinit var commentBtn: Button
-    lateinit var settingsBtn: Button
+    lateinit var scannerBtn: Button
 
     lateinit var db: Database
     lateinit var dbCom: DatabaseCom
@@ -361,7 +362,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setGroundOverlay(R.drawable.pietro1)//Nakłada pierwsze piętro na mapę
 
 
-        val floorNumber = findViewById<TextView>(R.id.floor)//Numer piętra w prawym górnym rogu
+        floorNumber = findViewById<TextView>(R.id.floor)//Numer piętra w prawym górnym rogu
 
 
         locButton = findViewById(R.id.locBtn)
@@ -465,7 +466,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             clickFloor(floorButton)
         }
         commentBtn = findViewById<Button>(R.id.commentListBtn)
-        settingsBtn = findViewById<Button>(R.id.settingsBtn)
+//        settingsBtn = findViewById<Button>(R.id.qrScannerBtn)
 
 
         bottomButton.setOnClickListener {
@@ -481,7 +482,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
 //            commentBtn.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_FOCUSED)
 
-            openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
+            openBottomPanel(bottomButton, floorNumber, db, commentBtn, scannerBtn)
         }
 
 
@@ -499,7 +500,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
             //Jeżeli panel dolny nie jest jeszcze otrzowony to się otwiera
             if (!clickedPanel) {
-                openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
+                openBottomPanel(bottomButton, floorNumber, db, commentBtn, scannerBtn)
                 this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
             } else {
                 bottomButton.visibility = View.INVISIBLE
@@ -531,7 +532,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
 //            //Jeżeli panel dolny nie jest jeszcze otrzowony to się otwiera
             if (!clickedPanel) {
-                openBottomPanel(bottomButton, floorNumber, db, commentBtn, settingsBtn)
+                openBottomPanel(bottomButton, floorNumber, db, commentBtn, scannerBtn)
                 this.window.decorView.rootView.announceForAccessibility("Na dolnej połowie ekranu otworzono panel do odczytywania komunikatów.")
             } else {
                 bottomButton.visibility = View.INVISIBLE
@@ -596,6 +597,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
 
+        scannerBtn = findViewById(R.id.qrScannerBtn)
+        scannerBtn.setOnClickListener{
+            if (mapCircle != null) {
+                mapCircle.remove()
+            }
+            if (mapLine != null) {
+                mapLine.remove()
+            }
+            if (lineMarker != null) {
+                lineMarker.remove()
+            }
+            this.window.decorView.rootView.announceForAccessibility("Na całym ekranie otworzono widok ze skanerem kodów QR.")
+            hideBottomPanel(R.id.ContainerBottomPanel)
+            replaceFragment(
+                FragmentQRScanner(floorNumber),
+                R.anim.enter_from_left,
+                R.anim.exit_to_left,
+                R.id.fragmentContainer
+            )
+        }
 
 
 
@@ -603,8 +624,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //copy database to app
         copyDatabase("gmach_glowny_nowy.db")
 //        copyDatabase("komentarze.db")
-    }//=======================FUNKCJE=====================================================================================
+    }//================ =======FUNKCJE=====================================================================================
 
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, @Nullable data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        val intentResult: IntentResult =
+//            IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+//        // if the intentResult is null then
+//        // toast a message as "cancelled"
+//        if (intentResult != null) {
+//            if (intentResult.getContents() == null) {
+//                Toast.makeText(baseContext, "Cancelled", Toast.LENGTH_SHORT).show()
+//            } else {
+//                // if the intentResult is not null we'll set
+//                // the content and format of scan message
+//                messageText.setText(intentResult.getContents())
+//                messageFormat.setText(intentResult.getFormatName())
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data)
+//        }
+//    }
 
     override fun onBackPressed()
     {
@@ -613,6 +654,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val currentFragmentMenu =this.supportFragmentManager.findFragmentById(R.id.fragmentContainerMenu)
         val currentFragmentComment =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
         val currentFragmentSearchBar =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+        val currentFragmentQRScanner =this.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
 
         if(currentFragmentBottomPanel is FragmentBottomPanel) {
             hideBottomPanel(R.id.ContainerBottomPanel)
@@ -634,6 +676,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         else if(currentFragmentSearchBar is FragmentSearchBar){
             hideFragment(R.id.fragmentContainer, R.anim.enter_from_top, R.anim.exit_to_top)
+        }
+        else if(currentFragmentQRScanner is FragmentQRScanner){
+            hideFragment(R.id.fragmentContainer, R.anim.enter_from_right, R.anim.exit_to_left)
         }
         else{
             val alertDialog = AlertDialog.Builder(this)
@@ -1455,7 +1500,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         myMarkers.features?.filter { it.properties?.IDP!! in idFirst until idLast && it.properties?.FLOOR == floor }
             ?.forEach {
 
-                println("ttt ${it.properties?.IDP}")
+//                println("ttt ${it.properties?.IDP}")
                 val coordLong = it.geometry?.coordinates?.elementAt(0)?.toDouble() ?: 0.0
                 val coordLat = it.geometry?.coordinates?.elementAt(1)?.toDouble() ?: 0.0
                 val pointId = it.properties?.IDP ?: 0
@@ -1524,8 +1569,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 animation.fillAfter = true
                 commentBtn.startAnimation(animation)
                 commentBtn.y = commentBtn.y + 750F
-                settingsBtn.startAnimation(animation)
-                settingsBtn.y = settingsBtn.y + 750F
+                scannerBtn.startAnimation(animation)
+                scannerBtn.y = scannerBtn.y + 750F
             }
 
             clickedPanel = false
@@ -1899,6 +1944,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
     }
+
+
 
 }
 

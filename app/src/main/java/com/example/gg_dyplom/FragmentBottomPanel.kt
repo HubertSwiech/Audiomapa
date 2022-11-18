@@ -81,8 +81,8 @@ class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: Database,
             animation.fillAfter = true
             comButton.startAnimation(animation)
             comButton.setY(comButton.y + 750F)
-            ACTIVITY.settingsBtn.startAnimation(animation)
-            ACTIVITY.settingsBtn.setY(ACTIVITY.settingsBtn.y + 750F)
+            ACTIVITY.scannerBtn.startAnimation(animation)
+            ACTIVITY.scannerBtn.setY(ACTIVITY.scannerBtn.y + 750F)
 
         }
 
