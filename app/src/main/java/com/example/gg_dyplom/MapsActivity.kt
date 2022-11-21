@@ -71,6 +71,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var db: Database
     lateinit var dbCom: DatabaseCom
 
+    val roomMap = mutableMapOf<String, List<Double>>()//wszystkie numery pomieszczeń
     val markerMap = mutableMapOf<Int, List<Double>>()//wszystkie markery
     var polygonListN = mutableListOf<LatLng>()//poligon północny
     var polygonListS = mutableListOf<LatLng>()//poligon południowy
@@ -259,6 +260,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val floors = readJson("pietra.json")
         val myFloors = Gson().fromJson(floors, PolygonModelClass::class.java)
+
+        val rooms = readJson("rooms_centroids.json")//wczytuje poligony korytarzy z .json do strumienia
+        val myRooms = Gson().fromJson(rooms, RoomsModelClass::class.java)//pobiera markery ze strumienia
+
+//        println(myRooms)
+        sortingRoomsNumbers(myRooms,)
+//        println(roomMap)
 
         locationArray0.remove(0)
         locationArray1.remove(0)
@@ -1510,6 +1518,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 markerMap[pointId] = listOf(coordLat, coordLong, floorNr)
             }
         addMarkersToMap(locationArray1, googleMap, markerListLoc1, shape, markerConfig)
+    }
+
+    private fun sortingRoomsNumbers(
+        myMarkers: RoomsModelClass,
+//        locationArray1: MutableMap<String, List<Double>>,
+    ) {
+        myMarkers.features?.forEach {
+
+//                println("ttt ${it.properties?.IDP}")
+                val coordLong = it.geometry?.coordinates?.elementAt(0)?.toDouble() ?: 0.0
+                val coordLat = it.geometry?.coordinates?.elementAt(1)?.toDouble() ?: 0.0
+                val pointId = it.properties?.SHORTNAME ?: "null"
+                val floorNr = it.properties?.FLOOR_ID?.toDouble() ?: 0.0
+
+//                locationArray1[pointId] = listOf(coordLat, coordLong)
+            roomMap[pointId] = listOf(coordLat, coordLong, floorNr)
+            }
     }
 
 
