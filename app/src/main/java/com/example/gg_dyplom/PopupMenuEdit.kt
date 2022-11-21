@@ -96,6 +96,8 @@ class PopupMenuEdit(
 
         if(idstart.text.toString() != ""){//Jeżeli został wybrany marker
             setSpinner(dbkomunikat, targetList, dropList, idstart)
+        } else {
+            setSpinner(dbkomunikat, targetList, dropList, idstart)
         }
 
         idstart.addTextChangedListener(object : TextWatcher {
@@ -118,7 +120,10 @@ class PopupMenuEdit(
         zapiszbtn.setOnClickListener{
 
                 dbComment.open()
-                dbComment.updateRow(data.key.toString(), ACTIVITY.pointNumber, dropList.selectedItem.toString(), text.text.toString())
+                dbComment.updateRow(data.key.toString(),
+                    ACTIVITY.pointNumber,
+                    dropList.selectedItem.toString(),
+                    text.text.toString())
                 dbComment.close()
                 Toast.makeText(context, "Edytowano komentarz", Toast.LENGTH_SHORT).show()
 

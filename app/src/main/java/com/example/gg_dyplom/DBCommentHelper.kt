@@ -171,13 +171,13 @@ class DatabaseCom(private val context: Context) {
     fun deleteRow(idx: Int){
         val database = dbHelper.getWritable()
         database?.execSQL("DELETE FROM comments WHERE id = $idx ;")
-        Toast.makeText(context, "Usunięto", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Usunięto komentarz", Toast.LENGTH_SHORT).show()
     }
 
     fun updateRow(idx: String, locx: String, celx: String, textx: String){
         val query = "UPDATE comments SET lokalizacja = '$locx', cel = '$celx', komentarz = '$textx' WHERE id = $idx;"
         val database = dbHelper.getWritable()
         database?.execSQL(query)
-        Toast.makeText(context, "Edytowano", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Edytowano komentarz", Toast.LENGTH_SHORT).show()
     }
 }
