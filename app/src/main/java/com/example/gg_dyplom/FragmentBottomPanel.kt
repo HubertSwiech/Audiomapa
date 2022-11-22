@@ -18,7 +18,7 @@ import android.widget.*
 import androidx.fragment.app.FragmentTransaction
 import com.example.gg_dyplom.databinding.FragmentBottomPanelBinding
 
-class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: Database, btn: Button) : Fragment(R.layout.fragment_bottom_panel) {
+class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: DatabaseGeodes, btn: Button) : Fragment(R.layout.fragment_bottom_panel) {
 
     lateinit var binding: FragmentBottomPanelBinding
     lateinit var ACTIVITY: MapsActivity
@@ -145,7 +145,7 @@ class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: Database,
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
         })
 
-        ACTIVITY.ttsHelper?.ttsLocation(ACTIVITY.applicationContext, startEditText, nrBtn, db, ACTIVITY.fragmentManager, komEditText, stopBtn, ACTIVITY, floorTextView)
+        ACTIVITY.ttsHelper?.ttsLocation(ACTIVITY.applicationContext, startEditText.text.toString(), nrBtn, db, ACTIVITY.fragmentManager, komEditText, stopBtn, ACTIVITY, floorTextView)
 
         return v
     }
@@ -159,7 +159,7 @@ class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: Database,
         transaction.commit()
     }
 
-    fun setSpinner(db: Database, targetList: MutableList<String>, dropList: Spinner, navBtn: Button, startEditText: EditText, komEditText: EditText, stopBtn: Button){
+    fun setSpinner(db: DatabaseGeodes, targetList: MutableList<String>, dropList: Spinner, navBtn: Button, startEditText: EditText, komEditText: EditText, stopBtn: Button){
         db.open()
         targetList.clear()
         val targets = db.getTarget(ACTIVITY.pointNumber)

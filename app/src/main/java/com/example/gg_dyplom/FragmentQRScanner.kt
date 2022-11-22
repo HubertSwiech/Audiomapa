@@ -3,11 +3,14 @@ package com.example.gg_dyplom
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.TranslateAnimation
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -83,6 +86,7 @@ class FragmentQRScanner(floor: TextView): DialogFragment(), PermissionListener, 
     override fun handleResult(rawResult: Result) {
         val text = rawResult.getText().toString()
         try {
+
             if(text.startsWith("audiomapa\n")){
                 val arr = text.split("\n")
 
@@ -96,13 +100,17 @@ class FragmentQRScanner(floor: TextView): DialogFragment(), PermissionListener, 
                 ACTIVITY.db.open()
                 val pointsToRead = qrCodeContentMap["points"]?.split(",")
                 var message = ""
+                var messageList = mutableListOf<String>()
                 pointsToRead?.forEach {
                     message += ACTIVITY.db.getLocation(it)
+                    messageList.add(it)
                 }
 
+                println("oooooo: $message")
+
                 ACTIVITY.db.close()
-                ACTIVITY.pointNumber = pointsToRead?.get(0) ?: ""
-                ACTIVITY.ttsHelper?.mTTS?.speak(message, TextToSpeech.QUEUE_FLUSH, null)
+//                ACTIVITY.pointNumber = pointsToRead?.get(0) ?: ""
+//                ACTIVITY.ttsHelper?.mTTS?.speak(message, TextToSpeech.QUEUE_FLUSH, null)
 
                 val localizationCoordinates = qrCodeContentMap["coordinates"]?.split(",")
                 val latLngLocalizationCoordinates = LatLng((localizationCoordinates?.get(1)?.toDouble()?: 0.0)-0.00002,(localizationCoordinates?.get(0)?.toDouble()?: 0.0)+0.000035)
@@ -115,6 +123,11 @@ class FragmentQRScanner(floor: TextView): DialogFragment(), PermissionListener, 
                 transaction.setCustomAnimations( R.anim.enter_from_left, R.anim.exit_to_left)
                 transaction.remove(this)
                 transaction.commit()
+
+                if(messageList.size == 3){
+                    openBottomPanel(ACTIVITY.bottomButton, ACTIVITY.floorNumber, ACTIVITY.db, ACTIVITY.commentBtn, ACTIVITY.scannerBtn, messageList)
+                }
+
             } else {
                 Toast.makeText(context, "Ten kod QR nie jest kompatybilny z aplikacją.", Toast.LENGTH_SHORT).show()
 
@@ -152,5 +165,42 @@ class FragmentQRScanner(floor: TextView): DialogFragment(), PermissionListener, 
         scannerView.stopCamera()
         super.onPause()
     }
+
+
+    private fun openBottomPanel(
+        bottomButton: Button,
+        floorNumber: TextView,
+        db: DatabaseGeodes,
+        btn: Button,
+        setBtn: Button,
+        messageList: MutableList<String>
+    ) {
+
+//        if(!clickedPanel){
+        val animation: Animation = TranslateAnimation(0F, 0F, 750F, 0F)
+        animation.duration = 500
+        animation.fillAfter = true
+        btn.startAnimation(animation)
+        btn.y = btn.y - 750F
+
+        setBtn.startAnimation(animation)
+        setBtn.y = setBtn.y - 750F
+//        }
+
+
+        //Przycisk znika z opóźnieniem, żeby wyglądało lepiej wizualnie przy pojawiającym się
+        //dolnym panelu (?mogłoby być rozwiązane gdyby można było przeciągnąć panel zamiat klikać)
+        Handler().postDelayed({
+            bottomButton.visibility = View.INVISIBLE
+        }, 300)
+        ACTIVITY.replaceFragment(
+            FragmentQROptions(btn, messageList[0], messageList[1], messageList[2]),
+            R.anim.enter_from_bottom,
+            R.anim.exit_to_bottom,
+            R.id.ContainerBottomPanel
+        )
+        ACTIVITY.clickedPanel = true
+    }
+
 }
 

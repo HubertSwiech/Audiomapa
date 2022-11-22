@@ -4,14 +4,14 @@
         <layer-list>
             <item>
                 <shape>
-                    <solid android:color="#FFFFFF"/>
-                    <corners android:topLeftRadius="15dp"/>
+                    <solid android:color="#D5B06F"/>
+                    <corners android:topRightRadius="15dp"/>
                     <padding android:left="10dp"/>
                     <padding android:right="10dp"/>
                     <padding android:bottom="10dp"/>
                     <padding android:top="10dp"/>
                     <stroke android:width="2dp"
-                        android:color="#BED1B6"/>
+                        android:color="#D57613"/>
                 </shape>
             </item>
 

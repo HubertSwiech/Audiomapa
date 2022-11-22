@@ -1,7 +1,6 @@
 package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -19,7 +18,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
 
 class PopupMenuEdit(
-    db: Database,
+    db: DatabaseGeodes,
     dbCom: DatabaseCom,
     idx: MutableMap.MutableEntry<Int, List<String>>,
     comments2: FragmentComments
@@ -140,7 +139,7 @@ class PopupMenuEdit(
 
 
 
-    fun setSpinner(db: Database, targetList: MutableList<String>, dropList: Spinner, idstart: EditText){
+    fun setSpinner(db: DatabaseGeodes, targetList: MutableList<String>, dropList: Spinner, idstart: EditText){
         db.open()
         targetList.clear()
         val targets = db.getTarget(ACTIVITY.pointNumber)

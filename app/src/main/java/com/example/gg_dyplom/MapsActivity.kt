@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.room.Room
 import com.example.gg_dyplom.MarkerConfig.MarkerSizeFactor
 import com.example.gg_dyplom.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -68,7 +69,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var commentBtn: Button
     lateinit var scannerBtn: Button
 
-    lateinit var db: Database
+    lateinit var db: DatabaseGeodes
     lateinit var dbCom: DatabaseCom
 
     val roomMap = mutableMapOf<String, List<Double>>()//wszystkie numery pomieszczeń
@@ -306,8 +307,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         drawMarkers()
 
-        db = Database(this)
+        db = DatabaseGeodes(this)
         dbCom = DatabaseCom(this)
+
+//        val dbComments = Room.databaseBuilder(
+//            applicationContext,
+//            CommentsDatabase::class.java, "comments"
+//        ).build()
+
+//        val comDao = dbComments.commentsDao()
+//        val users: List<Comments> = comDao.getAll()
+//
+//        println("mmmmmm $users")
 
 
         mMap?.uiSettings?.isMapToolbarEnabled = false
@@ -1546,7 +1557,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         imageOverlay = mMap?.addGroundOverlay(newarkMap)!!
     }
 
-    private fun replaceFragment(fragment: Fragment, anim1: Int, anim2: Int, container: Int) {
+    fun replaceFragment(fragment: Fragment, anim1: Int, anim2: Int, container: Int) {
 
         hideFragment(R.id.fragmentContainerMenu, R.anim.enter_from_left, R.anim.exit_to_left)
 //        hideBottomPanel(R.id.ContainerBottomPanel)
@@ -1929,7 +1940,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun openBottomPanel(
         bottomButton: Button,
         floorNumber: TextView,
-        db: Database,
+        db: DatabaseGeodes,
         btn: Button,
         setBtn: Button
     ) {

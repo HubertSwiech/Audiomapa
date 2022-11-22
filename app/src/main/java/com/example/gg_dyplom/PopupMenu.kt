@@ -1,8 +1,6 @@
 package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
-import android.app.Dialog
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -14,12 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragment() {
+class PopupMenu(number: String, db: DatabaseGeodes, dbCom: DatabaseCom) : DialogFragment() {
 
     val pointNumber2 = number
     val dbkomunikat = db
@@ -131,7 +127,7 @@ class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragme
 
 
 
-    fun setSpinner(db: Database, targetList: MutableList<String>, dropList: Spinner){
+    fun setSpinner(db: DatabaseGeodes, targetList: MutableList<String>, dropList: Spinner){
         db.open()
         targetList.clear()
         val targets = db.getTarget(ACTIVITY.pointNumber)

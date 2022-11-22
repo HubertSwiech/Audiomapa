@@ -1,6 +1,5 @@
 package com.example.gg_dyplom
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -33,14 +32,15 @@ class TtsHelper(context: Context, activity: MapsActivity) {
 
     fun ttsLocation(
         mContext: Context,
-        nrEditText: EditText,
+        nrEditText: String,
         speakButton: Button,
-        database: Database,
+        database: DatabaseGeodes,
         fragManager: FragmentManager,
         komEditText: EditText,
         stopButton: Button,
         ACTIVITY: MapsActivity,
-        floorTextView: TextView
+        floorTextView: TextView,
+        rysujOkrag: String = "rysuj"
     ){
 //        val l = Locale("pl")
 
@@ -52,15 +52,18 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                 //mTTS.shutdown()
             }
 
-            val number = nrEditText.text.toString()
+            val number = nrEditText
 
             if (!isNumber(number)) {
                 val blad = "Sprawdź, czy numer jest wpisany prawidłowo."
                 Toast.makeText(mContext, blad, Toast.LENGTH_SHORT).show()
             } else {
                 //Przełączanie pietra
-                switchFloorOverlay(number, ACTIVITY, floorTextView)
-                drawCircle(number, ACTIVITY)
+                if(rysujOkrag == "rysuj"){
+                    switchFloorOverlay(number, ACTIVITY, floorTextView)
+                    drawCircle(number, ACTIVITY)
+                }
+
 
                 database.open()
                 val message = database.getLocation(number)
@@ -101,7 +104,7 @@ class TtsHelper(context: Context, activity: MapsActivity) {
             startEditText: EditText,
             endEditText: Spinner,
             speakButton: Button,
-            database: Database,
+            database: DatabaseGeodes,
             fragManager: FragmentManager,
             komEditText: EditText,
             stopButton: Button,
