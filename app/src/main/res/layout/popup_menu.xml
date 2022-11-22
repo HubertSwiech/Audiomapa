@@ -73,7 +73,8 @@
     <EditText
         android:id="@+id/popupText"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
+        android:lines="6"
         android:layout_marginTop="10dp"
         android:imeOptions="actionDone"
         android:background="#EBFFE4"

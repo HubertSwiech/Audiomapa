@@ -225,9 +225,9 @@ class FragmentMenu(floor: TextView) : Fragment(R.layout.fragment_menu){
                 2 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
                 3 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
                 4 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
-//            5 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
-//            6 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
-//            7 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            5 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            6 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            7 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
             }
         }
     }

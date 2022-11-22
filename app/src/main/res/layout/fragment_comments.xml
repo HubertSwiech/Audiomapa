@@ -34,6 +34,17 @@ android:id="@+id/tableLay"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textStyle="bold"></TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addComment"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Dodaj komentarz."
+            android:textSize="0dp"
+            android:background="@drawable/add_comment_button" />
     </RelativeLayout>
 
 

@@ -1,7 +1,6 @@
 package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -19,7 +18,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
 
 class PopupMenuEdit(
-    db: Database,
+    db: DatabaseGeodes,
     dbCom: DatabaseCom,
     idx: MutableMap.MutableEntry<Int, List<String>>,
     comments2: FragmentComments
@@ -96,6 +95,8 @@ class PopupMenuEdit(
 
         if(idstart.text.toString() != ""){//Jeżeli został wybrany marker
             setSpinner(dbkomunikat, targetList, dropList, idstart)
+        } else {
+            setSpinner(dbkomunikat, targetList, dropList, idstart)
         }
 
         idstart.addTextChangedListener(object : TextWatcher {
@@ -118,7 +119,10 @@ class PopupMenuEdit(
         zapiszbtn.setOnClickListener{
 
                 dbComment.open()
-                dbComment.updateRow(data.key.toString(), ACTIVITY.pointNumber, dropList.selectedItem.toString(), text.text.toString())
+                dbComment.updateRow(data.key.toString(),
+                    ACTIVITY.pointNumber,
+                    dropList.selectedItem.toString(),
+                    text.text.toString())
                 dbComment.close()
                 Toast.makeText(context, "Edytowano komentarz", Toast.LENGTH_SHORT).show()
 
@@ -135,7 +139,7 @@ class PopupMenuEdit(
 
 
 
-    fun setSpinner(db: Database, targetList: MutableList<String>, dropList: Spinner, idstart: EditText){
+    fun setSpinner(db: DatabaseGeodes, targetList: MutableList<String>, dropList: Spinner, idstart: EditText){
         db.open()
         targetList.clear()
         val targets = db.getTarget(ACTIVITY.pointNumber)
