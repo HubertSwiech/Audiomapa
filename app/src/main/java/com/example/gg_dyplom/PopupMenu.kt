@@ -15,11 +15,15 @@ import android.widget.*
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
 
-class PopupMenu(number: String, db: DatabaseGeodes, dbCom: DatabaseCom) : DialogFragment() {
+class PopupMenu(number: String, db: DatabaseGeodes) : DialogFragment() {
 
     val pointNumber2 = number
     val dbkomunikat = db
-    val dbComment = dbCom
+
+    lateinit var idstart: EditText
+    lateinit var text: EditText
+    lateinit var dropList: Spinner
+
     lateinit var ACTIVITY: MapsActivity
 
     override fun onAttach(context: Context) {
@@ -41,10 +45,10 @@ class PopupMenu(number: String, db: DatabaseGeodes, dbCom: DatabaseCom) : Dialog
     ): View? {
         var v: View = inflater.inflate(R.layout.popup_menu, container, false)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val idstart = v.findViewById<EditText>(R.id.popupEditStart)
-        val text = v.findViewById<EditText>(R.id.popupText)
+        idstart = v.findViewById<EditText>(R.id.popupEditStart)
+        text = v.findViewById<EditText>(R.id.popupText)
         val zapiszbtn = v.findViewById<Button>(R.id.popupZapisz)
-        val dropList = v.findViewById<Spinner>(R.id.spnTestPop)
+        dropList = v.findViewById<Spinner>(R.id.spnTestPop)
         val back = v.findViewById<Button>(R.id.backPopup)
 
         idstart.setText(ACTIVITY.pointNumber)
@@ -86,12 +90,11 @@ class PopupMenu(number: String, db: DatabaseGeodes, dbCom: DatabaseCom) : Dialog
 
 
         zapiszbtn.setOnClickListener{
+            activity?.runOnUiThread {
+                insertComments()
+            }
 
-            dbComment.open()
-            dbComment.insertData(idstart.text.toString(),
-                dropList.selectedItem.toString(),
-                text.text.toString())
-            dbComment.close()
+
             Toast.makeText(context, "Dodano komentarz", Toast.LENGTH_SHORT).show()
             closeKeyboard()
 
@@ -160,6 +163,19 @@ class PopupMenu(number: String, db: DatabaseGeodes, dbCom: DatabaseCom) : Dialog
         view?.clearFocus();
     }
 
+
+    private fun insertComments(){
+        val thread = Thread {
+            val commentEntity = Comments()
+//            commentEntity.lp = 3
+            commentEntity.lokalizacja = idstart.text.toString()
+            commentEntity.cel = dropList.selectedItem.toString()
+            commentEntity.komentarz = text.text.toString()
+
+            ACTIVITY.dbComments.commentsDao().insertComent(commentEntity)
+        }
+        thread.start()
+    }
 
 }
 

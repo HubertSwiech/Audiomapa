@@ -1,5 +1,6 @@
 package com.example.gg_dyplom
 
+import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -9,6 +10,7 @@ import android.speech.tts.UtteranceProgressListener
 import android.text.Editable
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.*
@@ -53,6 +55,7 @@ class TtsHelper(context: Context, activity: MapsActivity) {
             }
 
             val number = nrEditText
+            println("ssssss ${number}")
 
             if (!isNumber(number)) {
                 val blad = "Sprawdź, czy numer jest wpisany prawidłowo."
@@ -164,12 +167,12 @@ class TtsHelper(context: Context, activity: MapsActivity) {
         }
     }
 
-        fun ttsComment(mContext: Context, idx: Int, speakButton: Button, databaseCom: DatabaseCom, stopButton: Button
+        fun ttsComment(mContext: Context, idx: Int, speakButton: Button, stopButton: Button, activity: FragmentActivity?
         ){
 //        val l = Locale("pl")
 
             speakButton.setOnClickListener {
-                val toSpeak: String
+                var toSpeak: String
                 speakButton.isPressed = true
                 if (mTTS?.isSpeaking == true) {
                     //if speaking then stop
@@ -177,34 +180,39 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                     //mTTS.shutdown()
                 }
 
-                databaseCom.open()
-                    val message = databaseCom.readComment(idx)
-                    databaseCom.close()
-
-                    toSpeak = message
 
 
-                    if (toSpeak == "") {
-                        //if there is no text in edit text
+                fetchComments(idx) { comments ->
+                    activity?.runOnUiThread {
+                       toSpeak = comments
+
+                        if (toSpeak == "") {
+                            //if there is no text in edit text
 //                        Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show()
-                    } else {
-                        //if there is text in edit text
+                        } else {
+                            //if there is text in edit text
 //                        Toast.makeText(mContext, toSpeak, Toast.LENGTH_SHORT).show()
-                        val map = HashMap<String, String>()
-                        map[TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID] = "UniqueID";
-                        mTTS?.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, map)
-                    }
+                            val map = HashMap<String, String>()
+                            map[TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID] = "UniqueID";
+                            mTTS?.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, map)
+                        }
 
-                mTTS?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-                    override fun onStart(utteranceId: String) {
-                        speakButton.isPressed = true
+                        mTTS?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
+                            override fun onStart(utteranceId: String) {
+                                speakButton.isPressed = true
+                            }
+                            override fun onDone(utteranceId: String) {
+                                speakButton.isPressed = false
+                            }
+                            override fun onError(utteranceId: String) {
+                            }
+                        })
                     }
-                    override fun onDone(utteranceId: String) {
-                        speakButton.isPressed = false
-                    }
-                    override fun onError(utteranceId: String) {
-                    }
-                })
+                }
+//                    toSpeak = message
+
+
+
 
             }
 
@@ -234,6 +242,18 @@ class TtsHelper(context: Context, activity: MapsActivity) {
         }
     }
 
+
+    private fun fetchComments(idx: Int, successCallback: (String) -> Unit) {
+        var message: String =""
+        val thread = Thread {
+            ACTIVITY.dbComments.commentsDao().getComment(idx).forEach()
+            {
+                message = it.komentarz.toString()
+            }
+            successCallback(message)
+        }
+        thread.start()
+    }
 }
 
 

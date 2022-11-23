@@ -96,7 +96,11 @@ class FragmentActionButton(
 //            deleteDialog.setTitle("Delete Alert")
             deleteDialog.setMessage(Html.fromHtml("<font color='#062e04'> <big> <big> Czy na pewno chcesz usunąć ten komentarz? <br> </big> </big> </font>"))
             deleteDialog.setPositiveButton(Html.fromHtml("<font color='#633a0e'> <big> <big> <b> Usuń </b> </big> </big> </font>")) { dialog, whichButton ->
-                ACTIVITY.dbCom.deleteRow(data.key)
+//                ACTIVITY.dbComments.commentsDao().deleteComment(data.key)
+                activity?.runOnUiThread {
+                    deleteComment(data.key)
+                }
+
 
                 val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
                 transaction.remove(this)
@@ -136,7 +140,7 @@ class FragmentActionButton(
 
         val edytuj = v.findViewById<Button>(R.id.edytuj)
         edytuj.setOnClickListener{
-            val dialog = PopupMenuEdit(ACTIVITY.db, ACTIVITY.dbCom, data, FragmentComments(floorTextView, supportFragmentManager))
+            val dialog = PopupMenuEdit(ACTIVITY.db, data, FragmentComments(floorTextView, supportFragmentManager))
             dialog.show(supportFragmentManager, "customDialog")
 //            Handler().postDelayed({
                 actionButton.background = resources.getDrawable(R.drawable.action_button)
@@ -151,14 +155,19 @@ class FragmentActionButton(
         czytaj = v.findViewById<Button>(R.id.czytaj)
         val przerwij = v.findViewById<Button>(R.id.przerwij)
 //        ttsHelper = TtsHelper(ACTIVITY.applicationContext, ACTIVITY)
-        ACTIVITY.ttsHelper?.ttsComment(ACTIVITY.applicationContext, data.key, czytaj,ACTIVITY.dbCom, przerwij)
+        ACTIVITY.ttsHelper?.ttsComment(ACTIVITY.applicationContext, data.key, czytaj, przerwij, activity)
 
 
         return v
     }
 
 
-
+    private fun deleteComment(idx: Int) {
+        val thread = Thread {
+            ACTIVITY.dbComments.commentsDao().deleteComment(idx)
+        }
+        thread.start()
+    }
 
 
 }

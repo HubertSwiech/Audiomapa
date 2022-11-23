@@ -22,6 +22,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.example.gg_dyplom.MarkerConfig.MarkerSizeFactor
 import com.example.gg_dyplom.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -70,7 +71,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     lateinit var scannerBtn: Button
 
     lateinit var db: DatabaseGeodes
-    lateinit var dbCom: DatabaseCom
+//    lateinit var dbCom: DatabaseCom
+    lateinit var dbComments: CommentsDatabase
 
     val roomMap = mutableMapOf<String, List<Double>>()//wszystkie numery pomieszczeń
     val markerMap = mutableMapOf<Int, List<Double>>()//wszystkie markery
@@ -308,18 +310,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         drawMarkers()
 
         db = DatabaseGeodes(this)
-        dbCom = DatabaseCom(this)
+//        dbCom = DatabaseCom(this)
 
-//        val dbComments = Room.databaseBuilder(
-//            applicationContext,
-//            CommentsDatabase::class.java, "comments"
-//        ).build()
-
-//        val comDao = dbComments.commentsDao()
-//        val users: List<Comments> = comDao.getAll()
-//
-//        println("mmmmmm $users")
-
+        dbComments = Room.databaseBuilder(
+            applicationContext,
+            CommentsDatabase::class.java, "comments"
+        ).build()
 
         mMap?.uiSettings?.isMapToolbarEnabled = false
 //        mMap.uiSettings.isCompassEnabled = false
@@ -340,7 +336,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap?.setInfoWindowAdapter(CustomInfoWindowForGoogleMap(this))
         mMap?.setOnInfoWindowClickListener { marker ->
 //            Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
-            val dialog = PopupMenu(marker.title.toString(), db, dbCom)
+            val dialog = PopupMenu(marker.title.toString(), db)
 //            dialog.setStyle(R.style.PopupStyle)
 
             dialog.show(supportFragmentManager, "customDialog")

@@ -2,34 +2,41 @@ package com.example.gg_dyplom
 
 import androidx.room.*
 
+
 @Entity
-data class Comments(
-    @PrimaryKey val id: Int,
-//    @ColumnInfo(name = "id") val id: String?,
-    @ColumnInfo(name = "lokalizacja") val lokalizacja: String?,
-    @ColumnInfo(name = "cel") val cel: String?,
-    @ColumnInfo(name = "komentarz") val komentarz: String?
-)
+class Comments {
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0
+
+//    @ColumnInfo(name = "lp")
+//    var lp: Int = 0
+    //    @ColumnInfo(name = "id") val id: String?,
+    @ColumnInfo(name = "lokalizacja")
+    var lokalizacja: String? = null
+
+    @ColumnInfo(name = "cel")
+    var cel: String? = null
+
+    @ColumnInfo(name = "komentarz")
+    var komentarz: String? = null
+}
 
 @Dao
 interface CommentsDao {
     @Query("SELECT * FROM comments")
     fun getAll(): List<Comments>
 
-    @Query("SELECT * FROM comments WHERE id IN (:userIds)")
-    fun loadAllByIds(userIds: IntArray): List<Comments>
+    @Query("SELECT * FROM comments WHERE id LIKE (:idx)")
+    fun getComment(idx: Int): List<Comments>
 
-//    @Query("SELECT * FROM comments WHERE first_name LIKE :first AND " +
-//            "last_name LIKE :last LIMIT 1")
-//    fun findByName(first: String, last: String): Comments
-@Insert(onConflict = OnConflictStrategy.IGNORE)
-suspend fun insert(id: Comments, lokalizacjia: Comments, cel: Comments, komentarz: Comments)
+    @Query("UPDATE comments SET lokalizacja = :loc, cel = :target, komentarz = :com WHERE id = :idx")
+    fun updateComments(idx: Int, loc: String, target: String, com: String)
 
     @Insert
-    fun insertAll(vararg users: Comments)
+    fun insertComent(comment: Comments)
 
-    @Delete
-    fun delete(user: Comments)
+    @Query("DELETE FROM comments WHERE id = :idx")
+    fun deleteComment(idx: Int)
 }
 
 @Database(entities = [Comments::class], version = 1)

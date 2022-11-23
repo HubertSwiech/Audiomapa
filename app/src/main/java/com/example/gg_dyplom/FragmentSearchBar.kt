@@ -175,7 +175,7 @@ var poiMap = list
 //                    listAdapter.filter.filter(query)
                 } else {
                     // if query is not present we are displaying a toast message as no  data found..
-//                    Toast.makeText(ACTIVITY, "No Language found..", Toast.LENGTH_LONG).show()
+                    Toast.makeText(ACTIVITY, "Nie ma takiego miejsca.", Toast.LENGTH_SHORT).show()
                 }
                 return false
             }
@@ -247,7 +247,7 @@ var poiMap = list
 //                    roomsAdapter.filter.filter(query)
                 } else {
                     // if query is not present we are displaying a toast message as no  data found..
-//                    Toast.makeText(ACTIVITY, "No Language found..", Toast.LENGTH_LONG).show()
+                    Toast.makeText(ACTIVITY, "Nie ma sali o podanym numerze.", Toast.LENGTH_SHORT).show()
                 }
                 return false
             }

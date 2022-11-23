@@ -47,6 +47,7 @@ class FragmentComments(
 //        ACTIVITY.window.decorView.rootView.findViewById<TextView>(R.id.floor).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS
 
     }
+
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,10 +57,9 @@ class FragmentComments(
         val v = inflater.inflate(R.layout.fragment_comments, container, false)
 
         backButton = v.findViewById<Button>(R.id.back)
-        val rel = v.findViewById<RelativeLayout>(R.id.rel)
-        backButton.setOnClickListener{
+        backButton.setOnClickListener {
             var frag = requireFragmentManager().findFragmentById(R.id.ButtonAction)
-            if(frag!=null){
+            if (frag != null) {
                 val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                 transaction.remove(frag)
@@ -86,33 +86,66 @@ class FragmentComments(
 
         val addCommentBtn = v.findViewById<Button>(R.id.addComment)
 
-        addCommentBtn.setOnClickListener{
+        addCommentBtn.setOnClickListener {
             ACTIVITY.pointNumber = ""
-            val dialog = PopupMenu("null", ACTIVITY.db, ACTIVITY.dbCom)
-//            dialog.setStyle(R.style.PopupStyle)
-
+            val dialog = PopupMenu("null", ACTIVITY.db)
             dialog.show(ACTIVITY.fragmentManager, "customDialog")
-
-
         }
 
+        fetchComments { comments ->
+            activity?.runOnUiThread {
+                v.setUp(comments)
+            }
+        }
 
+        return v
+    }
 
-        ACTIVITY.dbCom.open()
-        val commentList = ACTIVITY.dbCom.getComments()
-        ACTIVITY.dbCom.close()
+    @SuppressLint("RtlHardcoded")
+    fun addTextViewInRow(i: String, tbrow: TableRow, width: Int, height: Int, gravity: Int) {
+        val tv4 = TextView(ACTIVITY)
 
-        var stk = v.findViewById<TableLayout>(R.id.rows)
+        tv4.setText(i)
+        tv4.setLayoutParams(TableRow.LayoutParams(width, height))
+        tv4.gravity = gravity
+        tv4.setPadding(0, 15, 0, 15);
+        tv4.textSize = 20F
+        tv4.setTextColor(Color.BLACK)
+        tbrow.addView(tv4)
+    }
+
+    private fun fetchComments(successCallback: (MutableMap<Int, List<String>>) -> Unit) {
+        val answer: MutableMap<Int, List<String>> = mutableMapOf()
+        val thread = Thread {
+            ACTIVITY.dbComments.commentsDao().getAll().forEach()
+            {
+                answer[it.id] = listOf(it.lokalizacja, it.cel, it.komentarz) as List<String>
+            }
+            println("mmmmmmmmmm $answer")
+            successCallback(answer)
+        }
+        thread.start()
+    }
+
+    private fun View.setUp(comments: MutableMap<Int, List<String>>) {
+        val rel = findViewById<RelativeLayout>(R.id.rel)
+
+        println("ppppp: $comments")
+        val commentList = comments
+//        MutableMap<Int, List<String>> = mutableMapOf()
+//        ACTIVITY.dbCom.close()
+
+        var stk = findViewById<TableLayout>(R.id.rows)
 
         var nr = 1
 
-        for(i in commentList){
+        for (i in commentList) {
 
             val tbrow = TableRow(ACTIVITY)
             tbrow.isClickable = true
 
 
-            rel.setPadding(0,0,0,130)
+            rel.setPadding(0, 0, 0, 130)
 //            val tableRowParams = TableLayout.LayoutParams(
 //                TableLayout.LayoutParams.FILL_PARENT,
 //                TableLayout.LayoutParams.WRAP_CONTENT
@@ -123,65 +156,79 @@ class FragmentComments(
 //            tbrow.layoutParams = tableRowParams
 
 
-
-            if(nr % 2 == 0){
+            if (nr % 2 == 0) {
                 tbrow.background = resources.getDrawable(R.drawable.comment_list_even)
 //                tbrow.setBackground(0x00C9D8BC)
-            }else{
+            } else {
                 tbrow.background = resources.getDrawable(R.drawable.comment_list_odd)
 //                tbrow.setBackgroundColor(0x00E2E2E2)
             }
 
-            addTextViewInRow(nr.toString(), tbrow, 160, TableRow.LayoutParams.MATCH_PARENT, Gravity.CENTER or Gravity.CENTER_VERTICAL)
-            addTextViewInRow(i.value[0], tbrow, 150, TableRow.LayoutParams.MATCH_PARENT, Gravity.CENTER or Gravity.CENTER_VERTICAL)
-            addTextViewInRow(i.value[1], tbrow, 130, TableRow.LayoutParams.MATCH_PARENT,Gravity.CENTER or Gravity.CENTER_VERTICAL)
-            addTextViewInRow(i.value[2], tbrow, 510, TableRow.LayoutParams.WRAP_CONTENT, Gravity.LEFT)
+            addTextViewInRow(
+                nr.toString(),
+                tbrow,
+                160,
+                TableRow.LayoutParams.MATCH_PARENT,
+                Gravity.CENTER or Gravity.CENTER_VERTICAL
+            )
+            addTextViewInRow(
+                i.value[0],
+                tbrow,
+                150,
+                TableRow.LayoutParams.MATCH_PARENT,
+                Gravity.CENTER or Gravity.CENTER_VERTICAL
+            )
+            addTextViewInRow(
+                i.value[1],
+                tbrow,
+                130,
+                TableRow.LayoutParams.MATCH_PARENT,
+                Gravity.CENTER or Gravity.CENTER_VERTICAL
+            )
+            addTextViewInRow(
+                i.value[2],
+                tbrow,
+                510,
+                TableRow.LayoutParams.WRAP_CONTENT,
+                Gravity.LEFT
+            )
 
             val btn = Button(ACTIVITY)
 
 
-            tbrow.setOnClickListener{
+            tbrow.setOnClickListener {
                 btn.background = resources.getDrawable(R.drawable.action_button_clicked)
                 val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-                transaction.replace(R.id.ButtonAction, FragmentActionButton(rel, this, floorTextView, i, supFM, btn))
+                transaction.replace(
+                    R.id.ButtonAction,
+                    FragmentActionButton(rel, this@FragmentComments, floorTextView, i, supFM, btn)
+                )
                 transaction.commit()
-                this.view?.announceForAccessibility("Wyświetlono pasek z akcjami do komentarza.")
+                announceForAccessibility("Wyświetlono pasek z akcjami do komentarza.")
             }
 
             btn.text = "Przycisk akcji dla komentarza."
             btn.textSize = 0F
             btn.background = resources.getDrawable(R.drawable.action_button)
             btn.setLayoutParams(TableRow.LayoutParams(50, TableRow.LayoutParams.WRAP_CONTENT))
-            btn.setOnClickListener{
+            btn.setOnClickListener {
                 btn.background = resources.getDrawable(R.drawable.action_button_clicked)
                 val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-                transaction.replace(R.id.ButtonAction, FragmentActionButton(rel, this, floorTextView, i, supFM, btn))
+                transaction.replace(
+                    R.id.ButtonAction,
+                    FragmentActionButton(rel, this@FragmentComments, floorTextView, i, supFM, btn)
+                )
                 transaction.commit()
-                this.view?.announceForAccessibility("Wyświetlono pasek z akcjami do komentarza.")
+                announceForAccessibility("Wyświetlono pasek z akcjami do komentarza.")
             }
 
             tbrow.addView(btn)
 
             stk.addView(tbrow)
-            nr+=1
+            nr += 1
         }
-
-        return v
-    }
-
-    @SuppressLint("RtlHardcoded")
-    fun addTextViewInRow(i: String, tbrow: TableRow, width: Int, height: Int, gravity: Int){
-        val tv4 = TextView(ACTIVITY)
-
-        tv4.setText(i)
-        tv4.setLayoutParams(TableRow.LayoutParams(width, height))
-        tv4.gravity = gravity
-        tv4.setPadding(0, 15, 0, 15);
-        tv4.textSize = 20F
-        tv4.setTextColor(Color.BLACK)
-        tbrow.addView(tv4)
     }
 }
 

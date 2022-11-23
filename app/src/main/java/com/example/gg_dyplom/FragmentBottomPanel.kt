@@ -139,13 +139,15 @@ class FragmentBottomPanel(bottomButton2: Button, floor: TextView, db2: DatabaseG
                 if(ACTIVITY.pointNumber != ""){
                     setSpinner(db, targetList, dropList, navBtn, startEditText, komEditText, stopBtn)
                }
-            }
+                ACTIVITY.ttsHelper?.ttsLocation(ACTIVITY.applicationContext, startEditText.text.toString(), nrBtn, db, ACTIVITY.fragmentManager, komEditText, stopBtn, ACTIVITY, floorTextView)
+                }
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
         })
 
         ACTIVITY.ttsHelper?.ttsLocation(ACTIVITY.applicationContext, startEditText.text.toString(), nrBtn, db, ACTIVITY.fragmentManager, komEditText, stopBtn, ACTIVITY, floorTextView)
+
 
         return v
     }
