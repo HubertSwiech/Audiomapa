@@ -45,13 +45,13 @@ class DatabaseOpenHelper(context: Context) :
 }
 
 
-class Database(private val context: Context) {
+class DatabaseGeodes(private val context: Context) {
     private var database: SQLiteDatabase? = null
     private val dbHelper: DatabaseOpenHelper = DatabaseOpenHelper(context)
 
     @Throws(SQLException::class)
 
-    fun open(): Database {
+    fun open(): DatabaseGeodes {
         dbHelper.openDataBase()
         dbHelper.close()
         database = dbHelper.readableDatabase

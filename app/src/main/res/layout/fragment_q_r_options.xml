@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentBottomPanel"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="#CCFFFFFF"
+    tools:targetApi="p">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hideFrag"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/bottom_panel_down"
+        android:text="Zamknij panel do odczytywania komentarzy."
+        android:textSize="0dp"
+        tools:targetApi="lollipop_mr1" />
+
+    <LinearLayout
+        android:id="@+id/przyciski"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginTop="185dp"
+        android:accessibilityTraversalAfter="@id/cel"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical"
+        tools:targetApi="lollipop_mr1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/readLocation"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bottom_panel_button"
+            android:text="Komunikat dla lokalizacji"
+            android:textSize="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/readZones"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bottom_panel_button"
+            android:text="Komunikat dla strefy"
+            android:textSize="17dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/readFloor"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bottom_panel_button"
+            android:text="Komunikat dla piętra"
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bottom_panel_button"
+        android:text="przerwij\nczytanie"
+
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/komunikat"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="5dp"
+        android:accessibilityTraversalAfter="@id/hideFrag"
+        android:enabled="true"
+        android:focusableInTouchMode="false"
+        android:hint="Wybierz komunikat, który chcesz usłyszeć."
+        android:inputType="none"
+        android:textSize="25dp"
+        tools:targetApi="lollipop_mr1" />
+
+
+</RelativeLayout>

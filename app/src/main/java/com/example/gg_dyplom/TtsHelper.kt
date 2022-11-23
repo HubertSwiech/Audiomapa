@@ -1,5 +1,6 @@
 package com.example.gg_dyplom
 
+import android.app.Activity
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -9,6 +10,7 @@ import android.speech.tts.UtteranceProgressListener
 import android.text.Editable
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.*
@@ -32,14 +34,15 @@ class TtsHelper(context: Context, activity: MapsActivity) {
 
     fun ttsLocation(
         mContext: Context,
-        nrEditText: EditText,
+        nrEditText: String,
         speakButton: Button,
-        database: Database,
+        database: DatabaseGeodes,
         fragManager: FragmentManager,
         komEditText: EditText,
         stopButton: Button,
         ACTIVITY: MapsActivity,
-        floorTextView: TextView
+        floorTextView: TextView,
+        rysujOkrag: String = "rysuj"
     ){
 //        val l = Locale("pl")
 
@@ -51,15 +54,19 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                 //mTTS.shutdown()
             }
 
-            val number = nrEditText.text.toString()
+            val number = nrEditText
+            println("ssssss ${number}")
 
             if (!isNumber(number)) {
                 val blad = "Sprawdź, czy numer jest wpisany prawidłowo."
                 Toast.makeText(mContext, blad, Toast.LENGTH_SHORT).show()
             } else {
                 //Przełączanie pietra
-                switchFloorOverlay(number, ACTIVITY, floorTextView)
-                drawCircle(number, ACTIVITY)
+                if(rysujOkrag == "rysuj"){
+                    switchFloorOverlay(number, ACTIVITY, floorTextView)
+                    drawCircle(number, ACTIVITY)
+                }
+
 
                 database.open()
                 val message = database.getLocation(number)
@@ -100,7 +107,7 @@ class TtsHelper(context: Context, activity: MapsActivity) {
             startEditText: EditText,
             endEditText: Spinner,
             speakButton: Button,
-            database: Database,
+            database: DatabaseGeodes,
             fragManager: FragmentManager,
             komEditText: EditText,
             stopButton: Button,
@@ -121,7 +128,7 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                 val number2 = endEditText.selectedItem.toString()
                 ACTIVITY.targetNumber = number2
 
-                if(!isNumber(number1) || number1.toInt() > 149 || !isNumber(number2) || number2.toInt() > 149){
+                if(!isNumber(number1) || number1.toInt() > 153 || !isNumber(number2) || number2.toInt() > 153){
                     val blad = "Sprawdź, czy numery są wpisane prawidłowo."
                     Toast.makeText(mContext, blad, Toast.LENGTH_SHORT).show()
                 } else {
@@ -160,12 +167,12 @@ class TtsHelper(context: Context, activity: MapsActivity) {
         }
     }
 
-        fun ttsComment(mContext: Context, idx: Int, speakButton: Button, databaseCom: DatabaseCom, stopButton: Button
+        fun ttsComment(mContext: Context, idx: Int, speakButton: Button, stopButton: Button, activity: FragmentActivity?
         ){
 //        val l = Locale("pl")
 
             speakButton.setOnClickListener {
-                val toSpeak: String
+                var toSpeak: String
                 speakButton.isPressed = true
                 if (mTTS?.isSpeaking == true) {
                     //if speaking then stop
@@ -173,34 +180,39 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                     //mTTS.shutdown()
                 }
 
-                databaseCom.open()
-                    val message = databaseCom.readComment(idx)
-                    databaseCom.close()
-
-                    toSpeak = message
 
 
-                    if (toSpeak == "") {
-                        //if there is no text in edit text
+                fetchComments(idx) { comments ->
+                    activity?.runOnUiThread {
+                       toSpeak = comments
+
+                        if (toSpeak == "") {
+                            //if there is no text in edit text
 //                        Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show()
-                    } else {
-                        //if there is text in edit text
+                        } else {
+                            //if there is text in edit text
 //                        Toast.makeText(mContext, toSpeak, Toast.LENGTH_SHORT).show()
-                        val map = HashMap<String, String>()
-                        map[TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID] = "UniqueID";
-                        mTTS?.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, map)
-                    }
+                            val map = HashMap<String, String>()
+                            map[TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID] = "UniqueID";
+                            mTTS?.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, map)
+                        }
 
-                mTTS?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-                    override fun onStart(utteranceId: String) {
-                        speakButton.isPressed = true
+                        mTTS?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
+                            override fun onStart(utteranceId: String) {
+                                speakButton.isPressed = true
+                            }
+                            override fun onDone(utteranceId: String) {
+                                speakButton.isPressed = false
+                            }
+                            override fun onError(utteranceId: String) {
+                            }
+                        })
                     }
-                    override fun onDone(utteranceId: String) {
-                        speakButton.isPressed = false
-                    }
-                    override fun onError(utteranceId: String) {
-                    }
-                })
+                }
+//                    toSpeak = message
+
+
+
 
             }
 
@@ -230,6 +242,18 @@ class TtsHelper(context: Context, activity: MapsActivity) {
         }
     }
 
+
+    private fun fetchComments(idx: Int, successCallback: (String) -> Unit) {
+        var message: String =""
+        val thread = Thread {
+            ACTIVITY.dbComments.commentsDao().getComment(idx).forEach()
+            {
+                message = it.komentarz.toString()
+            }
+            successCallback(message)
+        }
+        thread.start()
+    }
 }
 
 
@@ -345,9 +369,9 @@ fun changeFloor(ACTIVITY: MapsActivity){
             2 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
             3 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
             4 -> makeFloorPolygonVisibleMenu(ACTIVITY, ACTIVITY.allFloorPolygons)
-//            5 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
-//            6 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
-//            7 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            5 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            6 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
+            7 -> makePolygonVisibleMenu(ACTIVITY, ACTIVITY.allPolygonsLibrary)
         }
     } else {
         for(i in ACTIVITY.allFloorPolygons){
@@ -369,94 +393,88 @@ fun isNumber(s: String): Boolean {
 }
 //powtórki ^
 
-fun switchFloorOverlay(stringNumber: String, ACTIVITY: MapsActivity, floorTextView: TextView) {
+fun switchFloorOverlay(stringNumber: String, ACTIVITY: MapsActivity, floorTextView: TextView, floorNumberInBuilding : String = "null") {
 
-    var pointFloor = 1
-    if(stringNumber.toInt() < 500){
-        val pointMap = ACTIVITY.markerMap.getValue(stringNumber.toInt())
-        pointFloor = pointMap[2].toInt()
+    println("oooo $floorNumberInBuilding")
+    if(floorNumberInBuilding == "null"){
+        var pointFloor = 1
+        if(stringNumber.toInt() < 500){
+            val pointMap = ACTIVITY.markerMap.getValue(stringNumber.toInt())
+            pointFloor = pointMap[2].toInt()
+        } else {
+            when (stringNumber.toInt()) {
+                in 503..509 -> pointFloor = 0
+                in 510..516 -> pointFloor = 1
+                in 517..523 -> pointFloor = 2
+                in 524..530 -> pointFloor = 3
+                in 531..536 -> pointFloor = 4
+                in 537..539 -> pointFloor = 0
+                540 -> pointFloor = 5
+                541 -> pointFloor = 6
+                542 -> pointFloor = 7
+                500, 543 -> pointFloor = 1
+                501, 502 -> pointFloor = 0
+            }
+        }
+
+
+        var typeShort = ""
+
+        when {
+            stringNumber.toInt() < 200 -> {typeShort = "loc"}
+            stringNumber.toInt() in 200..299 -> {typeShort = "war"}
+            stringNumber.toInt() in 300..499 -> {typeShort = "poi"}
+            stringNumber.toInt() == 503 -> {typeShort = "floor"}
+            stringNumber.toInt() == 510 -> {typeShort = "floor"}
+            stringNumber.toInt() == 517 -> {typeShort = "floor"}
+            stringNumber.toInt() == 524 -> {typeShort = "floor"}
+            stringNumber.toInt() == 531 -> {typeShort = "floor"}
+            stringNumber.toInt() in 500..502  -> {typeShort = "poly"}
+            stringNumber.toInt() in 504..509  -> {typeShort = "poly"}
+            stringNumber.toInt() in 511..516  -> {typeShort = "poly"}
+            stringNumber.toInt() in 518..523  -> {typeShort = "poly"}
+            stringNumber.toInt() in 525..530  -> {typeShort = "poly"}
+            stringNumber.toInt() > 531  -> {typeShort = "poly"}
+        }
+//    println("aaaaaaaaa $typeShort")
+
+        var floorNumber = ""
+        floorNumber = when (pointFloor) {
+            5 -> { "L1" }
+            6 -> { "L2" }
+            7 -> { "L3" }
+            else -> { pointFloor.toString() }
+        }
+
+//    println("aaaaaaaa: " + pointFloor + " " + stringNumber.toInt() + " " + typeShort + " " + floorNumber)
+
+        when (pointFloor) {
+            0 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro0)
+            1 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro1)
+            2 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro2)
+            3 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro3)
+            4 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro4)
+            5 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietrol1)
+            6 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietrol2)
+            7 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietrol3)
+        }
     } else {
-        when (stringNumber.toInt()) {
-            in 503..509 -> pointFloor = 0
-            in 510..516 -> pointFloor = 1
-            in 517..523 -> pointFloor = 2
-            in 524..530 -> pointFloor = 3
-            in 531..536 -> pointFloor = 4
-            in 537..539 -> pointFloor = 0
-            500, 501 -> pointFloor = 1
+        when (floorNumberInBuilding.toInt()) {
+            0 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietro0)
+            1 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietro1)
+            2 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietro2)
+            3 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietro3)
+            4 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietro4)
+            5 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietrol1)
+            6 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietrol2)
+            7 -> replaceOverlay(ACTIVITY, "loc", floorTextView, floorNumberInBuilding, R.drawable.pietrol3)
         }
     }
 
 
-    var typeShort = ""
 
-    when {
-        stringNumber.toInt() < 200 -> {typeShort = "loc"}
-        stringNumber.toInt() in 200..299 -> {typeShort = "war"}
-        stringNumber.toInt() in 300..499 -> {typeShort = "poi"}
-        stringNumber.toInt() == 503 -> {typeShort = "floor"}
-        stringNumber.toInt() == 510 -> {typeShort = "floor"}
-        stringNumber.toInt() == 517 -> {typeShort = "floor"}
-        stringNumber.toInt() == 524 -> {typeShort = "floor"}
-        stringNumber.toInt() == 531 -> {typeShort = "floor"}
-        stringNumber.toInt() in 500..502  -> {typeShort = "poly"}
-        stringNumber.toInt() in 504..509  -> {typeShort = "poly"}
-        stringNumber.toInt() in 511..516  -> {typeShort = "poly"}
-        stringNumber.toInt() in 518..523  -> {typeShort = "poly"}
-        stringNumber.toInt() in 525..530  -> {typeShort = "poly"}
-        stringNumber.toInt() > 531  -> {typeShort = "poly"}
-    }
-    println("aaaaaaaaa $typeShort")
-
-    var floorNumber = ""
-    floorNumber = when (pointFloor) {
-        5 -> { "L1" }
-        6 -> { "L2" }
-        7 -> { "L3" }
-        else -> { pointFloor.toString() }
-    }
-
-//    println("aaaaaaaa: " + pointFloor + " " + stringNumber.toInt() + " " + typeShort + " " + floorNumber)
-
-    when (pointFloor) {
-        0 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro0)
-        1 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro1)
-        2 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro2)
-        3 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro3)
-        4 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietro4)
-        5 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietrol1)
-        6 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietrol2)
-        7 -> replaceOverlay(ACTIVITY, typeShort, floorTextView, floorNumber, R.drawable.pietrol3)
-    }
-
-//    when (stringNumber.toInt()) {
-//        in 0..35    -> replaceOverlay(ACTIVITY,"loc", floorTextView, "1",  R.drawable.pietro1)
-//        in 36..73   -> replaceOverlay(ACTIVITY,"loc", floorTextView, "0",  R.drawable.pietro0)
-//        in 74..98   -> replaceOverlay(ACTIVITY,"loc", floorTextView, "2",  R.drawable.pietro2)
-//        in 99..122  -> replaceOverlay(ACTIVITY,"loc", floorTextView, "3",  R.drawable.pietro3)
-//        in 123..143 -> replaceOverlay(ACTIVITY,"loc", floorTextView, "4",  R.drawable.pietro4)
-//        144, 145, 426, 427  -> replaceOverlay(ACTIVITY,"loc", floorTextView, "L1", R.drawable.pietrol1)
-//        146, 147, 150, 428, 425  -> replaceOverlay(ACTIVITY,"loc", floorTextView, "L2", R.drawable.pietrol2)
-//        148, 149, 429  -> replaceOverlay(ACTIVITY,"loc", floorTextView, "L3", R.drawable.pietrol3)
-//        in 200..210 -> replaceOverlay(ACTIVITY,"war", floorTextView, "0",  R.drawable.pietro0)
-//        in 211..226 -> replaceOverlay(ACTIVITY,"war", floorTextView, "1",  R.drawable.pietro1)
-//        in 227..235 -> replaceOverlay(ACTIVITY,"war", floorTextView, "2",  R.drawable.pietro2)
-//        in 236..246, 271 -> replaceOverlay(ACTIVITY,"war", floorTextView, "3",  R.drawable.pietro3)
-//        in 247..259 -> replaceOverlay(ACTIVITY,"war", floorTextView, "4",  R.drawable.pietro4)
-//        in 260..263 -> replaceOverlay(ACTIVITY,"war", floorTextView, "L1", R.drawable.pietrol1)
-//        in 264..267 -> replaceOverlay(ACTIVITY,"war", floorTextView, "L2", R.drawable.pietrol2)
-//        in 268..270 -> replaceOverlay(ACTIVITY,"war", floorTextView, "L3", R.drawable.pietrol3)
-//        in 300..324 -> replaceOverlay(ACTIVITY,"poi", floorTextView, "0",  R.drawable.pietro0)
-//        in 325..361 -> replaceOverlay(ACTIVITY,"poi", floorTextView, "1",  R.drawable.pietro1)
-//        in 362..381 -> replaceOverlay(ACTIVITY,"poi", floorTextView, "2",  R.drawable.pietro2)
-//        in 382..405 -> replaceOverlay(ACTIVITY,"poi", floorTextView, "3",  R.drawable.pietro3)
-//        in 406..422 -> replaceOverlay(ACTIVITY,"poi", floorTextView, "4",  R.drawable.pietro4)
-//        423, 424    -> replaceOverlay(ACTIVITY,"poi", floorTextView, "0",  R.drawable.pietro0)
-//        else -> {
-//            print("brak numeru")
-//        }
-//    }
 }
+
 
 
 fun replaceOverlay(ACTIVITY: MapsActivity, pkt:String, floorTextView: TextView, nr: String, overlay: Int) {
@@ -478,8 +496,14 @@ fun replaceOverlay(ACTIVITY: MapsActivity, pkt:String, floorTextView: TextView, 
         else -> { ACTIVITY.floorVisibility = nr.toInt() }
     }
 
+    when (nr) {
+        "5"  -> { floorTextView.text = "L1" }
+        "6"  -> { floorTextView.text = "L2" }
+        "7"  -> { floorTextView.text = "L3" }
+        else -> { floorTextView.text = nr }
+    }
 
-    floorTextView.text = nr
+
     when (pkt) {
         "loc" -> {
             ACTIVITY.clickedLoc = true
@@ -552,17 +576,16 @@ fun replaceOverlay(ACTIVITY: MapsActivity, pkt:String, floorTextView: TextView, 
 
 fun String.toEditable(): Editable =  Editable.Factory.getInstance().newEditable(this)
 
-fun drawCircle(number: String, ACTIVITY: MapsActivity) {
+fun drawCircle(number: String, ACTIVITY: MapsActivity, coordinates: LatLng = LatLng(0.0,0.0)) {
     if(ACTIVITY.mapCircle!=null){
         ACTIVITY.mapCircle.remove()
     }
 
-    for(i in ACTIVITY.markerMap){
-        if(i.key == number.toInt()){
+    if (coordinates != LatLng(0.0,0.0)){
             // Instantiating CircleOptions to draw a circle around the marker
             val circleOptions = CircleOptions()
             // Specifying the center of the circle
-            circleOptions.center(LatLng(i.value[0]-0.00002, i.value[1]+0.000035))
+            circleOptions.center(coordinates)
             // Radius of the circle
             circleOptions.radius(5.0)
             // Border color of the circle
@@ -578,13 +601,42 @@ fun drawCircle(number: String, ACTIVITY: MapsActivity) {
             }
             val cp = CameraPosition.Builder()
                 .bearing(-65f)
-                .target(LatLng(i.value[0]-0.00002, i.value[1]+0.000035))
+                .target(coordinates)
                 .zoom(20f)
                 .build()
             val cu = CameraUpdateFactory.newCameraPosition(cp)
             ACTIVITY.mMap?.animateCamera(cu)
+        } else {
+        for(i in ACTIVITY.markerMap){
+            if(i.key == number.toInt()){
+                // Instantiating CircleOptions to draw a circle around the marker
+                val circleOptions = CircleOptions()
+                // Specifying the center of the circle
+                circleOptions.center(LatLng(i.value[0]-0.00002, i.value[1]+0.000035))
+                // Radius of the circle
+                circleOptions.radius(5.0)
+                // Border color of the circle
+                circleOptions.strokeColor(0x70E50000)
+                // Fill color of the circle
+                circleOptions.fillColor(0x50ff0000)
+                // Border width of the circle
+                circleOptions.strokeWidth(50f)
+                circleOptions.zIndex(2F)
+                // Adding the circle to the GoogleMap
+                ACTIVITY.mMap?.let {
+                    ACTIVITY.mapCircle = it.addCircle(circleOptions)
+                }
+                val cp = CameraPosition.Builder()
+                    .bearing(-65f)
+                    .target(LatLng(i.value[0]-0.00002, i.value[1]+0.000035))
+                    .zoom(20f)
+                    .build()
+                val cu = CameraUpdateFactory.newCameraPosition(cp)
+                ACTIVITY.mMap?.animateCamera(cu)
+            }
         }
     }
+
 
 
 }

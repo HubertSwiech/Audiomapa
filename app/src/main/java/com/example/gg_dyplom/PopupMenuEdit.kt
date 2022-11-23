@@ -1,7 +1,6 @@
 package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -19,17 +18,20 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
 
 class PopupMenuEdit(
-    db: Database,
-    dbCom: DatabaseCom,
+    db: DatabaseGeodes,
     idx: MutableMap.MutableEntry<Int, List<String>>,
     comments2: FragmentComments
 ) : DialogFragment() {
 
 
     val dbkomunikat = db
-    val dbComment = dbCom
     val data = idx
     val comments = comments2
+
+    lateinit var idstart: EditText
+    lateinit var text: EditText
+    lateinit var dropList: Spinner
+
     lateinit var ACTIVITY: MapsActivity
     lateinit var back: Button
 
@@ -55,10 +57,10 @@ class PopupMenuEdit(
     ): View? {
         var v: View = inflater.inflate(R.layout.fragment_popup_menu_edit, container, false)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val idstart = v.findViewById<EditText>(R.id.popupEditStart)
-        val text = v.findViewById<EditText>(R.id.popupText)
+        idstart = v.findViewById<EditText>(R.id.popupEditStart)
+        text = v.findViewById<EditText>(R.id.popupText)
         val zapiszbtn = v.findViewById<Button>(R.id.popupZapisz)
-        val dropList = v.findViewById<Spinner>(R.id.spnTestPop)
+        dropList = v.findViewById<Spinner>(R.id.spnTestPop)
         back = v.findViewById<Button>(R.id.backPopupEdit)
 
         back.setOnClickListener{
@@ -96,6 +98,8 @@ class PopupMenuEdit(
 
         if(idstart.text.toString() != ""){//Jeżeli został wybrany marker
             setSpinner(dbkomunikat, targetList, dropList, idstart)
+        } else {
+            setSpinner(dbkomunikat, targetList, dropList, idstart)
         }
 
         idstart.addTextChangedListener(object : TextWatcher {
@@ -117,10 +121,10 @@ class PopupMenuEdit(
 
         zapiszbtn.setOnClickListener{
 
-                dbComment.open()
-                dbComment.updateRow(data.key.toString(), ACTIVITY.pointNumber, dropList.selectedItem.toString(), text.text.toString())
-                dbComment.close()
-                Toast.makeText(context, "Edytowano komentarz", Toast.LENGTH_SHORT).show()
+            activity?.runOnUiThread {
+                insertComments()
+            }
+            Toast.makeText(context, "Edytowano komentarz", Toast.LENGTH_SHORT).show()
 
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.fragmentContainer, comments)
@@ -135,7 +139,7 @@ class PopupMenuEdit(
 
 
 
-    fun setSpinner(db: Database, targetList: MutableList<String>, dropList: Spinner, idstart: EditText){
+    fun setSpinner(db: DatabaseGeodes, targetList: MutableList<String>, dropList: Spinner, idstart: EditText){
         db.open()
         targetList.clear()
         val targets = db.getTarget(ACTIVITY.pointNumber)
@@ -169,6 +173,18 @@ class PopupMenuEdit(
         view?.clearFocus();
     }
 
+    private fun insertComments(){
+        val thread = Thread {
+//            val commentEntity = Comments()
+////            commentEntity.lp = 3
+//            commentEntity.lokalizacja = idstart.text.toString()
+//            commentEntity.cel = dropList.selectedItem.toString()
+//            commentEntity.komentarz = text.text.toString()
+
+            ACTIVITY.dbComments.commentsDao().updateComments(data.key, idstart.text.toString(), dropList.selectedItem.toString(), text.text.toString())
+        }
+        thread.start()
+    }
 
 }
 

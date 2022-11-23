@@ -1,8 +1,6 @@
 package com.example.gg_dyplom
 
 import android.annotation.SuppressLint
-import android.app.Dialog
-import android.content.ContentValues
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -14,15 +12,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.DialogFragment
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.fragment.app.FragmentTransaction
 
-class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragment() {
+class PopupMenu(number: String, db: DatabaseGeodes) : DialogFragment() {
 
     val pointNumber2 = number
     val dbkomunikat = db
-    val dbComment = dbCom
+
+    lateinit var idstart: EditText
+    lateinit var text: EditText
+    lateinit var dropList: Spinner
+
     lateinit var ACTIVITY: MapsActivity
 
     override fun onAttach(context: Context) {
@@ -44,10 +45,10 @@ class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragme
     ): View? {
         var v: View = inflater.inflate(R.layout.popup_menu, container, false)
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val idstart = v.findViewById<EditText>(R.id.popupEditStart)
-        val text = v.findViewById<EditText>(R.id.popupText)
+        idstart = v.findViewById<EditText>(R.id.popupEditStart)
+        text = v.findViewById<EditText>(R.id.popupText)
         val zapiszbtn = v.findViewById<Button>(R.id.popupZapisz)
-        val dropList = v.findViewById<Spinner>(R.id.spnTestPop)
+        dropList = v.findViewById<Spinner>(R.id.spnTestPop)
         val back = v.findViewById<Button>(R.id.backPopup)
 
         idstart.setText(ACTIVITY.pointNumber)
@@ -64,6 +65,8 @@ class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragme
 
 
         if(ACTIVITY.pointNumber != ""){//Jeżeli został wybrany marker
+            setSpinner(dbkomunikat, targetList, dropList)
+        } else {
             setSpinner(dbkomunikat, targetList, dropList)
         }
 
@@ -87,11 +90,37 @@ class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragme
 
 
         zapiszbtn.setOnClickListener{
-            dbComment.open()
-            dbComment.insertData(idstart.text.toString(), dropList.selectedItem.toString(), text.text.toString())
-            dbComment.close()
+            activity?.runOnUiThread {
+                insertComments()
+            }
+
+
             Toast.makeText(context, "Dodano komentarz", Toast.LENGTH_SHORT).show()
             closeKeyboard()
+
+            val currentFragmentComment = ACTIVITY.supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+            if(currentFragmentComment is FragmentComments) {
+                var frag = ACTIVITY.fragmentManager.findFragmentById(R.id.ButtonAction)
+                if (frag != null) {
+                    val transaction: FragmentTransaction = ACTIVITY.fragmentManager.beginTransaction()
+                    transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    transaction.remove(frag)
+                    transaction.commit()
+                }
+
+                var frag2 = ACTIVITY.fragmentManager.findFragmentById(R.id.fragmentContainer)
+                if (frag2 != null) {
+                    val transaction: FragmentTransaction = ACTIVITY.fragmentManager.beginTransaction()
+                    transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+                    transaction.remove(frag2)
+                    transaction.commit()
+                }
+
+                val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                transaction.replace(R.id.fragmentContainer, FragmentComments(ACTIVITY.floorNumber, ACTIVITY.fragmentManager))
+                transaction.commitAllowingStateLoss()
+//                hideFragment(R.id.fragmentContainer, R.anim.enter_from_right, R.anim.exit_to_left)
+            }
             this.dismiss()
         }
 
@@ -101,7 +130,7 @@ class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragme
 
 
 
-    fun setSpinner(db: Database, targetList: MutableList<String>, dropList: Spinner){
+    fun setSpinner(db: DatabaseGeodes, targetList: MutableList<String>, dropList: Spinner){
         db.open()
         targetList.clear()
         val targets = db.getTarget(ACTIVITY.pointNumber)
@@ -134,6 +163,19 @@ class PopupMenu(number: String, db: Database, dbCom: DatabaseCom) : DialogFragme
         view?.clearFocus();
     }
 
+
+    private fun insertComments(){
+        val thread = Thread {
+            val commentEntity = Comments()
+//            commentEntity.lp = 3
+            commentEntity.lokalizacja = idstart.text.toString()
+            commentEntity.cel = dropList.selectedItem.toString()
+            commentEntity.komentarz = text.text.toString()
+
+            ACTIVITY.dbComments.commentsDao().insertComent(commentEntity)
+        }
+        thread.start()
+    }
 
 }
 
