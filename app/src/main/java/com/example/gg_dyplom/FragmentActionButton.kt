@@ -18,7 +18,6 @@ import androidx.fragment.app.FragmentTransaction
 
 
 class FragmentActionButton(
-    relativeLayout: RelativeLayout,
     fragmentComments: FragmentComments,
     flrTextView: TextView,
     i: MutableMap.MutableEntry<Int, List<String>>,
@@ -27,7 +26,7 @@ class FragmentActionButton(
 ) : DialogFragment() {
 
 
-    val rel = relativeLayout
+//    val rel = relativeLayout
     var comments = fragmentComments
     var floorTextView = flrTextView
     var data = i

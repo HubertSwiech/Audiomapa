@@ -128,7 +128,7 @@ class FragmentComments(
     }
 
     private fun View.setUp(comments: MutableMap<Int, List<String>>) {
-        val rel = findViewById<RelativeLayout>(R.id.rel)
+//        val rel = findViewById<RelativeLayout>(R.id.rel)
 
         println("ppppp: $comments")
         val commentList = comments
@@ -145,7 +145,7 @@ class FragmentComments(
             tbrow.isClickable = true
 
 
-            rel.setPadding(0, 0, 0, 130)
+//            rel.setPadding(0, 0, 0, 130)
 //            val tableRowParams = TableLayout.LayoutParams(
 //                TableLayout.LayoutParams.FILL_PARENT,
 //                TableLayout.LayoutParams.WRAP_CONTENT
@@ -202,7 +202,7 @@ class FragmentComments(
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                 transaction.replace(
                     R.id.ButtonAction,
-                    FragmentActionButton(rel, this@FragmentComments, floorTextView, i, supFM, btn)
+                    FragmentActionButton(this@FragmentComments, floorTextView, i, supFM, btn)
                 )
                 transaction.commit()
                 announceForAccessibility("Wyświetlono pasek z akcjami do komentarza.")
@@ -218,7 +218,7 @@ class FragmentComments(
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
                 transaction.replace(
                     R.id.ButtonAction,
-                    FragmentActionButton(rel, this@FragmentComments, floorTextView, i, supFM, btn)
+                    FragmentActionButton(this@FragmentComments, floorTextView, i, supFM, btn)
                 )
                 transaction.commit()
                 announceForAccessibility("Wyświetlono pasek z akcjami do komentarza.")

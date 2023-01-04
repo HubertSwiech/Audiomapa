@@ -3,90 +3,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CCFFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E6FFFFFF"
     android:clickable="true"
     tools:context=".FragmentSearchBar"
     android:focusable="true">
 
-
-    <SearchView
-        android:id="@+id/searchBar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginRight="40dp"
-        android:minHeight="50dp"
-        android:iconifiedByDefault="false"
-        android:focusableInTouchMode="true"
-        android:background="@drawable/search_bar_edit"
+        android:layout_height="match_parent">
 
-        android:queryHint="ODSZUKAJ POI"/>
+        <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_marginTop="6dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/poiListButton"
-            android:layout_width="170dp"
-            android:layout_height="match_parent"
-            android:text="POI"
-            android:textSize="20dp"
-            android:background="@drawable/poi_list_button_click" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/poiListButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:text="POI"
+                    android:textSize="20dp"
+                    android:background="@drawable/poi_list_button_click"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/roomListButton"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/roomListButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Numery sal"
-            android:textSize="20dp"
-            android:background="@drawable/rooms_list_button" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/roomListButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:text="Numery sal"
+                    android:textSize="20dp"
+                    android:background="@drawable/rooms_list_button"
+                    app:layout_constraintLeft_toRightOf="@id/poiListButton"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/poiListButton"/>
 
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchBar"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:iconifiedByDefault="false"
+                    android:focusableInTouchMode="true"
+                    app:iconifiedByDefault="false"
+                    android:background="@drawable/search_bar_edit"
+                    app:queryHint="ODSZUKAJ POI"
+                    app:layout_constraintLeft_toLeftOf="@id/poiListButton"
+                    app:layout_constraintRight_toRightOf="@id/roomListButton"
+                    app:layout_constraintTop_toBottomOf="@id/poiListButton"
+                    />
 
-
+         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
 
     <ListView
         android:id="@+id/poiList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/searchBar"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="110dp"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="65dp"
-        android:layout_marginRight="40dp"
         android:background="@drawable/listview_bcg"
-        android:visibility="visible" />
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/searchLayout"
+        app:layout_constraintBottom_toTopOf="@id/back"
+        app:layout_constraintLeft_toLeftOf="@id/searchLayout"
+        app:layout_constraintRight_toRightOf="@id/searchLayout" />
 
     <ListView
         android:id="@+id/roomsList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/searchBar"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginBottom="65dp"
-        android:layout_marginRight="40dp"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
         android:background="@drawable/listview_rooms_bcg"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/poiList"
+        app:layout_constraintBottom_toBottomOf="@id/poiList"
+        app:layout_constraintLeft_toLeftOf="@id/poiList"
+        app:layout_constraintRight_toRightOf="@id/poiList" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/back"
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="720dp"
-        android:layout_marginRight="300dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
         android:text="Powrót do mapy"
         android:textSize="0dp"
-        android:background="@drawable/back_arrow_bcg" />
+        android:background="@drawable/back_arrow_bcg"
+
+        app:layout_constraintTop_toBottomOf="@id/poiList"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -3,92 +3,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentBottomPanel"
     android:focusable="true"
     android:clickable="true"
-    android:background="#CCFFFFFF"
+    android:background="#E6FFFFFF"
     tools:targetApi="p">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/hideFrag"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/bottom_panel_down"
-        android:text="Zamknij panel do odczytywania komentarzy."
-        android:textSize="0dp"
-        tools:targetApi="lollipop_mr1" />
-
-    <LinearLayout
-        android:id="@+id/przyciski"
-        android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:layout_marginTop="185dp"
-        android:accessibilityTraversalAfter="@id/cel"
-        android:focusable="true"
-        android:focusableInTouchMode="false"
-        android:orientation="vertical"
-        tools:targetApi="lollipop_mr1">
+        android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/readLocation"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/bottom_panel_button"
-            android:text="Komunikat dla lokalizacji"
-            android:textSize="16dp" />
+            android:id="@+id/hideFrag"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bottom_panel_down"
+            android:text="Zamknij panel do odczytywania komentarzy."
+            android:textSize="0dp"
+            tools:targetApi="lollipop_mr1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/komunikat"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:accessibilityTraversalAfter="@id/hideFrag"
+            android:enabled="true"
+            android:focusableInTouchMode="false"
+            android:hint="Wybierz komunikat, który chcesz usłyszeć."
+            android:inputType="none"
+            android:textSize="25dp"
+            tools:targetApi="lollipop_mr1"
+            app:layout_constraintTop_toBottomOf="@id/hideFrag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/przyciski"
+            android:layout_width="0dp"
+            android:layout_height="165dp"
+            android:accessibilityTraversalAfter="@id/cel"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            tools:targetApi="lollipop_mr1"
+            app:layout_constraintTop_toBottomOf="@id/komunikat"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/stop">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/readLocation"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bottom_panel_button"
+                android:text="Komunikat dla lokalizacji"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/readZones"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bottom_panel_button"
+                android:text="Komunikat dla strefy"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/readFloor"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bottom_panel_button"
+                android:text="Komunikat dla piętra"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/readZones"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:id="@+id/stop"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/bottom_panel_button"
-            android:text="Komunikat dla strefy"
-            android:textSize="17dp" />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/readFloor"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:text="przerwij\nczytanie"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bottom_panel_button"
-            android:text="Komunikat dla piętra"
-            android:textSize="17dp" />
+            android:layout_marginBottom="11dp"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/przyciski"
+            app:layout_constraintLeft_toRightOf="@id/przyciski"
+            app:layout_constraintRight_toRightOf="parent"/>
 
-
-    </LinearLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/stop"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="270dp"
-        android:layout_marginTop="295dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/bottom_panel_button"
-        android:text="przerwij\nczytanie"
-
-        android:textSize="16dp" />
-
-    <EditText
-        android:id="@+id/komunikat"
-        android:layout_width="match_parent"
-        android:layout_height="155dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginRight="5dp"
-        android:accessibilityTraversalAfter="@id/hideFrag"
-        android:enabled="true"
-        android:focusableInTouchMode="false"
-        android:hint="Wybierz komunikat, który chcesz usłyszeć."
-        android:inputType="none"
-        android:textSize="25dp"
-        tools:targetApi="lollipop_mr1" />
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

@@ -100,20 +100,16 @@ class FragmentQRScanner(floor: TextView): DialogFragment(), PermissionListener, 
                 ACTIVITY.db.open()
                 val pointsToRead = qrCodeContentMap["points"]?.split(",")
                 var message = ""
-                var messageList = mutableListOf<String>()
+                val messageList = mutableListOf<String>()
                 pointsToRead?.forEach {
                     message += ACTIVITY.db.getLocation(it)
                     messageList.add(it)
                 }
-
-                println("oooooo: $message")
-
                 ACTIVITY.db.close()
-//                ACTIVITY.pointNumber = pointsToRead?.get(0) ?: ""
-//                ACTIVITY.ttsHelper?.mTTS?.speak(message, TextToSpeech.QUEUE_FLUSH, null)
 
                 val localizationCoordinates = qrCodeContentMap["coordinates"]?.split(",")
-                val latLngLocalizationCoordinates = LatLng((localizationCoordinates?.get(1)?.toDouble()?: 0.0)-0.00002,(localizationCoordinates?.get(0)?.toDouble()?: 0.0)+0.000035)
+                val latLngLocalizationCoordinates = LatLng((localizationCoordinates?.get(1)?.toDouble()?: 0.0)-0.00002,
+                    (localizationCoordinates?.get(0)?.toDouble()?: 0.0)+0.000035)
                 drawCircle(pointsToRead?.get(0) ?: "", ACTIVITY, latLngLocalizationCoordinates)
 
                 val localizationFloorNumber = qrCodeContentMap["floor"]

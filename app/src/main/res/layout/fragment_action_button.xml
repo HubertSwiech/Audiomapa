@@ -3,63 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="5dp"
     android:tag="action_bar"
     tools:context=".FragmentActionButton">
 
 
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/lokalizuj"
-        android:layout_width="50dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@drawable/pin_button"
         android:text="Wyświetl lokalizacje komentarza na mapie."
         android:textSize="0dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/edytuj"
+        app:layout_constraintTop_toTopOf="parent">
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/edytuj"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/edit_button"
         android:text="Edytuj komentarz."
         android:textSize="0dp"
-        android:layout_marginLeft="20dp">
+        app:layout_constraintLeft_toRightOf="@id/lokalizuj"
+        app:layout_constraintRight_toLeftOf="@id/usun"
+        app:layout_constraintTop_toTopOf="@id/lokalizuj"
+        >
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/usun"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/delete_button"
         android:text="Usuń komentarz."
         android:textSize="0dp"
-        android:layout_marginLeft="40dp">
+        android:layout_marginEnd="40dp"
+        app:layout_constraintLeft_toRightOf="@id/edytuj"
+        app:layout_constraintRight_toLeftOf="@id/czytaj"
+        app:layout_constraintTop_toTopOf="@id/edytuj"
+        >
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/czytaj"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/read_button_state"
         android:text="Odczytaj komentarz."
         android:textSize="0dp"
-        android:layout_marginLeft="40dp">
+        android:layout_marginEnd="20dp"
+        app:layout_constraintLeft_toRightOf="@id/usun"
+        app:layout_constraintRight_toLeftOf="@id/przerwij"
+        app:layout_constraintTop_toTopOf="@id/usun">
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/przerwij"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/stop_read_button"
         android:text="Przerwiij czytanie komentarza."
         android:textSize="0dp"
-        android:layout_marginLeft="20dp">
+        android:layout_marginEnd="20dp"
+        app:layout_constraintLeft_toRightOf="@id/czytaj"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/czytaj">
     </androidx.appcompat.widget.AppCompatButton>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

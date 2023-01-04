@@ -11,6 +11,7 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.view.accessibility.AccessibilityEvent
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
@@ -38,6 +39,12 @@ class PopupMenuEdit(
     override fun onAttach( context: Context) {
         super.onAttach(context)
         ACTIVITY = context as MapsActivity
+    }
+
+    override fun onStart() {
+        super.onStart()
+        dialog!!.window
+            ?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
     }
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {

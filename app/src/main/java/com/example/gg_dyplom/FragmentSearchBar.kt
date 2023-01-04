@@ -12,12 +12,18 @@ import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.view.accessibility.AccessibilityEvent
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.ListView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.Nullable
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.gms.maps.model.LatLng
-
+//import androidx.appcompat.widget.SearchView
+//import android.widget.*
 
 class FragmentSearchBar(list: MutableMap<Int, MutableList<String>>, floor: TextView) : Fragment() {
 
@@ -58,7 +64,7 @@ var poiMap = list
     ): View? {
         val v = inflater.inflate(R.layout.fragment_search_bar, container, false)
 
-        searchBar = v.findViewById<SearchView>(R.id.searchBar)
+        searchBar = v.findViewById(R.id.searchBar)
         val list = v.findViewById<ListView>(R.id.poiList)
         val roomsList = v.findViewById<ListView>(R.id.roomsList)
 
@@ -95,6 +101,7 @@ var poiMap = list
 //            .translationX(-110f)
 //            .start();
 
+        
 
         var poiList = mutableListOf<String>()
         poiMap.forEach(){
@@ -105,9 +112,6 @@ var poiMap = list
         ACTIVITY.roomMap.forEach(){
             roomsMutableList.add(it.key)
         }
-
-
-
 
 
         val listAdapter: ArrayAdapter<String?> =
@@ -161,74 +165,30 @@ var poiMap = list
     }
 
     private fun searchingPOIList(poiList: MutableList<String>, list: ListView, listAdapter: ArrayAdapter<String?>){
-//        searchBar = v.findViewById<SearchView>(R.id.searchBar)
         searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                // on below line we are checking
-                // if query exist or not.
+                // on below line we are checking if query exist or not.
                 if (poiList.contains(query)) {
-                    // if query exist within list we
-                    // are filtering our list adapter.
+                    // if query exist within list we are filtering our list adapter.
                     if (query != null) {
                         setSearchingPOIOnMap(query)
                     }
-//                    listAdapter.filter.filter(query)
                 } else {
                     // if query is not present we are displaying a toast message as no  data found..
                     Toast.makeText(ACTIVITY, "Nie ma takiego miejsca.", Toast.LENGTH_SHORT).show()
                 }
                 return false
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 // if query text is change in that case we are filtering our adapter with
                 // new text on below line.
-
                 listAdapter.filter.filter(newText)
                 return false
             }
         })
-//
-//        searchBar.setOnKeyListener(object : View.OnKeyListener {
-//            override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
-//                // If the event is a key-down event on the "enter" button
-//                if (event.getAction() === KeyEvent.ACTION_DOWN &&
-//                    keyCode == KeyEvent.KEYCODE_ENTER
-//                ) {
-//                    // Perform action on key press
-//
-//                    Toast.makeText(ACTIVITY, searchBar.query, Toast.LENGTH_SHORT)
-//                        .show()
-//                    return true
-//                }
-//                return false
-//            }
-//        })
-
-
         list.setOnItemClickListener{ parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position) as String
             setSearchingPOIOnMap(selectedItem)
-//            poiMap.filter { it.value[1] == selectedItem }.forEach{
-//                drawCircle(it.value[0], ACTIVITY)
-//                switchFloorOverlay(it.value[0], ACTIVITY, floorNumber)
-//                ACTIVITY.pointNumber = it.value[0]
-//            }
-//            ACTIVITY.ttsHelper?.mTTS?.speak(selectedItem, TextToSpeech.QUEUE_FLUSH, null)
-//            this.view?.announceForAccessibility("Zamknięto widok wyszukiwania punktów. Na mapie zaznaczono $selectedItem")
-//            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-//            transaction.setCustomAnimations(R.anim.enter_from_top, R.anim.exit_to_top)
-//            transaction.hide(this)
-//            transaction.commit()
-//
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.poiBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.locBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.ostBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.menu).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.searchButton).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.bottomPanelBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.commentListBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<TextView>(R.id.floor).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
         }
     }
 
@@ -263,27 +223,7 @@ var poiMap = list
 
         roomsList.setOnItemClickListener{ parent, _, position, _ ->
             val selectedItem = parent.getItemAtPosition(position) as String
-
             setSearchingRoomOnMap(selectedItem)
-//            ACTIVITY.roomMap.filter { it.key == selectedItem }.forEach{
-//                drawCircle("0", ACTIVITY, LatLng(it.value[0]-0.00002,it.value[1]+0.000035))
-//                switchFloorOverlay(it.value[0].toString(), ACTIVITY, floorNumber, it.value[2].toInt().toString())
-//            }
-//            ACTIVITY.ttsHelper?.mTTS?.speak("Sala o numerze $selectedItem.", TextToSpeech.QUEUE_FLUSH, null)
-//            this.view?.announceForAccessibility("Zamknięto widok wyszukiwania punktów. Na mapie zaznaczono salę o numerze $selectedItem")
-//            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-//            transaction.setCustomAnimations(R.anim.enter_from_top, R.anim.exit_to_top)
-//            transaction.hide(this)
-//            transaction.commit()
-//
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.poiBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.locBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.ostBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.menu).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.searchButton).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.bottomPanelBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<Button>(R.id.commentListBtn).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
-//            ACTIVITY.window.decorView.rootView.findViewById<TextView>(R.id.floor).importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
         }
     }
 

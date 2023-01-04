@@ -19,10 +19,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.example.gg_dyplom.MarkerConfig.MarkerSizeFactor
 import com.example.gg_dyplom.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -268,7 +268,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val myRooms = Gson().fromJson(rooms, RoomsModelClass::class.java)//pobiera markery ze strumienia
 
 //        println(myRooms)
-        sortingRoomsNumbers(myRooms,)
+        sortingRoomsNumbers(myRooms)
 //        println(roomMap)
 
         locationArray0.remove(0)
@@ -328,7 +328,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //        rlp.addRule(RelativeLayout.ALIGN_PARENT_END)
         rlp.addRule(RelativeLayout.ALIGN_PARENT_TOP)
         rlp.addRule(RelativeLayout.ALIGN_PARENT_START)
-        rlp.topMargin = 250
+        rlp.topMargin = 350
         rlp.leftMargin = 70
 
 
@@ -338,8 +338,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //            Toast.makeText(this, marker.title.toString(), Toast.LENGTH_SHORT).show()
             val dialog = PopupMenu(marker.title.toString(), db)
 //            dialog.setStyle(R.style.PopupStyle)
-
+//            dialog.setStyle(DialogFragment.STYLE_NO_FRAME, 0)
             dialog.show(supportFragmentManager, "customDialog")
+
         }
 
 
@@ -364,7 +365,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             //Ustawia pozycje kamery, obrót i zoom
             val cp = CameraPosition.Builder()
                 .bearing(-65f)
-                .target(LatLng(52.220585, 21.010170))
+                .target(LatLng(52.220677316782002,21.009892793341582))
                 .zoom(18.4f).build()
             val cu = CameraUpdateFactory.newCameraPosition(cp)
             it.animateCamera(cu)

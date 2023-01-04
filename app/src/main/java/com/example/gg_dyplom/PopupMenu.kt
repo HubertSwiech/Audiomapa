@@ -10,10 +10,12 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
+
 
 class PopupMenu(number: String, db: DatabaseGeodes) : DialogFragment() {
 
@@ -36,6 +38,11 @@ class PopupMenu(number: String, db: DatabaseGeodes) : DialogFragment() {
 //            .setPositiveButton("OK", null)
 //            .create()
 //    }
+    override fun onStart() {
+        super.onStart()
+        dialog!!.window
+            ?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+    }
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(

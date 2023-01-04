@@ -44,7 +44,6 @@ class TtsHelper(context: Context, activity: MapsActivity) {
         floorTextView: TextView,
         rysujOkrag: String = "rysuj"
     ){
-//        val l = Locale("pl")
 
         speakButton.setOnClickListener {
             val toSpeak: String
@@ -53,9 +52,7 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                 mTTS?.stop()
                 //mTTS.shutdown()
             }
-
             val number = nrEditText
-            println("ssssss ${number}")
 
             if (!isNumber(number)) {
                 val blad = "Sprawdź, czy numer jest wpisany prawidłowo."
@@ -67,7 +64,6 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                     drawCircle(number, ACTIVITY)
                 }
 
-
                 database.open()
                 val message = database.getLocation(number)
                 database.close()
@@ -76,10 +72,8 @@ class TtsHelper(context: Context, activity: MapsActivity) {
                 komEditText.text = toSpeak.toEditable()
 
                 if (toSpeak == "") {
-                    //if there is no text in edit text
                     Toast.makeText(mContext, "Wpisz numer lub wybierz punkt.", Toast.LENGTH_SHORT).show()
                 } else {
-                    //if there is text in edit text
                     mTTS?.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null)
                 }
             }
@@ -87,19 +81,10 @@ class TtsHelper(context: Context, activity: MapsActivity) {
 
         stopButton.setOnClickListener {
             if (mTTS?.isSpeaking == true){
-                //if speaking then stop
                 mTTS?.stop()
-                //mTTS.shutdown()
-            }
-            else{
-                //if not speaking
-//                Toast.makeText(mContext, "Not speaking", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
-
-
 
 
         fun ttsNavigation(

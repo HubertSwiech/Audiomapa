@@ -8,8 +8,8 @@
                     <corners android:radius="15dp"/>
                     <padding android:left="10dp"/>
                     <padding android:right="10dp"/>
-                    <padding android:bottom="7dp"/>
-                    <padding android:top="7dp"/>
+                    <padding android:bottom="3dp"/>
+                    <padding android:top="3dp"/>
                 </shape>
             </item>
         </layer-list>
